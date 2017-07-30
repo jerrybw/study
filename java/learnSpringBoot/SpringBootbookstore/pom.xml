@@ -28,7 +28,8 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-freeMarker</artifactId>
+			<artifactId>spring-boot-starter-freeMarker</artifactId>
+			<version>1.5.4.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -40,7 +41,16 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<!-- SpringData-Jpa依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- mysql驱动:com.mysql.jdbc.Driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

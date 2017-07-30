@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    check-template-location: true
+    content-type: text/html
+    cache: false
+    suffix: .ftl
+    charset: utf-8
+    request-context-attribute: request
+    expose-request-attributes: true
+    expose-session-attributes: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url : jdbc:mysql://127.0.0.1:3306/bookstoredb
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
