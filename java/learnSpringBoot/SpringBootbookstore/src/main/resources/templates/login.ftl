@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>login</title>
 </head>
-<script type="text/javascript" src="/js/jquery-3.1.0.min.js"></script>
-<script type="text/javascript">
+<script src="/js/jquery-3.1.0.min.js"></script>
+<script>
     function login() {
         var param = {
             "userName": $("#username").val(),
