@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<<<<<<< HEAD
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<script src="/js/jquery-3.1.0.min.js"></script>
+<script>
+    function login() {
+        var param = {
+            "userName": $("#username").val(),
+            "password": $("#pwd").val()
+        };
+        $.ajax({
+            url: "/login",
+            type: "post",
+            contentType: "application/json",
+            data: JSON.stringify(param),
+            success: function (data) {
+                alert(data);
+=======
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +44,7 @@
             }
             if(!$("#pwd").val()){
                 return;
+>>>>>>> 667fb56b99615975b10ad5f7c950470273fa53b2
             }
             var param = {
                 "userName": $("#userName").val(),
