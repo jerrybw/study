@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jerry.study.dao.UserMapper">
+
+    <select id="findUserInfoById" parameterType="int" resultType="com.jerry.study.bean.User">
+        select * from user where id = #{id};
+    </select>
+
+    <select id="findUserTagsByUserId" parameterType="int" resultMap="myResultMap">
+        select u.name userName,t.name tagName from user u LEFT JOIN user_tag ut on u.id = ut.userId LEFT JOIN tag t ON t.id = ut.tagId where u.id = #{userId};
+    </select>
+    
+    <resultMap id="myResultMap" type="com.jerry.study.bean.UserTags">
+        <result property="userName" column="userName"></result>
+        <result property="tagName" column="tagName"></result>
+    </resultMap>
+<!--aa-->
+</mapper>
