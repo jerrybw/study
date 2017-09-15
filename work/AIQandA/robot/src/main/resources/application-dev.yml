@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  context-path: /robot
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url : jdbc:mysql://101.200.44.115:3306/subscribe?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: S1tdq1E2tzAyOUgb
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+logging:
+  file: log.log
+saveAlertMsgUrl: "http://101.200.44.115:2503/alert/alertMsg"
+
+mybatis:
+  mapper-locations: /mybatis/*
+  type-aliases-package: com.jerry.work.bean
+  configuration:
+    mapUnderscoreToCamelCase: true
+

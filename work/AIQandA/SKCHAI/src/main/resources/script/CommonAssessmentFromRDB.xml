@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 开始前，先通过方法 SetUserAssessment 设置用户的评估表，本脚本直接解析该评估表 -->
+<DataScripts title="通用调查评估表" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <!-- 通过一个空问句获取用户的userId -->
+        <id001 ask="" field="" face='{"type": "msg"}' value="" ds="" table=""/>
+        <!-- 通过方法 CAFRDBGetWelcomeWords 获取问候语 -->
+        <id002 ask='$FUN$CAFRDBGetWelcomeWords?{"userId":"$_userId_$"}$FUN$' field="" face='{"type":"radioBox","list":["好的，明白"]}' value="" ds="" table="">
+            <Questions condition="好的，明白">
+                <!-- 通过一组方法 CAFRDBEvaluationItemAsk、CAFRDBEvaluationItemFace、CAFRDBEvaluationItemVariable 分别获取 问句、问句界面、保存变量 -->
+                <id002001 ask='$FUN$CAFRDBEvaluationItemAsk?{"userId":"$_userId_$"}$FUN$' field="" face='$FUN$CAFRDBEvaluationItemFace?{"userId":"$_userId_$"}$FUN$' value="" ds="" table="" variable='$FUN$CAFRDBEvaluationItemVariable?{"userId":"$_userId_$"}$FUN$'>
+                    <Questions condition="_退出_">
+                        <id002001001 goto='["","id999"]'></id002001001>
+                    </Questions>
+                </id002001>
+                <!-- 通过方法 CAFRDBEvaluationItemNext 跳转 -->
+                <id002002 goto='$FUN$CAFRDBEvaluationItemNext?{"userId":"$_userId_$","continue":"id002001","end":"id002003"}$FUN$'/>
+                <!-- 通过方法 CAFRDBEvaluationResultMsg 返回评估结果信息 -->
+                <id002003 ask='$FUN$CAFRDBEvaluationResultMsg?{"userId":"$_userId_$"}$FUN$' field="" face='{"type":"msg"}' value="" ds="" table=""></id002003> 
+            </Questions>
+        </id002>
+    </Questions>
+</DataScripts>

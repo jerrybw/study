@@ -1,0 +1,64 @@
+2017-08-09 13:34:00.736  INFO 35960 --- [main] com.skch.AiInterfaceApplication          : Starting AiInterfaceApplication on DESKTOP-DD2G69R with PID 35960 (G:\work\java\AIQandA\AIInterface\target\classes started by XX in G:\work\java\AIQandA\AIInterface)
+2017-08-09 13:34:00.738  INFO 35960 --- [main] com.skch.AiInterfaceApplication          : The following profiles are active: dev
+2017-08-09 13:34:00.789  INFO 35960 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2f7298b: startup date [Wed Aug 09 13:34:00 CST 2017]; root of context hierarchy
+2017-08-09 13:34:01.849  INFO 35960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-08-09 13:34:01.906  INFO 35960 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.skch.dao.MongoDBResultRepository.
+2017-08-09 13:34:02.133  INFO 35960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-08-09 13:34:02.285  INFO 35960 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.skch.dao.T_resultRepository.
+2017-08-09 13:34:02.286  INFO 35960 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.skch.dao.T_buriedPointRepository.
+2017-08-09 13:34:02.287  INFO 35960 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.skch.dao.T_form_itemRepository.
+2017-08-09 13:34:02.287  INFO 35960 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.skch.dao.T_formsRepository.
+2017-08-09 13:34:02.288  INFO 35960 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.skch.dao.T_user_formRepository.
+2017-08-09 13:34:02.288  INFO 35960 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.skch.dao.T_variableRepository.
+2017-08-09 13:34:03.401  INFO 35960 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-08-09 13:34:03.415  INFO 35960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-09 13:34:03.417  INFO 35960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-09 13:34:03.566  INFO 35960 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/aiinterface]   : Initializing Spring embedded WebApplicationContext
+2017-08-09 13:34:03.566  INFO 35960 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2779 ms
+2017-08-09 13:34:03.777  INFO 35960 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-09 13:34:03.780  INFO 35960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-09 13:34:03.781  INFO 35960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-09 13:34:03.781  INFO 35960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-09 13:34:03.781  INFO 35960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-09 13:34:04.698  INFO 35960 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-09 13:34:04.713  INFO 35960 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-09 13:34:04.778  INFO 35960 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-09 13:34:04.780  INFO 35960 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-09 13:34:04.781  INFO 35960 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-09 13:34:04.821  INFO 35960 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-09 13:34:05.028  INFO 35960 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2017-08-09 13:34:05.444  INFO 35960 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-09 13:34:06.259  INFO 35960 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-09 13:34:06.601  INFO 35960 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-08-09 13:34:06.659  INFO 35960 --- [cluster-ClusterId{value='598a9ece22cd348c78446cd8', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:230}] to localhost:27017
+2017-08-09 13:34:06.661  INFO 35960 --- [cluster-ClusterId{value='598a9ece22cd348c78446cd8', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=605675}
+2017-08-09 13:34:07.400  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2f7298b: startup date [Wed Aug 09 13:34:00 CST 2017]; root of context hierarchy
+2017-08-09 13:34:07.467  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/CAFRDBEvaluationResultMsg]}" onto public java.lang.String com.skch.controller.CAFRDBController.getResultMsg(java.lang.String)
+2017-08-09 13:34:07.468  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/CAFRDBEvaluationItemAsk]}" onto public java.lang.String com.skch.controller.CAFRDBController.getItemAsk(java.lang.String)
+2017-08-09 13:34:07.468  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/CAFRDBEvaluationItemFace]}" onto public java.lang.String com.skch.controller.CAFRDBController.getItemFace(java.lang.String)
+2017-08-09 13:34:07.469  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/CAFRDBEvaluationItemVariable]}" onto public java.lang.String com.skch.controller.CAFRDBController.getItemVariable(java.lang.String)
+2017-08-09 13:34:07.469  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/CAFRDBEvaluationItemNext]}" onto public java.lang.String com.skch.controller.CAFRDBController.getItemNext(java.lang.String)
+2017-08-09 13:34:07.469  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getWelcomeWords]}" onto public java.lang.String com.skch.controller.CAFRDBController.getWelcomeWords(java.lang.String)
+2017-08-09 13:34:07.469  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/SetUserAssessment]}" onto public java.lang.String com.skch.controller.CAFRDBController.setUserAssessment(java.lang.String)
+2017-08-09 13:34:07.470  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/FuglMeyerBalanceFunctionEvaluation]}" onto public java.lang.String com.skch.controller.FuglMeyerBalanceFunctionEvaluationController.fuglMeyerBalanceFunctionEvaluation(java.lang.String)
+2017-08-09 13:34:07.470  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/HandFunctionGradingEAB]}" onto public java.lang.String com.skch.controller.HandFunctionGradingEABController.handFunctionGradingEAB(java.lang.String)
+2017-08-09 13:34:07.470  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/LowerLimbsWalkingEvaluationAfterBrainInjury]}" onto public java.lang.String com.skch.controller.LowerLimbsWalkingEvaluationAfterBrainInjuryController.lowerLimbsWalkingEvaluationAfterBrainInjury(java.lang.String)
+2017-08-09 13:34:07.470  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/MiniMentalStatusChecklist]}" onto public java.lang.String com.skch.controller.MiniMentalStatusChecklist.miniMentalStatusChecklist(java.lang.String)
+2017-08-09 13:34:07.473  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/MuscleSpasticityAssessment]}" onto public java.lang.String com.skch.controller.MuscleSpasticityAssessmentController.muscleSpasticityAssessment(java.lang.String)
+2017-08-09 13:34:07.473  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/SimplifiedFuglMeyerMotorFunctionScore]}" onto public java.lang.String com.skch.controller.SimplifiedFuglMeyerMotorFunctionScoreController.SimplifiedFuglMeyerMotorFunctionScore(java.lang.String)
+2017-08-09 13:34:07.476  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-09 13:34:07.476  INFO 35960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-09 13:34:07.501  INFO 35960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 13:34:07.501  INFO 35960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 13:34:07.539  INFO 35960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 13:34:07.558  INFO 35960 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2017-08-09 13:34:07.789  INFO 35960 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-09 13:34:07.836  INFO 35960 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-08-09 13:34:07.840  INFO 35960 --- [main] com.skch.AiInterfaceApplication          : Started AiInterfaceApplication in 7.514 seconds (JVM running for 7.97)
+2017-08-09 13:38:46.514  INFO 35960 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/aiinterface]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-09 13:38:46.515  INFO 35960 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-09 13:38:46.544  INFO 35960 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-08-09 13:38:46.623  INFO 35960 --- [http-nio-8081-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-08-09 13:38:47.127  INFO 35960 --- [http-nio-8081-exec-4] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:231}] to localhost:27017

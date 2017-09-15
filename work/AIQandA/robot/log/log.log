@@ -1,0 +1,36 @@
+2017-08-18 15:09:37.427  INFO 62072 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 62072 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-08-18 15:09:37.430  INFO 62072 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-08-18 15:09:37.505  INFO 62072 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b6776cb: startup date [Fri Aug 18 15:09:37 CST 2017]; root of context hierarchy
+2017-08-18 15:09:39.844  INFO 62072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-08-18 15:09:39.860  INFO 62072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-18 15:09:39.861  INFO 62072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-18 15:09:40.019  INFO 62072 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-08-18 15:09:40.019  INFO 62072 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2516 ms
+2017-08-18 15:09:40.249  INFO 62072 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-18 15:09:40.255  INFO 62072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-18 15:09:40.255  INFO 62072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-18 15:09:40.255  INFO 62072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-18 15:09:40.256  INFO 62072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-18 15:09:41.579  INFO 62072 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-18 15:09:41.598  INFO 62072 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-18 15:09:41.673  INFO 62072 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-18 15:09:41.675  INFO 62072 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-18 15:09:41.677  INFO 62072 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-18 15:09:41.748  INFO 62072 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-18 15:09:41.969  INFO 62072 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2017-08-18 15:09:42.400  INFO 62072 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-18 15:09:42.441  INFO 62072 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: alert_message
+2017-08-18 15:09:42.449  INFO 62072 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: alert_message
+2017-08-18 15:09:42.529  INFO 62072 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-18 15:09:43.230  INFO 62072 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b6776cb: startup date [Fri Aug 18 15:09:37 CST 2017]; root of context hierarchy
+2017-08-18 15:09:43.327  INFO 62072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-08-18 15:09:43.334  INFO 62072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-18 15:09:43.337  INFO 62072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-18 15:09:43.379  INFO 62072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-18 15:09:43.379  INFO 62072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-18 15:09:43.456  INFO 62072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-18 15:09:43.821  INFO 62072 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-18 15:09:43.892  INFO 62072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-08-18 15:09:43.902  INFO 62072 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 7.003 seconds (JVM running for 7.573)

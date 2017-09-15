@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.jerry.work.mapper.TaskSyllabusMapper">
+
+    <select id="findByTaskStatusAndStartLessThanEqualAndJenny" resultType="taskSyllabus">
+        select * from ai_task_syllabus where task_status = #{taskStatus} and start &lt;= #{start} and jenny = #{jenny}
+    </select>
+
+    <select id="updateByUserIdAndJennyAndTaskStatusAndStartLessThanEquals" resultType="taskSyllabus">
+        update ai_task_syllabus set task_status = #{afterStatus} where user_id = #{userId} and task_status = #{taskStatus} and jenny = #{jenny} and start &lt;= #{start}
+    </select>
+
+    <select id="updateByUserIdAndJennyAndTaskStatusAndStartLessThanEqualsAndTaskId" resultType="taskSyllabus">
+        update ai_task_syllabus set task_status = #{afterStatus} where user_id = #{userId} and task_status = #{taskStatus} and jenny = #{jenny} and start &lt;= #{start} and task_id=#{taskId}
+    </select>
+
+    <select id="getGroupIdByUserIdAndJenny" resultType="string">
+        SELECT group_id FROM ai_task_syllabus WHERE user_id = #{userId} AND jenny = #{jenny} GROUP BY group_id
+    </select>
+
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataScripts title="健康咨询脚本" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="您有什么问题要咨询一下吗？" field="" face='{"type":"radioBox","list":["有","没有"]}' value="" ds="" table="">
+            <Questions condition="有">
+                <id001001 ask="好的，家医机器人很高兴为您解答问题，我将知无不言，言无不尽"  field="" face='{"type": "msg"}' value="" ds="" table="" ></id001001>
+                <id001002 ask="" field="" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"结束咨询"}' value="" ds="" table="">
+                    <Questions condition="结束咨询">
+                        <id001002001 goto='["","id999"]'></id001002001>
+                    </Questions>
+                </id001002> 
+                <id001003 goto='$FUN$aiFindAiBuriedPointByuserId_Question_noPointId?{"ClientId":"$_clientId_$","userId":"$_userId_$","Question":"$_answer.value_$","noPointId":"id001006"}$FUN$'></id001003>
+                <id001004 ask='您还有什么需要咨询的吗？' field="" face='{"type": "msg"}' value="" ds="" table=""></id001004>
+                <id001005 goto='["","id001002"]'></id001005>
+                <id001006 ask='$FUN$aiFindAiLastAnswerByuserId?{"userId":"$_userId_$"}$FUN$' field="" face='{"type": "msg"}' value="" ds="" table=""></id001006>
+                <id001007 goto='["","id001002"]'></id001007>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>

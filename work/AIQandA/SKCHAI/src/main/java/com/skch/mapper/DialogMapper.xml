@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.skch.mapper.DialogMapper">
+	<insert id="insertIntot_dialog" >
+		insert into t_dialog (sender,accepter,scripts,askId,dialog) values (#{sender},#{accepter},#{scripts},#{askId},#{dialog})
+	</insert>
+</mapper>

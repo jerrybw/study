@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataScripts title="预约医生脚本" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="您现在需要预约医生吗？" field="" face='{"type":"radioBox","list":["预约医生","不需要"]}' value="" ds="" table="">
+            <Questions condition="预约医生">
+                <id001001 ask="请问患者是否有发热、头晕、抽搐、呼吸困难、胸痛、呕吐、急性腹痛、咯血、食管异物、被狗猫等动物咬伤或抓伤、急性中毒、淹溺、外伤等症状？" field="" face='{"type":"radioBox","list":["无","有"]}' value="" ds="" table="" >
+                    <Questions condition="有">
+                        <id001001001 ask="急诊告知：请患者立即就医！" field="" face='{"type":"picker","list":["已阅知"] }' value="" ds="" table="" >
+                            <Questions condition="已阅知">
+                                <id001001001001 goto='["","id999"]'/>
+                            </Questions>
+                        </id001001001>
+                    </Questions>
+                    <Questions condition="无">
+                        <id001001002 ask="请问您是为自己预约还是为家人预约？" field="isUserSelf" face='{"type":"radioBox","list":["自己","家人"],"breakReturn":"退出预约"}' value="" ds="userDb" table="t_appointment" after="new">
+                            <Questions condition="家人">
+                                <id001001002001 ask="告知书&#x0D;&#x0A;温馨提醒：因非患者本人，描述信息可能不准确，就诊时医生将向患者再次确认。" field="" face='{"type":"picker","list":["已阅知"],"breakReturn":"退出预约"}' value="" ds="" table="" >
+                                    <Questions condition="退出预约">
+                                        <id001001002001001 goto="['','id999']"> </id001001002001001>
+                                    </Questions>
+                                </id001001002001>
+                                <id001001002002 ask="请输入患者姓名？" field="real_name" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient">
+                                    <Questions condition="退出预约">
+                                        <id001001002002001 goto="['','id999']"> </id001001002002001>
+                                    </Questions>
+                                </id001001002002>
+                                <id001001002003 ask="请选择患者性别？" field="gender" face='{"type":"radioBox","list":["男","女"],"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient">
+                                    <Questions condition="退出预约">
+                                        <id001001002003001 goto="['','id999']"> </id001001002003001>
+                                    </Questions>
+                                </id001001002003>
+                                <id001001002004 ask="请选择患者出生年月？" field="birthday"  face='{"type":"datePicker"}' value="" ds="userDb" table="t_patient"/>
+                                <id001001002005 ask="患者的身高是多少厘米？" field="person_height" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient_health_assessment">
+                                    <Questions condition="退出预约">
+                                        <id001001002005001 goto="['','id999']"> </id001001002005001>
+                                    </Questions>
+                                </id001001002005>
+                                <id001001002006 ask="患者的体重是多少公斤？" field="person_weight" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient_health_assessment">
+                                    <Questions condition="退出预约">
+                                        <id001001002006001 goto="['','id999']"> </id001001002006001>
+                                    </Questions>
+                                </id001001002006>
+                            </Questions>
+                            <Questions condition="自己">
+                                <id001001002007 ask="您的体重是否有变化？" field="" face='{"type":"radioBox","list":["无变化","有变化"],"breakReturn":"退出预约"}' value="" ds="" table="" >
+                                    <Questions condition="有变化">
+                                        <id001001002007001 ask="您现有的体重是多少公斤？" field="person_height" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient_health_assessment" />
+                                        <Questions condition="退出预约">
+                                            <id001001002007001001 goto="['','id999']"> </id001001002007001001>
+                                        </Questions>
+                                    </Questions>
+                                    <Questions condition="退出预约">
+                                        <id001001002007002 goto="['','id999']"> </id001001002007002>
+                                    </Questions>
+                                </id001001002007>
+                                <id001001002008 ask="您的身高是否有变化？" field="" face='{"type":"radioBox","list":["无变化","有变化"],"breakReturn":"退出预约"}' value="" ds="" table="" >
+                                    <Questions condition="有变化">
+                                        <id001001002008001 ask="您现有的身高是多少厘米？" field="person_weight" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient_health_assessment" >
+                                            <Questions condition="退出预约">
+                                                <id001001002008001001 goto="['','id999']"> </id001001002008001001>
+                                            </Questions>
+                                        </id001001002008001>
+                                    </Questions>
+                                    <Questions condition="退出预约">
+                                        <id001001002008002 goto="['','id999']"> </id001001002008002>
+                                    </Questions>
+                                </id001001002008>
+                            </Questions>
+                            <Questions condition="退出预约">
+                                <id001001002009 goto="['','id999']"> </id001001002009>
+                            </Questions>
+                        </id001001002>
+                        <id001001003 ask="患者有既往病史吗？" field="self_sick_history" face='{"type":"radioBox","list":["无","有"],"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient_health_assessment">
+                            <Questions condition="有">
+                                <id001001003001 ask="请选选择患者的既往病史" field="self_sick_history" face='{"type":"checkBox","list":["心脏病","高血压","糖尿病","其它"]}' value="" ds="userDb" table="t_patient_health_assessment">
+                                    <Questions condition="退出预约">
+                                        <id001001003001 goto="['','id999']"> </id001001003001>
+                                    </Questions>
+                                </id001001003001>
+                            </Questions>
+                            <Questions condition="退出预约">
+                                <id001001003002 goto="['','id999']"> </id001001003002>
+                            </Questions>
+                        </id001001003>
+                        <id001001004 ask="患者有家族病史吗？" field="family_sick_history" face='{"type":"radioBox","list":["无","有"],"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient_health_assessment">
+                            <Questions condition="有">
+                                <id001001004001 ask="请选选择患者的家族病史" field="family_sick_history" face='{"type":"checkBox","list":["心脏病","高血压","糖尿病","其它"],"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient_health_assessment">
+                                    <Questions condition="退出预约">
+                                        <id001001004001001 goto="['','id999']"> </id001001004001001>
+                                    </Questions>
+                                </id001001004001>
+                            </Questions>
+                            <Questions condition="退出预约">
+                                <id001001004002 goto="['','id999']"> </id001001004002>
+                            </Questions>
+                        </id001001004>
+                        <id001001005 ask="患者有无吸烟或饮酒嗜好？" field="bad_allergy" face='{"type":"radioBox","list":["无","只吸烟","只饮酒","吸烟饮酒"],"breakReturn":"退出预约"}' value="" ds="userDb" table="t_patient_health_assessment">
+                            <Questions condition="退出预约">
+                                <id001001005001 goto="['','id999']"> </id001001005001>
+                            </Questions>
+                        </id001001005>
+                        <id001001006 ask="现在的主要症状是什么？【例如：喉咙疼痛（位置+症状）】" answerEg="例如：喉咙疼痛（位置+症状）" field="disease_discription" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出预约"}' value="" ds="userDb" table="appointment">
+                            <Questions condition="退出预约">
+                                <id001001006001 goto="['','id999']"> </id001001006001>
+                            </Questions>
+                        </id001001006>
+                        <id001001007 ask="什么时间开始不舒服的？" field="disease_discription_time" face='{"type":"radioBox","list":["刚才","数小时前","数天前","数周前","数月前"],"breakReturn":"退出预约"}' value="" ds="userDb" table="appointment">
+                            <Questions condition="退出预约">
+                                <id001001007001 goto="['','id999']"> </id001001007001>
+                            </Questions>
+                        </id001001007>						
+                        <id001001008 ask="除了您的主要症状外，还有哪里不舒服呢？【例如：还有流鼻涕、低热、浑身无力、没有食欲】" answerEg="例如：还有流鼻涕、低热、浑身无力、没有食欲" field="disease_discription_other" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出预约"}' value="" table="appointment">
+                            <Questions condition="退出预约">
+                                <id001001008001 goto="['','id999']"> </id001001008001>
+                            </Questions>
+                        </id001001008>
+                        <id001001009 ask="以前出现过这类症状吗？" field="disease_discription_has_hapened" face='{"type":"radioBox","list":["没出现过","出现过"],"breakReturn":"退出预约"}' value="" ds="userDb" table="appointment" >
+                            <Questions condition="出现过">
+                                <id001001009001 ask="作何处理？【例如：口服双黄连胶囊】" field="disease_discription_old_deal" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出预约"}' value="" ds="" table="appointment" >
+                                    <Questions condition="退出预约">
+                                        <id001001009001 goto="['','id999']"> </id001001009001>
+                                    </Questions>
+                                </id001001009001>
+                            </Questions>
+                            <Questions condition="退出预约">
+                                <id001001009002 goto="['','id999']"> </id001001009002>
+                            </Questions>
+                        </id001001009>
+                        <id001001010 ask="患者还有未上传的以往病例补充吗？" field="has_medical_records-to_upload" face='{"type":"radioBox","list":["无","有"],"breakReturn":"退出预约"}' value="" ds="userDb" table="appointment">
+                            <Questions condition="有">
+                                <id001001010001 ask="【请补充上传病历】" field="" face='{"type":"link","auto":"1","url":"http://101.200.44.115:2502/subscribe/guide/PerfectTheCases?userId=$_userId_$","parameter":""}' value="" ds="userDb" table="appointment" >
+                                </id001001010001>
+                            </Questions>
+                            <Questions condition="退出预约">
+                                <id001001010002 goto="['','id999']"> </id001001010002>
+                            </Questions>
+                        </id001001010>
+                    </Questions>
+                </id001001>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>

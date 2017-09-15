@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.jerry.work.dao.NavigationMapper">
+
+    <select id="getNavigationByUserId" resultType="navigation">
+        SELECT n.navigation_name navigationName ,n.url url FROM user u LEFT JOIN user_navigation un ON u.id = un.user_id LEFT JOIN navigation n ON n.id = un.navigation_id WHERE u.id = #{userId}
+    </select>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataScripts title="手（Ⅰ～Ⅲ期）g" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="" field="" face='{"type": "msg"}' value="" ds="" table=""/>
+        <id002 goto='$FUN$setUserAssessment?{"userId":"$_userId_$","Assessment":"95","number":"1","next":"id003"}$FUN$'></id002>
+        <id003 ask='$FUN$cafrdbGetWelcomeWords?{"userId":"$_userId_$"}$FUN$' field="" face='{"type":"radioBox","list":["好的，明白"]}' value="" ds="" table="">
+            <Questions condition="好的，明白">
+                <id003001 ask='$FUN$cafrdbEvaluationItemAsk?{"userId":"$_userId_$"}$FUN$' field="" face='$FUN$cafrdbEvaluationItemFace?{"userId":"$_userId_$"}$FUN$' value="" ds="" table="" variable='$FUN$cafrdbEvaluationItemVariable?{"userId":"$_userId_$"}$FUN$'/>
+                <id003002 goto='$FUN$cafrdbEvaluationItemNext?{"userId":"$_userId_$","continue":"id003001","end":"id003003"}$FUN$'/>
+                <id003003 ask='$FUN$cafrdbEvaluationResultMsg?{"userId":"$_userId_$"}$FUN$' field="" face='{"type":"msg"}' value="" ds="" table=""/>
+            </Questions>
+        </id003>
+    </Questions>
+</DataScripts>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Functions>
+    <!-- 预约信息 -->
+    <Function name='mainAppointmentMessageAskBypatientId' actuator='HttpActuatorFromJson' >
+      	<Property name='out' value='appointmentMessage'></Property>
+      	<Property name='type' value='GET'></Property>
+      	<Property name='url' value='http://101.200.44.115:2500/LocationUrl/patientDoctor/AppointmentMessage'></Property>
+    </Function>
+    <!-- BMI -->
+    <Function name='mainQuestionBMIAskByheight_weight' actuator='HttpActuatorFromJson' >
+    	<Property name='out' value='BMI'></Property>
+        <Property name='type' value='GET'></Property>
+        <Property name='url' value='http://101.200.44.115:2502/subscribe/question/QuestionBMI'></Property>
+    </Function>
+    <!-- ai埋点处理 -->
+    <Function name='aiFindAiBuriedPointByuserId_Question_noPointId' actuator='HttpActuatorFromJson' >
+    	<Property name='out' value='list'></Property>
+        <Property name='type' value='GET'></Property>
+        <Property name='url' value='http://101.200.44.115:2502/subscribe/ai/FindAiBuriedPoint'></Property>
+    </Function>
+    <!-- 根据userId得到ai问题答案 -->
+    <Function name='aiFindAiLastAnswerByuserId' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='aiAnswer'></Property>
+            <Property name='type' value='GET'></Property>
+            <Property name='url' value='http://101.200.44.115:2502/subscribe/ai/findAiAnswer'></Property>
+    </Function>
+    <!-- osas 非家医用户myhealth.iask.in:25077-->
+    <Function name='AppaisePersonOSAS' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='Words'></Property>
+            <Property name='type' value='POST'></Property>
+            <Property name='url' value='http://101.200.44.115:2500/LocationUrl/osas/Person'></Property>
+    </Function>
+    
+	<!--     手功能 -->
+    <Function name='HandFunctionGradingEAB' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='Words'></Property>
+            <Property name='type' value='POST'></Property>
+            <Property name='url' value='http://101.200.44.115:2503/aiinterface/HandFunctionGradingEAB'></Property>
+    </Function>
+    
+	<!--     精神 -->
+    <Function name='MuscleSpasticityAssessment' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='Words'></Property>
+            <Property name='type' value='POST'></Property>
+            <Property name='url' value='http://101.200.44.115:2503/aiinterface/MuscleSpasticityAssessment'></Property>
+    </Function>
+
+	<!-- 	101.200.44.115:2503  101.200.44.115:2503-->
+	<!-- 	下肢 -->
+    <Function name='LowerLimbsWalkingEvaluationAfterBrainInjury' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='Words'></Property>
+            <Property name='type' value='POST'></Property>
+            <Property name='url' value='http://101.200.44.115:2503/aiinterface/LowerLimbsWalkingEvaluationAfterBrainInjury'></Property>
+    </Function>
+    
+	<!--     精神 -->
+    <Function name='MiniMentalStatusChecklist' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='Words'></Property>
+            <Property name='type' value='POST'></Property>
+            <Property name='url' value='http://101.200.44.115:2503/aiinterface/MiniMentalStatusChecklist'></Property>
+    </Function>
+    
+    
+    <Function name='FuglMeyerBalanceFunctionEvaluation' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='Words'></Property>
+            <Property name='type' value='POST'></Property>
+            <Property name='url' value='http://101.200.44.115:2503/aiinterface/FuglMeyerBalanceFunctionEvaluation'></Property>
+    </Function>
+    
+    <Function name='SimplifiedFuglMeyerMotorFunctionScore' actuator='HttpActuatorFromJson' >
+		<Property name='out' value='Words'></Property>
+        <Property name='type' value='POST'></Property>
+        <Property name='url' value='http://101.200.44.115:2503/aiinterface/SimplifiedFuglMeyerMotorFunctionScore'></Property>
+    </Function>
+    
+	<!--     通用评估表设置用户当前评估表与评估项 -->
+    <Function name='setUserAssessment' actuator='HttpActuatorFromJson' >
+		<Property name='out' value='success'></Property>
+        <Property name='type' value='POST'></Property>
+        <Property name='url' value='http://101.200.44.115:2503/aiinterface/SetUserAssessment'></Property>
+    </Function>
+    
+    <!--     通用评估表获取欢迎语句 -->
+    <Function name='cafrdbGetWelcomeWords' actuator='HttpActuatorFromJson' >
+		<Property name='out' value='welcomeMsg'></Property>
+        <Property name='type' value='POST'></Property>
+        <Property name='url' value='http://101.200.44.115:2503/aiinterface/getWelcomeWords'></Property>
+    </Function>
+    
+    <!--     通用评估表获取问题 -->
+    <Function name='cafrdbEvaluationItemAsk' actuator='HttpActuatorFromJson' >
+		<Property name='out' value='ask'></Property>
+        <Property name='type' value='POST'></Property>
+        <Property name='url' value='http://101.200.44.115:2503/aiinterface/CAFRDBEvaluationItemAsk'></Property>
+    </Function>
+    
+    <!--     通用评估表获取face -->
+    <Function name='cafrdbEvaluationItemFace' actuator='HttpActuatorFromJson' >
+		<Property name='out' value='face'></Property>
+        <Property name='type' value='POST'></Property>
+        <Property name='url' value='http://101.200.44.115:2503/aiinterface/CAFRDBEvaluationItemFace'></Property>
+    </Function>
+    
+    <!--     通用评估表获取要存储的值 -->
+    <Function name='cafrdbEvaluationItemVariable' actuator='HttpActuatorFromJson' >
+		<Property name='out' value='variable'></Property>
+        <Property name='type' value='POST'></Property>
+        <Property name='url' value='http://101.200.44.115:2503/aiinterface/CAFRDBEvaluationItemVariable'></Property>
+    </Function>
+    
+    <!--     通用评估表获取是否有下一个问题，并将user_form表中itemId改为下一个问题的id -->
+    <Function name='cafrdbEvaluationItemNext' actuator='HttpActuatorFromJson' >
+		<Property name='out' value='next'></Property>
+        <Property name='type' value='POST'></Property>
+        <Property name='url' value='http://101.200.44.115:2503/aiinterface/CAFRDBEvaluationItemNext'></Property>
+    </Function>
+    
+    <!--     通用评估表获取结果  101.200.44.115:2503 -->
+    <Function name='cafrdbEvaluationResultMsg' actuator='HttpActuatorFromJson' >
+		<Property name='out' value='result'></Property>
+        <Property name='type' value='POST'></Property>
+        <Property name='url' value='http://101.200.44.115:2503/aiinterface/CAFRDBEvaluationResultMsg'></Property>
+    </Function>
+    
+    <!-- osas 家医用户-->
+    <Function name='AppaiseUserOSAS' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='welcomeMsg'></Property>
+            <Property name='type' value='POST'></Property>
+            <Property name='url' value='http://101.200.44.115:2500/LocationUrl/osas/User'></Property>
+    </Function>
+    
+    <Function name='SocialSupportScale' actuator='HttpActuatorFromJson' >
+    		<Property name='out' value='Words'></Property>
+            <Property name='type' value='POST'></Property>
+            <Property name='url' value='http://101.200.44.115:2500/LocationUrl/appaise/userOSAS'></Property>
+    </Function>
+    
+    
+    <Function name='mainLoginService' actuator='Beans' >
+        <Property name='id' value='loginService'></Property> 
+        <Property name='class' value='scripts.LoginServiceImpl'></Property> 
+    </Function>
+</Functions>

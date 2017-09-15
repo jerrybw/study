@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataScripts title="Fugl-Meyer平衡功能评定 —— 患者用表" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="很乐意为您服务，现在开始评估吧" field="" face='{"type":"radioBox","list":["开始评估","下次再来评估"]}' value="" ds="" table="" >
+            <Questions condition="开始评估">
+                <id001001 ask="平衡功能判定，请根据自身情况选择合适的选项，并对训练前后平衡能力变化进行比较。建议由家属辅助填写，测试过程中请注意安全，不要摔倒。" field="" face='{"type":"radioBox","list":["好的，明白"]}' value="" ds="" table="" />
+                <id001002 ask="无支撑坐位&lt;br /&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/FuglMeyerBalanceFunctionEvaluation1.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;A、不能保持坐位&lt;br /&gt;B、能坐，但少于5分钟&lt;br /&gt;C、能坚持坐5分钟以上" field="" face='{"type":"radioBox","list":["A","B","C"]}' value="" ds="" table=""  variable="MusclelSA01"/>
+                <id001003 ask="健侧伸展防护反应&lt;br /&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/FuglMeyerBalanceFunctionEvaluation2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;A、肩部无外展或肘关节无伸展&lt;br /&gt;B、反应减弱&lt;br /&gt;C、反应正常" field="" face='{"type":"radioBox","list":["A","B","C"]}' value="" ds="" table=""  variable="MusclelSA02"/>
+                <id001004 ask="患侧伸展防护反应&lt;br /&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/FuglMeyerBalanceFunctionEvaluation3.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;A、肩部无外展或肘关节无伸展&lt;br /&gt;B、反应减弱&lt;br /&gt;C、反应正常" field="" face='{"type":"radioBox","list":["A","B","C"]}' value="" ds="" table=""  variable="MusclelSA03"/>
+                <id001005 ask="支撑站立&lt;br /&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/FuglMeyerBalanceFunctionEvaluation4.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;A、不能站立&lt;br /&gt;B、在他人最大支撑下可以站立&lt;br /&gt;C、由他人稍给支撑即能站立1分钟" field="" face='{"type":"radioBox","list":["A","B","C"]}' value="" ds="" table=""  variable="MusclelSA04"/>
+                <id001006 ask="无支撑站立&lt;br /&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/FuglMeyerBalanceFunctionEvaluation5.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;A、不能站立&lt;br /&gt;B、不能站立1分钟或身体摇晃&lt;br /&gt;C、能平衡站立1分钟以上" field="" face='{"type":"radioBox","list":["A","B","C"]}' value="" ds="" table=""  variable="MusclelSA05"/>
+                <id001007 ask="健侧单足站立&lt;br /&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/FuglMeyerBalanceFunctionEvaluation6.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;A、不能维持1-2秒&lt;br /&gt;B、平衡站稳达4-9秒&lt;br /&gt;C、平衡站立超过10秒" field="" face='{"type":"radioBox","list":["A","B","C"]}' value="" ds="" table=""  variable="MusclelSA06"/>
+                <id001008 ask="患侧单足站立&lt;br /&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/FuglMeyerBalanceFunctionEvaluation7.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;A、不能维持1-2秒&lt;br /&gt;B、平衡站稳达4-9秒&lt;br /&gt;C、平衡站立超过10秒" field="" face='{"type":"radioBox","list":["A","B","C"]}' value="" ds="" table=""  variable="MusclelSA07"/>
+                <id001009 ask='$FUN$FuglMeyerBalanceFunctionEvaluation?{
+                    "s1":"#_MusclelSA01_#","s2":"#_MusclelSA02_#","s3":"#_MusclelSA03_#","s4":"#_MusclelSA04_#","s5":"#_MusclelSA05_#","s6":"#_MusclelSA06_#","s7":"#_MusclelSA07_#"}$FUN$' field="" face='{"type": "msg"}' value="" ds="" table="" />
+            </Questions>
+            <Questions condition="下次再来">
+                <id001010 ask="好的，欢迎下次再来。" field="" face='{"type": "msg"}' value="" ds="" table="" ></id001010>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>

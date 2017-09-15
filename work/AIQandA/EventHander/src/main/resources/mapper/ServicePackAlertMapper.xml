@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.jerry.work.mapper.ServicePackAlertMapper">
+
+    <select id="findServicePackAlertByEventAndServicePackId" resultType="servicePackAlert">
+        select * from ai_service_pack_alert where service_pack_id = #{servicePackId} and event = #{event} order by number
+    </select>
+
+</mapper>

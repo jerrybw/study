@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url : jdbc:mysql://101.200.44.115:3306/subscribe?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: S1tdq1E2tzAyOUgb
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+mybatis:
+  mapper-locations: /mybatis/*
+  type-aliases-package: com.jerry.work.bean
+  configuration:
+    mapUnderscoreToCamelCase: true
+logging:
+  file: /application/tomcat/webapps2/log/robotlog.log
+saveAlertMsgUrl: "http://101.200.44.115:2503/alert/alertMsg"

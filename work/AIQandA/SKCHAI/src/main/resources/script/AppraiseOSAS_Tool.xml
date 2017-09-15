@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataScripts title="评估睡眠呼吸暂停综合症脚本1" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="建议您做个睡眠呼吸暂停综合症（OSAS）评估，如何？" field="" face='{"type":"radioBox","list":["好的","不测"]}' value="" ds="" table="">
+            <Questions condition="好的">
+                <id001001 ask="请问您是为自己评估还是为别人评估？" field="" face='{"type":"radioBox","list":["自己","别人"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="osasWho">
+                    <Questions condition="别人">
+                        <id001001001 ask="他（她）是男的还是女的" field="" face='{"type":"radioBox","list":["男","女"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="osasUsrSex">
+                            <Questions condition="退出评估">
+                                <id001001001 goto="['','id999']"> </id001001001>
+                            </Questions>
+                        </id001001001>
+                        <id001001002 ask="请输入这位#_osasUsrSex_#士的姓名" field="" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出评估"}' value="" ds="" table=""  variable="osasUsrName">
+                            <Questions condition="退出评估">
+                                <iid001001002001 goto="['','id999']"> </iid001001002001>
+                            </Questions>
+                            <Questions condition="">
+                                <iid001001002002 ask='我晕~~~，我都不知道要给谁做评估~~，这活没法干了，哪怕您告诉我个化名也凑合啊' field="" face='{"type": "msg"}' value="" ds="" table=""></iid001001002002>
+                                <iid001001002003 goto="['','id001001002']"> </iid001001002003>
+                            </Questions>
+                        </id001001002>
+                        <id001001003 ask="#_osasUsrName_##_osasUsrSex_#士超过50岁了吗？" field="" face='{"type":"radioBox","list":["超过","没"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="osasUsrAge">
+                            <Questions condition="退出评估">
+                                <id001001003001 goto="['','id999']"> </id001001003001>
+                            </Questions>
+                        </id001001003>
+                        <id001001004 ask="#_osasUsrName_##_osasUsrSex_#士目前的身高是多少厘米(cm)？" field="" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrHeight">
+                            <Questions condition="退出评估">
+                                <id001001004001 goto='["","id999"]'></id001001004001>
+                            </Questions>
+                        </id001001004>
+                        <id001001005 ask="#_osasUsrName_##_osasUsrSex_#士现在的体重是多少公斤(kg)？" field="" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrWeight">
+                            <Questions condition="退出评估">
+                                <id001001005001 goto='["","id999"]'></id001001005001>
+                            </Questions>
+                        </id001001005> 
+                        <id001001006 ask="#_osasUsrName_##_osasUsrSex_#士的颈围超过40cm吗？" field="" face='{"type":"radioBox","list":["超过","没"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrNeck">
+                            <Questions condition="退出评估">
+                                <id001001006001 goto="['','id999']"> </id001001006001>
+                            </Questions>
+                        </id001001006>
+                        <id001001007 ask="#_osasUsrName_##_osasUsrSex_#士打呼噜声音大吗（比说话声音大或者关上门都能听得到）？" field="" face='{"type":"radioBox","list":["大","不大"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrSnore">
+                            <Questions condition="退出评估">
+                                <id001001007001 goto="['','id999']"> </id001001007001>
+                            </Questions>
+                        </id001001007>
+                        <id001001008 ask="#_osasUsrName_##_osasUsrSex_#士有没有白天常常感到疲倦、劳累或想睡觉的现象？" field="" face='{"type":"radioBox","list":["有","没有"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrTired">
+                            <Questions condition="退出评估">
+                                <id001001008001 goto="['','id999']"> </id001001008001>
+                            </Questions>
+                        </id001001008>
+                        <id001001009 ask="#_osasUsrName_##_osasUsrSex_#士有没有发生过在睡眠中有呼吸停止的现象？" field="" face='{"type":"radioBox","list":["有","没有"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrApnea">
+                            <Questions condition="退出评估">
+                                <id001001009001 goto="['','id999']"> </id001001009001>
+                            </Questions>
+                        </id001001009>
+                        <id001001010 ask="#_osasUsrName_##_osasUsrSex_#士有没有高血压或正在治疗高血压？" field="" face='{"type":"radioBox","list":["有","没有"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrHypertension">
+                            <Questions condition="退出评估">
+                                <id001001010001 goto="['','id999']"> </id001001010001>
+                            </Questions>
+                        </id001001010>
+                        <id001001011 ask='$FUN$AppaisePersonOSAS?{"Name":"#_osasUsrName_#","Sex":"#_osasUsrSex_#","Age":"#_osasUsrAge_#","Height":"#_osasUsrHeight_#","Weight":"#_osasUsrWeight_#","Neck":"#_osasUsrNeck_#","Snore":"#_osasUsrSnore_#","Tired":"#_osasUsrTired_#","Apnea":"#_osasUsrApnea_#","Hyper":"#_osasUsrHypertension_#","Words":["根据您的选择，判断%s暂无睡眠呼吸暂停综合征，不用太过担心噢。","根据您的选择，%s很有可能患有阻塞性睡眠呼吸暂停综合征。请及时去医院进一步检查"]}$FUN$' field="" face='{"type": "msg"}' value="" ds="" table=""></id001001011>
+                    </Questions>
+                    <Questions condition="自己">
+                        <id001001012 ask="您的体重是否有变化？" field="" face='{"type":"radioBox","list":["无变化","有变化"],"breakReturn":"退出评估"}' value="" ds="" table="" >
+                            <Questions condition="有变化">
+                                <id001001012001 ask="您现有的体重是多少公斤？" field="" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出评估"}' value="" ds="" table=""  variable="myWeight">
+                                    <Questions condition="退出评估">
+                                        <id001001002001001 goto="['','id999']"> </id001001002001001>
+                                    </Questions>
+                                </id001001012001>
+                            </Questions>
+                            <Questions condition="退出评估">
+                                <id001001002002 goto="['','id999']"> </id001001002002>
+                            </Questions>
+                        </id001001012>
+                        <id001001013 ask="您的身高是否有变化？" field="" face='{"type":"radioBox","list":["无变化","有变化"],"breakReturn":"退出评估"}' value="" ds="" table="" >
+                            <Questions condition="有变化">
+                                <id001001013001 ask="您现有的身高是多少厘米？" field="" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出评估"}' value="" ds="" table="" variable="myHeight">
+                                    <Questions condition="退出评估">
+                                        <id001001013001001 goto="['','id999']"> </id001001013001001>
+                                    </Questions>
+                                </id001001013001>
+                            </Questions>
+                            <Questions condition="退出评估">
+                                <id001001013002 goto="['','id999']"> </id001001013002>
+                            </Questions>
+                        </id001001013>
+                        <id001001014 ask="您的颈围超过40cm吗？" field="" face='{"type":"radioBox","list":["超过","没"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrNeck">
+                            <Questions condition="退出评估">
+                                <id001001014001 goto="['','id999']"> </id001001014001>
+                            </Questions>
+                        </id001001014>
+                        <id001001015 ask="您打呼噜声音大吗（比说话声音大或者关上门都能听得到）？" field="" face='{"type":"radioBox","list":["大","不大"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrSnore">
+                            <Questions condition="退出评估">
+                                <id001001015001 goto="['','id999']"> </id001001015001>
+                            </Questions>
+                        </id001001015>
+                        <id001001016 ask="您有没有白天常常感到疲倦、劳累或想睡觉的现象？" field="" face='{"type":"radioBox","list":["有","没有"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrTired">
+                            <Questions condition="退出评估">
+                                <id001001016001 goto="['','id999']"> </id001001016001>
+                            </Questions>
+                        </id001001016>
+                        <id001001017 ask="您有没有发生过在睡眠中有呼吸停止的现象？" field="" face='{"type":"radioBox","list":["有","没有"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrApnea">
+                            <Questions condition="退出评估">
+                                <id001001017001 goto="['','id999']"> </id001001017001>
+                            </Questions>
+                        </id001001017>
+                        <id001001018 ask="您有没有高血压或正在治疗高血压？" field="" face='{"type":"radioBox","list":["有","没有"],"breakReturn":"退出评估"}' value="" ds="" table="" variable="osasUsrHypertension">
+                            <Questions condition="退出评估">
+                                <id001001018001 goto="['','id999']"> </id001001018001>
+                            </Questions>
+                        </id001001018>
+                        <id001001019 ask='$FUN$AppaiseUserOSAS?{"userId":"$_userId_$","Height":"#_myHeight_#","Weight":"#_myWeight_#","Neck":"#_osasUsrNeck_#","Snore":"#_osasUsrSnore_#","Tired":"#_osasUsrTired_#","Apnea":"#_osasUsrApnea_#","Hyper":"#_osasUsrHypertension_#","Words":["根据您的选择，判断您暂无睡眠呼吸暂停综合征，不用太过担心噢。","根据您的选择，您很有可能患有阻塞性睡眠呼吸暂停综合征。请及时去医院进一步检查。"]}$FUN$' field="" face='{"type": "msg"}' value="" ds="" table=""></id001001019>
+                    </Questions>
+                    <Questions condition="退出评估">
+                        <id001001020 goto="['','id999']"> </id001001020>
+                    </Questions>
+                </id001001>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataScripts title="脑损伤后手功能分级评估表——患者用表" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="很乐意为您服务，现在开始评估吧" field="" face='{"type":"radioBox","list":["开始评估","下次再来评估"]}' value="" ds="" table="" >
+            <Questions condition="开始评估">
+                <id001001 ask="下面的情况，请用户自查，家属辅助填写，只需要根据实际情况选择“能”或 “不能”即可" field="" face='{"type":"radioBox","list":["好的，明白"]}' value="" ds="" table="" >
+                </id001001>
+                <id001002 ask="&lt;p&gt;1、患手固定纸张，健手使用剪刀&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/HandFunctionGradingEvaluationAfterBrainInjury1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["能","不能"]}' value="" ds="" table=""  variable="HandFGEAB1">
+                </id001002>
+                <id001003 ask="&lt;p&gt;2、患手拿钱包，健手使用钱包&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/HandFunctionGradingEvaluationAfterBrainInjury2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["能","不能"]}' value="" ds="" table=""  variable="HandFGEAB2">
+                </id001003>
+                <id001004 ask="&lt;p&gt;3、用患手悬空撑伞10秒钟以上&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/HandFunctionGradingEvaluationAfterBrainInjury3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["能","不能"]}' value="" ds="" table=""  variable="HandFGEAB3">
+                </id001004>
+                <id001005 ask="&lt;p&gt;4、用患手剪指甲&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/HandFunctionGradingEvaluationAfterBrainInjury4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["能","不能"]}' value="" ds="" table=""  variable="HandFGEAB4">
+                </id001005>
+                <id001006 ask="&lt;p&gt;5、用患手系纽扣&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/HandFunctionGradingEvaluationAfterBrainInjury5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["能","不能"]}' value="" ds="" table=""  variable="HandFGEAB5">
+                </id001006>
+                <id001007 ask='$FUN$HandFunctionGradingEAB?{"s1":"#_HandFGEAB1_#","s2":"#_HandFGEAB2_#","s3":"#_HandFGEAB3_#","s4":"#_HandFGEAB4_#","s5":"#_HandFGEAB5_#","Words":["废用手：五个动作均不能完成","辅助手C：五个动作能完成1个","辅助手B：五个动作能完成2个","辅助手A：五个动作能完成3个","实用手B：五个动作能完成4个","实用手A：五个动作均能完成"]}$FUN$' field="" face='{"type": "msg"}' value="" ds="" table="" />
+            </Questions>
+            <Questions condition="下次再来">
+                <!--id001008 ask="好的，欢迎下次再来参与评估。" field="" face='{"type": "msg"}' value="" ds="" table=""  variable="SocialSS18"></id001008-->
+            </Questions>
+            <Questions condition="退出">
+                <id001009 goto="['','id999']"> </id001009>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>

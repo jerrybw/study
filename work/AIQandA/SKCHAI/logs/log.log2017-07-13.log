@@ -1,0 +1,727 @@
+[INFO] [2017-07-13 09:03:49][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-07-13 09:03:49][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Thu Jul 13 09:03:49 CST 2017]; root of context hierarchy
+[INFO] [2017-07-13 09:03:50][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[DEBUG] [2017-07-13 09:03:50][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [G:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\SKCHAI\WEB-INF\classes\com\skch\mapper\DialogMapper.class]
+[DEBUG] [2017-07-13 09:03:50][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [G:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\SKCHAI\WEB-INF\classes\com\skch\mapper\VariableMapper.class]
+[DEBUG] [2017-07-13 09:03:50][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'dialogMapper' and 'com.skch.mapper.DialogMapper' mapperInterface
+[DEBUG] [2017-07-13 09:03:50][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'variableMapper' and 'com.skch.mapper.VariableMapper' mapperInterface
+[INFO] [2017-07-13 09:03:50][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [dbConfig.properties]
+[INFO] [2017-07-13 09:03:50][com.mchange.v2.log.MLog]MLog clients using log4j logging.
+[INFO] [2017-07-13 09:03:50][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.2 [built 09-February-2013 02:13:17 +0000; debug? true; trace: 10]
+[DEBUG] [2017-07-13 09:03:50][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis-config.xml]'
+[DEBUG] [2017-07-13 09:03:50][org.mybatis.spring.SqlSessionFactoryBean]Property 'mapperLocations' was not specified or no matching resources found
+[INFO] [2017-07-13 09:03:51][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1195 ms
+[INFO] [2017-07-13 09:15:00][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springmvc': initialization started
+[INFO] [2017-07-13 09:15:00][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Thu Jul 13 09:15:00 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-07-13 09:15:00][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2017-07-13 09:15:01][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/askDr],methods=[],params=[],headers=[],consumes=[],produces=[text/html;charset=utf-8],custom=[]}" onto public java.lang.Object com.skch.controller.AIMainServerController.mainServer(java.lang.String) throws java.io.UnsupportedEncodingException
+[INFO] [2017-07-13 09:15:02][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2017-07-13 09:15:02][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springmvc': initialization completed in 1178 ms
+[DEBUG] [2017-07-13 09:15:02][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:02][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54344807] was not registered for synchronization because synchronization is not active
+[INFO] [2017-07-13 09:15:02][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge11l9pfy33mulgos3f|4e8c134a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge11l9pfy33mulgos3f|4e8c134a, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/mydb?useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[DEBUG] [2017-07-13 09:15:02][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6c187ab5] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:02][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54344807]
+[DEBUG] [2017-07-13 09:15:03][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:03][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fe9b328] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:03][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@735ab9b2] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:03][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fe9b328]
+[DEBUG] [2017-07-13 09:15:03][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:03][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b14deb1] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:03][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3d0acb4c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:03][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b14deb1]
+[DEBUG] [2017-07-13 09:15:05][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:05][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e47dc12] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:05][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@512a96be] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:05][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e47dc12]
+[WARN] [2017-07-13 09:15:06][org.springframework.web.servlet.handler.SimpleMappingExceptionResolver
+			]Handler execution resulted in exception
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
+	at redis.clients.jedis.Connection.connect(Connection.java:207)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.Connection.sendCommand(Connection.java:126)
+	at redis.clients.jedis.BinaryClient.lpush(BinaryClient.java:302)
+	at redis.clients.jedis.Client.lpush(Client.java:230)
+	at redis.clients.jedis.Jedis.lpush(Jedis.java:881)
+	at com.skch.service.impl.AIStackServiceImpl.push(AIStackServiceImpl.java:28)
+	at com.skch.controller.AIMainServerController.mainServer(AIMainServerController.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:516)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1086)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:659)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:223)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1558)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	... 50 more
+[DEBUG] [2017-07-13 09:15:30][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:30][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6630fad8] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:30][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@af23da5] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:30][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6630fad8]
+[DEBUG] [2017-07-13 09:15:31][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:31][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@547cab66] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:31][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7a9373c8] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:31][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@547cab66]
+[DEBUG] [2017-07-13 09:15:31][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:31][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5519600] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:31][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@627d4f99] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:31][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5519600]
+[DEBUG] [2017-07-13 09:15:33][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:33][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e0208e3] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:33][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@45877ea9] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:33][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e0208e3]
+[DEBUG] [2017-07-13 09:15:33][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:33][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@442ce9d5] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:33][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2c481b3b] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:33][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@442ce9d5]
+[DEBUG] [2017-07-13 09:15:39][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:39][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2099a91e] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:39][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4456c64b] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:39][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2099a91e]
+[DEBUG] [2017-07-13 09:15:39][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:39][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17e7075b] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:39][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@315f6cd8] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:39][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17e7075b]
+[DEBUG] [2017-07-13 09:15:40][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:40][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d1c7d6c] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:40][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@663e0c04] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:40][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d1c7d6c]
+[DEBUG] [2017-07-13 09:15:40][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:40][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4476e38e] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:40][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@52fd76b] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:40][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4476e38e]
+[DEBUG] [2017-07-13 09:15:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c46ebe4] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@112696ed] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c46ebe4]
+[DEBUG] [2017-07-13 09:15:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ed69d78] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3bfb174b] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ed69d78]
+[DEBUG] [2017-07-13 09:15:42][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:42][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ae433fa] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:42][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@77ff78f0] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:42][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ae433fa]
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@129636d8] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@62d873e5] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@129636d8]
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d30a38e] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@64ce315a] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d30a38e]
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b025447] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6d4bb312] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b025447]
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@661f77f1] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1fb3bc23] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@661f77f1]
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2197ca29] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1663cd1c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2197ca29]
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@579069de] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@f96a7f1] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@579069de]
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45631b95] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2e3b3e5d] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45631b95]
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b99d3af] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:48][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3db15a18] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:49][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b99d3af]
+[DEBUG] [2017-07-13 09:15:49][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:15:49][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e958769] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:15:49][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@358ec38] will not be managed by Spring
+[DEBUG] [2017-07-13 09:15:49][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e958769]
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@390bb73] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@852944f] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@390bb73]
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@727ba641] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@63774d6a] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@727ba641]
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79341939] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1d5a06ba] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79341939]
+[DEBUG] [2017-07-13 09:39:42][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:42][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2cb6d4cb] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:42][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1be801f7] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:42][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2cb6d4cb]
+[DEBUG] [2017-07-13 09:39:42][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:42][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a978023] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:42][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@74d41df8] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:42][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a978023]
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@785dd85d] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@50f0f0eb] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@785dd85d]
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72b10368] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7b6fda16] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72b10368]
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64be1653] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4ea4311e] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64be1653]
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@438518d4] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@42060c4b] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:44][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@438518d4]
+[DEBUG] [2017-07-13 09:39:45][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:45][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ec517f4] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:45][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4382dc38] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:45][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ec517f4]
+[DEBUG] [2017-07-13 09:39:45][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:45][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38598a6f] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:45][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5dbf973] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:45][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38598a6f]
+[DEBUG] [2017-07-13 09:39:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34c74783] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@54413ebc] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34c74783]
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@634f73fc] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3fcb6d4c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@634f73fc]
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c7de7b7] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7fc005db] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c7de7b7]
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7235ee41] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@61be9bb] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:51][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7235ee41]
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c6cbd72] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1ca3acfe] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c6cbd72]
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47aef63a] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1d68c8e7] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47aef63a]
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b53d4f] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@47bed53c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:39:58][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b53d4f]
+[DEBUG] [2017-07-13 09:40:02][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:40:02][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2dc94518] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:40:02][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7c3745cf] will not be managed by Spring
+[DEBUG] [2017-07-13 09:40:03][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2dc94518]
+[DEBUG] [2017-07-13 09:40:03][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:40:03][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31c50872] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:40:03][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@c9f1df] will not be managed by Spring
+[DEBUG] [2017-07-13 09:40:03][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31c50872]
+[DEBUG] [2017-07-13 09:40:04][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:40:04][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@217fc1d2] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:40:04][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@252313f1] will not be managed by Spring
+[DEBUG] [2017-07-13 09:40:04][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@217fc1d2]
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65a98f3b] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@17c48cbe] will not be managed by Spring
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65a98f3b]
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@772f092] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@48bc631c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@772f092]
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299fad44] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:40:16][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@78e524cc] will not be managed by Spring
+[DEBUG] [2017-07-13 09:40:17][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299fad44]
+[DEBUG] [2017-07-13 09:49:12][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:12][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c3dd3c5] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:12][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@607935ee] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:12][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c3dd3c5]
+[DEBUG] [2017-07-13 09:49:13][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:13][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77527c4f] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:13][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6e8cf0c2] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:13][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77527c4f]
+[DEBUG] [2017-07-13 09:49:13][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:13][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3bb4c0dd] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:13][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@397427d9] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:13][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3bb4c0dd]
+[DEBUG] [2017-07-13 09:49:23][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:23][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bf2bf32] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:23][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@20d65585] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:23][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bf2bf32]
+[DEBUG] [2017-07-13 09:49:23][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:23][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1744d4c6] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:23][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4094b6c9] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:23][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1744d4c6]
+[DEBUG] [2017-07-13 09:49:30][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:30][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@297e8681] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:30][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3fe11ce5] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:30][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@297e8681]
+[DEBUG] [2017-07-13 09:49:30][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:30][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@757ed50e] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:30][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@61d43ef6] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:30][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@757ed50e]
+[DEBUG] [2017-07-13 09:49:33][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:33][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c926850] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:33][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@229e571f] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:33][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c926850]
+[DEBUG] [2017-07-13 09:49:33][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:33][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48db75c1] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:33][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5832f3de] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:33][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48db75c1]
+[DEBUG] [2017-07-13 09:49:35][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:35][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c34415b] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:35][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5dfd6fec] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:35][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c34415b]
+[DEBUG] [2017-07-13 09:49:35][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:35][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11cb34be] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:35][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@436ae163] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:35][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11cb34be]
+[DEBUG] [2017-07-13 09:49:38][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:38][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11f5707b] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:38][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3cb97e77] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:38][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11f5707b]
+[DEBUG] [2017-07-13 09:49:38][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:38][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@245944e6] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:38][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6eb1f71e] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:38][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@245944e6]
+[DEBUG] [2017-07-13 09:49:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cd8cd39] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@c3f0ccc] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cd8cd39]
+[DEBUG] [2017-07-13 09:49:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40cb8d96] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@619e2a0f] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40cb8d96]
+[DEBUG] [2017-07-13 09:49:42][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:42][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d4c5873] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:42][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@291b752f] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:42][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d4c5873]
+[DEBUG] [2017-07-13 09:49:42][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:42][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b15038b] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:42][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6b57c7e6] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:42][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b15038b]
+[DEBUG] [2017-07-13 09:49:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bb2fb01] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@74bc79ef] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bb2fb01]
+[DEBUG] [2017-07-13 09:49:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e28ba13] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4c3e43c1] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e28ba13]
+[DEBUG] [2017-07-13 09:49:48][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:48][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e9d1025] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:48][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7b90455c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:48][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e9d1025]
+[DEBUG] [2017-07-13 09:49:48][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:48][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23a3d646] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:48][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2efcb502] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:48][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23a3d646]
+[DEBUG] [2017-07-13 09:49:50][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:50][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77122088] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:50][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@74c8fd3b] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:51][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77122088]
+[DEBUG] [2017-07-13 09:49:51][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:51][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@331f91bc] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:51][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@619e4c85] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:51][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@331f91bc]
+[DEBUG] [2017-07-13 09:49:54][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:54][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c10bd6] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:54][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3197152e] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:54][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c10bd6]
+[DEBUG] [2017-07-13 09:49:54][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:49:54][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@340c3b7f] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:49:54][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@78016c69] will not be managed by Spring
+[DEBUG] [2017-07-13 09:49:54][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@340c3b7f]
+[DEBUG] [2017-07-13 09:50:03][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:03][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@dfc2d46] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:03][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@703689b] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:03][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@dfc2d46]
+[DEBUG] [2017-07-13 09:50:03][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:03][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6644e450] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:03][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4ae8d61f] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:03][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6644e450]
+[DEBUG] [2017-07-13 09:50:13][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:13][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b24af05] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:13][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@475b06e2] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:13][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b24af05]
+[DEBUG] [2017-07-13 09:50:13][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:13][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bc5e5b2] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:13][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@33e5904c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:13][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bc5e5b2]
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3569577b] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7dd5c870] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3569577b]
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5efd75] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@69e17872] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5efd75]
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fd38ffc] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@724206cc] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:18][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fd38ffc]
+[DEBUG] [2017-07-13 09:50:26][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:26][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71a77539] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:26][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@bcd6b9e] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:26][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71a77539]
+[DEBUG] [2017-07-13 09:50:26][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:26][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@766a30c7] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:26][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4ef27780] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:26][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@766a30c7]
+[DEBUG] [2017-07-13 09:50:27][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:27][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73172383] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:27][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@579a072] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:27][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73172383]
+[DEBUG] [2017-07-13 09:50:35][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:35][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@dc27660] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:35][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@78f2869f] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:35][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@dc27660]
+[DEBUG] [2017-07-13 09:50:35][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:35][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a42d780] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:35][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@741966e9] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:35][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a42d780]
+[DEBUG] [2017-07-13 09:50:37][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:37][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71ea6829] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:37][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@a874df9] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:37][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71ea6829]
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@441e8828] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@65fd1116] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@441e8828]
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57a6c2e5] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@131ae71c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57a6c2e5]
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@256816af] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:43][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@37569ed4] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:44][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@256816af]
+[DEBUG] [2017-07-13 09:50:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5995b687] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@51ee1175] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5995b687]
+[DEBUG] [2017-07-13 09:50:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@192d1b89] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@389bc6c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@192d1b89]
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b696433] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@495d7e18] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b696433]
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21780b86] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3b0a3ab3] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21780b86]
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54112a0a] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5719b013] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54112a0a]
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71d99d80] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@33860570] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:50][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71d99d80]
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21cced72] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@61758c2d] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21cced72]
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18f907bd] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@774426c4] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18f907bd]
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a471f6d] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@28f67ca7] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a471f6d]
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5124e852] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1f99b54e] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5124e852]
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@600514b3] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@15bc61cf] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@600514b3]
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4745c8d2] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@711da449] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:53][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4745c8d2]
+[DEBUG] [2017-07-13 09:50:54][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:50:54][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33ba4add] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:50:54][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@52e268af] will not be managed by Spring
+[DEBUG] [2017-07-13 09:50:54][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33ba4add]
+[DEBUG] [2017-07-13 09:51:05][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:51:05][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@92658f5] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:51:05][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7b435c16] will not be managed by Spring
+[DEBUG] [2017-07-13 09:51:05][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@92658f5]
+[DEBUG] [2017-07-13 09:51:05][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:51:05][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3175024d] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:51:05][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@548c032c] will not be managed by Spring
+[DEBUG] [2017-07-13 09:51:05][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3175024d]
+[DEBUG] [2017-07-13 09:51:07][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:51:07][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7dd548d6] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:51:07][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1bbb5118] will not be managed by Spring
+[DEBUG] [2017-07-13 09:51:07][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7dd548d6]
+[DEBUG] [2017-07-13 09:51:07][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:51:07][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27388832] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:51:07][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3a0840ab] will not be managed by Spring
+[DEBUG] [2017-07-13 09:51:07][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27388832]
+[DEBUG] [2017-07-13 09:51:09][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:51:09][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a11008c] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:51:09][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@52e75265] will not be managed by Spring
+[DEBUG] [2017-07-13 09:51:09][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a11008c]
+[DEBUG] [2017-07-13 09:51:09][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:51:09][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b3f54e3] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:51:09][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4d676b79] will not be managed by Spring
+[DEBUG] [2017-07-13 09:51:09][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b3f54e3]
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30dec7e9] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2e38a04d] will not be managed by Spring
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30dec7e9]
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a71f1bc] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@cabaae1] will not be managed by Spring
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a71f1bc]
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2624bbeb] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@69e94b3] will not be managed by Spring
+[DEBUG] [2017-07-13 09:53:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2624bbeb]
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@495fe477] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4229d4b1] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@495fe477]
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57d778c8] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5f3f812] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57d778c8]
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32d6c2db] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1e14fcfd] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:06][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32d6c2db]
+[DEBUG] [2017-07-13 10:14:08][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:08][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3aaf9330] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:08][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@187a9b26] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:08][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3aaf9330]
+[DEBUG] [2017-07-13 10:14:08][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:08][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c7b6a3c] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:08][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5827b336] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:08][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c7b6a3c]
+[DEBUG] [2017-07-13 10:14:09][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:09][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7991f035] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:09][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2f1ad9e4] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:09][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7991f035]
+[DEBUG] [2017-07-13 10:14:09][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:09][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@486d3a95] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:09][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@402ec78f] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:09][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@486d3a95]
+[DEBUG] [2017-07-13 10:14:18][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:18][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beb4daa] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:18][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@15c9fda2] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:18][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beb4daa]
+[DEBUG] [2017-07-13 10:14:18][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:18][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c8f8d34] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:18][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@365b74c1] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:18][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c8f8d34]
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@116456cd] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7cc7cf99] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@116456cd]
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@eb4393] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@57cadd96] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@eb4393]
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62f7f153] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:19][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@507d9f67] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:20][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62f7f153]
+[DEBUG] [2017-07-13 10:14:20][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:20][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46d2c06a] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:20][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6dec08cd] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:20][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46d2c06a]
+[DEBUG] [2017-07-13 10:14:21][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:21][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18c4f707] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:21][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6480372c] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:21][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18c4f707]
+[DEBUG] [2017-07-13 10:14:21][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:21][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27d35d13] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:21][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6430003b] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:21][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27d35d13]
+[DEBUG] [2017-07-13 10:14:22][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:22][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@658d432e] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:22][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@310449a3] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:22][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@658d432e]
+[DEBUG] [2017-07-13 10:14:22][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:22][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52e1fed4] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:22][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@f3dfda] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:22][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52e1fed4]
+[DEBUG] [2017-07-13 10:14:24][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:24][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12187059] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:24][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@f3d4505] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:24][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12187059]
+[DEBUG] [2017-07-13 10:14:24][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:24][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54cfe02e] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:24][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@421865ec] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:24][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54cfe02e]
+[DEBUG] [2017-07-13 10:14:30][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:30][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56a21816] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:30][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@55d6ea9d] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:30][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56a21816]
+[DEBUG] [2017-07-13 10:14:30][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:30][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42a1a621] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:30][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@522a98c5] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:30][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42a1a621]
+[DEBUG] [2017-07-13 10:14:31][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:31][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e9b94f] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:31][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@282c17b6] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:31][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e9b94f]
+[DEBUG] [2017-07-13 10:14:31][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:31][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a7338c5] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:31][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6db34e1a] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:31][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a7338c5]
+[DEBUG] [2017-07-13 10:14:32][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:32][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@774e1c9b] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:32][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2c477d06] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:32][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@774e1c9b]
+[DEBUG] [2017-07-13 10:14:32][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:32][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7323d0ee] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:32][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1826cb12] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:32][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7323d0ee]
+[DEBUG] [2017-07-13 10:14:34][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:34][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f1c195] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:34][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@17206596] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:34][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f1c195]
+[DEBUG] [2017-07-13 10:14:34][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:34][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29bd16a6] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:34][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@76656c74] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:34][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29bd16a6]
+[DEBUG] [2017-07-13 10:14:35][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:35][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a0aa6d8] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:35][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@323c0978] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:35][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a0aa6d8]
+[DEBUG] [2017-07-13 10:14:35][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:35][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72d6fa6] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:35][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@42c7687f] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:35][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72d6fa6]
+[DEBUG] [2017-07-13 10:14:39][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:39][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1408e882] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:39][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@605efb90] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:39][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1408e882]
+[DEBUG] [2017-07-13 10:14:39][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:39][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c635f15] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:39][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@66e718b3] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:39][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c635f15]
+[DEBUG] [2017-07-13 10:14:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71183d03] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@35066e0d] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71183d03]
+[DEBUG] [2017-07-13 10:14:41][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:14:41][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@59b99421] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:14:41][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@72a74b29] will not be managed by Spring
+[DEBUG] [2017-07-13 10:14:41][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@59b99421]
+[DEBUG] [2017-07-13 10:15:05][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:15:05][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708b3ee9] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:15:05][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@34eac7d6] will not be managed by Spring
+[DEBUG] [2017-07-13 10:15:05][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@708b3ee9]
+[DEBUG] [2017-07-13 10:15:06][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:15:06][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68328c5a] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:15:06][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@c533ac3] will not be managed by Spring
+[DEBUG] [2017-07-13 10:15:06][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68328c5a]
+[DEBUG] [2017-07-13 10:15:06][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:15:06][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53293cc5] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:15:06][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@49352e4a] will not be managed by Spring
+[DEBUG] [2017-07-13 10:15:06][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53293cc5]
+[DEBUG] [2017-07-13 10:42:06][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:42:06][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@722a561a] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:42:06][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3a1d5097] will not be managed by Spring
+[DEBUG] [2017-07-13 10:42:06][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@722a561a]
+[DEBUG] [2017-07-13 10:42:06][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG] [2017-07-13 10:42:06][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3400c844] was not registered for synchronization because synchronization is not active
+[DEBUG] [2017-07-13 10:42:06][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@51cb124d] will not be managed by Spring
+[DEBUG] [2017-07-13 10:42:06][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3400c844]
+[INFO] [2017-07-13 10:52:34][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'springmvc-servlet': startup date [Thu Jul 13 09:15:00 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-07-13 10:52:34][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Thu Jul 13 09:03:49 CST 2017]; root of context hierarchy
+[INFO] [2017-07-13 10:52:38][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-07-13 10:52:38][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Thu Jul 13 10:52:38 CST 2017]; root of context hierarchy
+[INFO] [2017-07-13 10:52:38][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[DEBUG] [2017-07-13 10:52:38][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [G:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\SKCHAI\WEB-INF\classes\com\skch\mapper\DialogMapper.class]
+[DEBUG] [2017-07-13 10:52:38][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [G:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\SKCHAI\WEB-INF\classes\com\skch\mapper\VariableMapper.class]
+[DEBUG] [2017-07-13 10:52:38][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'dialogMapper' and 'com.skch.mapper.DialogMapper' mapperInterface
+[DEBUG] [2017-07-13 10:52:38][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'variableMapper' and 'com.skch.mapper.VariableMapper' mapperInterface
+[INFO] [2017-07-13 10:52:38][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [dbConfig.properties]
+[INFO] [2017-07-13 10:52:39][com.mchange.v2.log.MLog]MLog clients using log4j logging.
+[INFO] [2017-07-13 10:52:39][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.2 [built 09-February-2013 02:13:17 +0000; debug? true; trace: 10]
+[DEBUG] [2017-07-13 10:52:39][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis-config.xml]'
+[DEBUG] [2017-07-13 10:52:39][org.mybatis.spring.SqlSessionFactoryBean]Property 'mapperLocations' was not specified or no matching resources found
+[INFO] [2017-07-13 10:52:39][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1177 ms
+[INFO] [2017-07-13 11:30:24][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Thu Jul 13 10:52:38 CST 2017]; root of context hierarchy
+[INFO] [2017-07-13 15:13:30][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-07-13 15:13:30][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Thu Jul 13 15:13:30 CST 2017]; root of context hierarchy
+[INFO] [2017-07-13 15:13:30][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[DEBUG] [2017-07-13 15:13:30][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [G:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\SKCHAI\WEB-INF\classes\com\skch\mapper\DialogMapper.class]
+[DEBUG] [2017-07-13 15:13:30][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [G:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\SKCHAI\WEB-INF\classes\com\skch\mapper\VariableMapper.class]
+[DEBUG] [2017-07-13 15:13:30][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'dialogMapper' and 'com.skch.mapper.DialogMapper' mapperInterface
+[DEBUG] [2017-07-13 15:13:30][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'variableMapper' and 'com.skch.mapper.VariableMapper' mapperInterface
+[INFO] [2017-07-13 15:13:31][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [dbConfig.properties]
+[INFO] [2017-07-13 15:13:31][com.mchange.v2.log.MLog]MLog clients using log4j logging.
+[INFO] [2017-07-13 15:13:31][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.2 [built 09-February-2013 02:13:17 +0000; debug? true; trace: 10]
+[DEBUG] [2017-07-13 15:13:31][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis-config.xml]'
+[DEBUG] [2017-07-13 15:13:31][org.mybatis.spring.SqlSessionFactoryBean]Property 'mapperLocations' was not specified or no matching resources found
+[INFO] [2017-07-13 15:13:31][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1290 ms
+[INFO] [2017-07-13 16:59:05][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-07-13 16:59:05][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Thu Jul 13 16:59:05 CST 2017]; root of context hierarchy
+[INFO] [2017-07-13 16:59:06][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[DEBUG] [2017-07-13 16:59:06][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [G:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\SKCHAI\WEB-INF\classes\com\skch\mapper\DialogMapper.class]
+[DEBUG] [2017-07-13 16:59:06][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [G:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\SKCHAI\WEB-INF\classes\com\skch\mapper\VariableMapper.class]
+[DEBUG] [2017-07-13 16:59:06][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'dialogMapper' and 'com.skch.mapper.DialogMapper' mapperInterface
+[DEBUG] [2017-07-13 16:59:06][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'variableMapper' and 'com.skch.mapper.VariableMapper' mapperInterface
+[INFO] [2017-07-13 16:59:06][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [dbConfig.properties]
+[INFO] [2017-07-13 16:59:06][com.mchange.v2.log.MLog]MLog clients using log4j logging.
+[INFO] [2017-07-13 16:59:06][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.2 [built 09-February-2013 02:13:17 +0000; debug? true; trace: 10]
+[DEBUG] [2017-07-13 16:59:06][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis-config.xml]'
+[DEBUG] [2017-07-13 16:59:06][org.mybatis.spring.SqlSessionFactoryBean]Property 'mapperLocations' was not specified or no matching resources found
+[INFO] [2017-07-13 16:59:07][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1262 ms

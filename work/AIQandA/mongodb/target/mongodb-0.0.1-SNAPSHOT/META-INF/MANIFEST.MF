@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: mongodb
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: XX
+Implementation-Vendor-Id: com.jerry.study
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_111
+Main-Class: ${start-class}
+

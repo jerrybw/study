@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataScripts title="AI导医主脚本" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+		<id001 ask="$_userName_$$_userTitle_$，您好！欢迎您使用家医平台，很高兴有机会为您服务！"  field="" face='{"type": "msg"}' value="" ds="" table="" ></id001>
+        <id002 ask='$FUN$mainAppointmentMessageAskBypatientId?{"patientId":"$_userId_$"}$FUN$'  field="" face='{"type": "msg"}' value="" ds="" table=""></id002>
+        <id003 goto='["","id005"]'></id003>
+        <id004 ask="很高兴继续为您服务！"  field="" face='{"type": "msg"}' value="" ds="" table="" ></id004>
+        <id005 ask="" field="" face='{"type":"radioBox","list":["预约医生","健康咨询","BMI","OSAS评估","测试"]}' value="" ds="" table="" >
+            <Questions condition="预约医生">
+                <id005001 goto='["AppointmentForDoctor.xml","id001001"]'></id005001>
+                <id005002 goto='["","id005"]'></id005002>
+            </Questions>
+            <Questions condition="签约医生">
+                <id005003 goto='["SignContractForDoctor.xml","id001001"]'></id005003>
+                <id005004 goto='["","id005"]'></id005004>
+            </Questions>
+            <Questions condition="健康咨询">
+                <id005005 goto='["HealthConsultationTool.xml","id001001"]'></id005005>
+                <id005006 goto='["","id004"]'></id005006>
+            </Questions>
+            <Questions condition="周边健康">
+                <id005007 goto='["PeripheralHealthTool.xml","id001001"]'></id005007>
+                <id005008 goto='["","id005"]'></id005008>
+            </Questions>
+            <Questions condition="BMI">
+                <id005009 goto='["AccountBMI_Tool.xml","id001001"]'></id005009>
+                <id005010 goto='["","id005"]'></id005010>
+            </Questions>
+			<Questions condition="OSAS评估">
+                <id005011 goto='["AppraiseOSAS_Tool.xml","id001001"]'></id005011>
+                <id005012 goto='["","id005"]'></id005012>
+            </Questions>
+			<Questions condition="测试">
+                <id005013 goto='["BrainInjuryHandFunctionGrading.xml","id001"]'></id005013>
+                <id005014 goto='["","id005"]'></id005014>
+            </Questions>
+        </id005>
+    </Questions>
+</DataScripts>

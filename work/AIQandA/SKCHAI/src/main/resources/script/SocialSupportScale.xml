@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataScripts title="社会支持评定量表" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="欢迎您参加调查，现在开始吧" field="" face='{"type":"radioBox","list":["开始","下次再来"]}' value="" ds="" table="" >
+            <Questions condition="开始">
+                <id001001 ask="下面所提的一些您可能遇到的情况，请根据您的具体情况，您只需要选择“没有”、“有时”或“经常”即可" field="" face='{"type":"radioBox","list":["好的，我明白"]}' value="" ds="" table="" >
+                    <Questions condition="退出评估">
+                        <id001001001 goto="['','id999']"> </id001001001>
+                    </Questions>
+                </id001001>
+                <id001002 ask="受到同事的冷落" field="" face='{"type":"radioBox","list":["没有","有时","经常"]}' value="" ds="" table=""  variable="SocialSS01">
+                    <Questions condition="退出评估">
+                        <id001002001 goto="['','id999']"> </id001002001>
+                    </Questions>
+                </id001002>
+                <id001003 ask="在经济上遇到困难时，得到领导或同事的关心太少" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS02">
+                    <Questions condition="退出评估">
+                        <id001003001 goto="['','id999']"> </id001003001>
+                    </Questions>
+                </id001003>
+                <id001004 ask="远离家人或朋友" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS03">
+                    <Questions condition="退出评估">
+                        <id001004001 goto="['','id999']"> </id001004001>
+                    </Questions>
+                </id001004>
+                <id001005 ask="遇到烦恼时得不到别人的帮助" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS04">
+                    <Questions condition="退出评估">
+                        <id001005001 goto="['','id999']"> </id001005001>
+                    </Questions>
+                </id001005>
+                <id001006 ask="领导、家人对我的工作或做事放心不下" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS05">
+                    <Questions condition="退出评估">
+                        <id001006001 goto="['','id999']"> </id001006001>
+                    </Questions>
+                </id001006>
+                <id001007 ask="从家庭成员中很少得到支持和照顾" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS06">
+                    <Questions condition="退出评估">
+                        <id001007001 goto="['','id999']"> </id001007001>
+                    </Questions>
+                </id001007>
+                <id001008 ask="与同事之间缺少友谊" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS07">
+                    <Questions condition="退出评估">
+                        <id001008001 goto="['','id999']"> </id001008001>
+                    </Questions>
+                </id001008>
+                <id001009 ask="夫妻感情不和" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS08">
+                    <Questions condition="退出评估">
+                        <id001009001 goto="['','id999']"> </id001009001>
+                    </Questions>
+                </id001009>
+                <id001010 ask="遇到烦恼时不向人诉说" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS09">
+                    <Questions condition="退出评估">
+                        <id001010001 goto="['','id999']"> </id001010001>
+                    </Questions>
+                </id001010>
+                <id001011 ask="遇到急难时，心理上得不到领导或同事的安慰" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS10">
+                    <Questions condition="退出评估">
+                        <id001011001 goto="['','id999']"> </id001011001>
+                    </Questions>
+                </id001011>
+                <id001012 ask="亲人或朋友疏远我" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS11">
+                    <Questions condition="退出评估">
+                        <id001012001 goto="['','id999']"> </id001012001>
+                    </Questions>
+                </id001012>
+                <id001013 ask="领导很少与我商量一些事" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS12">
+                    <Questions condition="退出评估">
+                        <id001013001 goto="['','id999']"> </id001013001>
+                    </Questions>
+                </id001013>
+                <id001014 ask="战友或同志说我缺少同情心" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS13">
+                    <Questions condition="退出评估">
+                        <id001014001 goto="['','id999']"> </id001014001>
+                    </Questions>
+                </id001014>
+                <id001015 ask="我与邻居的互助情况" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS14">
+                    <Questions condition="退出评估">
+                        <id001015001 goto="['','id999']"> </id001015001>
+                    </Questions>
+                </id001015>
+                <id001016 ask="志愿参加群众团体(如党、团等)组织活动" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS15">
+                    <Questions condition="退出评估">
+                        <id001016001 goto="['','id999']"> </id001016001>
+                    </Questions>
+                </id001016>
+                <id001017 ask="遇到急难时，得不到别人经济上的支持" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS16">
+                    <Questions condition="退出评估">
+                        <id001017001 goto="['','id999']"> </id001017001>
+                    </Questions>
+                </id001017>
+                <id001018 ask="参加娱乐活动" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS17">
+                    <Questions condition="退出评估">
+                        <id001018001 goto="['','id999']"> </id001018001>
+                    </Questions>
+                </id001018>
+                <id001019 ask="与同事或战友互相来往" field="" face='{"type":"radioBox","list":["没有","有时","经常"],"breakReturn":"退出评估"}' value="" ds="" table=""  variable="SocialSS18">
+                    <Questions condition="退出评估">
+                        <id001019001 goto="['','id999']"> </id001019001>
+                    </Questions>
+                </id001019>
+                <id001020 ask='$FUN$SocialSupportScale?{
+                    "s1":"#_SocialSS01_#","s2":"#_SocialSS02_#","s3":"#_SocialSS03_#","s4":"#_SocialSS04_#","s5":"#_SocialSS05_#","s6":"#_SocialSS06_#","s7":"#_SocialSS07_#","s8":"#_SocialSS08_#","s9":"#_SocialSS09_#",
+                    "s10":"#_SocialSS10_#","s11":"#_SocialSS11_#","s12":"#_SocialSS12_#","s13":"#_SocialSS13_#","s14":"#_SocialSS14_#","s15":"#_SocialSS15_#","s16":"#_SocialSS16_#","s17":"#_SocialSS17_#","s18":"#_SocialSS18_#",
+                    "Words":"您本次社会支持评定的结果是%s分。谢谢您的参与！"}$FUN$' field="" face='{"type": "msg"}' value="" ds="" table="" />
+            </Questions>
+            <Questions condition="下次再来">
+                <id001021 ask="好的，欢迎下次再来参与调查。" field="" face='{"type": "msg"}' value="" ds="" table=""  variable="SocialSS18"></id001021>
+            </Questions>
+            <Questions condition="退出评估">
+                <id001022 goto="['','id999']"> </id001022>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>

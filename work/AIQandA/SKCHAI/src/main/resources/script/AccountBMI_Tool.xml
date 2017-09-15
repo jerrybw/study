@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataScripts title="计算身体健康指数脚本" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="建议您测一测您身体健康指数（BMI），如何？" field="" face='{"type":"radioBox","list":["测BMI","不测"]}' value="" ds="" table="">
+            <Questions condition="测BMI">
+                <id001001 ask="请问您的身高是多少厘米(cm)？" field="" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出BMI"}' value="" ds="" table="" variable="myHeight">
+                    <Questions condition="退出BMI">
+                        <id001001001 goto='["","id999"]'></id001001001>
+                    </Questions>
+                </id001001>
+                <id001002 ask="请问您的体重是多少公斤(kg)？" field="" face='{"type":"lineEdit","property":{"type":""},"breakReturn":"退出BMI"}' value="" ds="" table="" variable="myWeight">
+                    <Questions condition="退出BMI">
+                        <id001002001 goto='["","id999"]'></id001002001>
+                    </Questions>
+                </id001002> 
+                <id001003 ask='$FUN$mainQuestionBMIAskByheight_weight?{"height"="#_myHeight_#","weight":"$_answer.value_$"}$FUN$' field="" face='{"type": "msg"}' value="" ds="" table=""></id001003>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>

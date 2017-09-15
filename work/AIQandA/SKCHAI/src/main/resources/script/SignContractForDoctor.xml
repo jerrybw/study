@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataScripts title="签约医生脚本" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="您需要签约您的家庭医生才能得到更多的服务，现在答约吗？" field="" face='{"type":"radioBox","list":["签约","不签约"]}' value="" ds="" table="">
+            <Questions condition="签约">
+                <id001002 ask="请选择您的常住地址" field="" face='{"type":"radioBox","list":[$GET$http://101.200.44.115:2500/LocationUrl/patient/FindRelation?{userId:$_userId_$}$GET$],"breakReturn":"退出签约"}' value="" ds="" table=""></id001002>
+                <id001003 ask="您可以在地图上选择一个社区卫生服务中心" field="" face='{"type":"radioBox","icon":"","list":[$GET$http://101.200.44.115:2500/LocationUrl/patient/FindRelation?{"userId":"$_userId_$"}$GET$],"breakReturn":"退出签约"}' value="社区卫生服务中心" ds="" table=""></id001003>
+                <id001004 ask="已选择卫生机构：$_answer.value_$，现在可以签约" field="" face='{"type":"radioBox","list":["现在签约"],"breakReturn":"退出签约"}' value="社区卫生服务中心" ds="" table=""></id001004>
+                <id001005 ask="用户信息 用户协议" field="" face='{"type":"radioBox","list":["同意"],"breakReturn":"退出签约"}'>
+                    <Questions condition="同意">
+                        <id001005001 ask='$GET$http://101.200.44.115:2500/LocationUrl/patientDoctor/AddPatientDoctor?{"userId":"$_userId_$"}$GET$' field="" face='{"type": "msg"}' value="" table=""></id001005001>
+                    </Questions>
+                </id001005>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>

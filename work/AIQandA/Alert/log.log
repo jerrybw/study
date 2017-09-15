@@ -1,0 +1,133 @@
+2017-09-14 11:14:16.528  INFO 22912 --- [main] com.jerry.work.AlertApplication          : Starting AlertApplication on DESKTOP-DD2G69R with PID 22912 (G:\work\java\AIQandA\Alert\target\classes started by XX in G:\work\java\AIQandA\Alert)
+2017-09-14 11:14:16.530  INFO 22912 --- [main] com.jerry.work.AlertApplication          : The following profiles are active: dev
+2017-09-14 11:14:16.571  INFO 22912 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@667a738: startup date [Thu Sep 14 11:14:16 CST 2017]; root of context hierarchy
+2017-09-14 11:14:18.827  INFO 22912 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8082 (http)
+2017-09-14 11:14:18.839  INFO 22912 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-14 11:14:18.840  INFO 22912 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-14 11:14:18.983  INFO 22912 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/alert]  : Initializing Spring embedded WebApplicationContext
+2017-09-14 11:14:18.983  INFO 22912 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2414 ms
+2017-09-14 11:14:19.184  INFO 22912 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-14 11:14:19.188  INFO 22912 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-14 11:14:19.189  INFO 22912 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-14 11:14:19.189  INFO 22912 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-14 11:14:19.189  INFO 22912 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-14 11:14:20.417  INFO 22912 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2017-09-14 11:14:20.431  INFO 22912 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2017-09-14 11:14:20.495  INFO 22912 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-14 11:14:20.497  INFO 22912 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-14 11:14:20.499  INFO 22912 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-14 11:14:20.537  INFO 22912 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-14 11:14:21.386  INFO 22912 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-14 11:14:21.806  INFO 22912 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-14 11:14:22.231  INFO 22912 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2017-09-14 11:14:22.244  INFO 22912 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'secondaryPersistenceUnit'
+2017-09-14 11:14:22.245  INFO 22912 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: secondaryPersistenceUnit
+	...]
+2017-09-14 11:14:22.264  INFO 22912 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-14 11:14:22.301  INFO 22912 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-14 11:14:22.780  INFO 22912 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'secondaryPersistenceUnit'
+2017-09-14 11:14:23.332  INFO 22912 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@667a738: startup date [Thu Sep 14 11:14:16 CST 2017]; root of context hierarchy
+2017-09-14 11:14:23.410  INFO 22912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/alertMsg],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.AlertController.saveAlertMsg(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-09-14 11:14:23.412  INFO 22912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-14 11:14:23.412  INFO 22912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-14 11:14:23.437  INFO 22912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:14:23.437  INFO 22912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:14:23.471  INFO 22912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:14:23.504  INFO 22912 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2017-09-14 11:14:23.714  INFO 22912 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-14 11:14:23.757  INFO 22912 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8082 (http)
+2017-09-14 11:14:23.762  INFO 22912 --- [main] com.jerry.work.AlertApplication          : Started AlertApplication in 7.554 seconds (JVM running for 8.001)
+2017-09-14 11:14:24.815  INFO 22912 --- [Timer-0] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-09-14 11:21:20.769  INFO 22736 --- [main] com.jerry.work.AlertApplication          : Starting AlertApplication on DESKTOP-DD2G69R with PID 22736 (G:\work\java\AIQandA\Alert\target\classes started by XX in G:\work\java\AIQandA\Alert)
+2017-09-14 11:21:20.772  INFO 22736 --- [main] com.jerry.work.AlertApplication          : The following profiles are active: dev
+2017-09-14 11:21:20.829  INFO 22736 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@667a738: startup date [Thu Sep 14 11:21:20 CST 2017]; root of context hierarchy
+2017-09-14 11:21:22.657  INFO 22736 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8082 (http)
+2017-09-14 11:21:22.670  INFO 22736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-14 11:21:22.671  INFO 22736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-14 11:21:22.812  INFO 22736 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/alert]  : Initializing Spring embedded WebApplicationContext
+2017-09-14 11:21:22.812  INFO 22736 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1986 ms
+2017-09-14 11:21:23.047  INFO 22736 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-14 11:21:23.052  INFO 22736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-14 11:21:23.052  INFO 22736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-14 11:21:23.053  INFO 22736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-14 11:21:23.053  INFO 22736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-14 11:21:24.452  INFO 22736 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2017-09-14 11:21:24.466  INFO 22736 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2017-09-14 11:21:24.531  INFO 22736 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-14 11:21:24.532  INFO 22736 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-14 11:21:24.533  INFO 22736 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-14 11:21:24.569  INFO 22736 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-14 11:21:25.637  INFO 22736 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-14 11:21:26.043  INFO 22736 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-14 11:21:26.553  INFO 22736 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2017-09-14 11:21:26.566  INFO 22736 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'secondaryPersistenceUnit'
+2017-09-14 11:21:26.567  INFO 22736 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: secondaryPersistenceUnit
+	...]
+2017-09-14 11:21:26.587  INFO 22736 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-14 11:21:26.615  INFO 22736 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-14 11:21:27.061  INFO 22736 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'secondaryPersistenceUnit'
+2017-09-14 11:21:27.691  INFO 22736 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@667a738: startup date [Thu Sep 14 11:21:20 CST 2017]; root of context hierarchy
+2017-09-14 11:21:27.775  INFO 22736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/alertMsg],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.AlertController.saveAlertMsg(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-09-14 11:21:27.777  INFO 22736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-14 11:21:27.777  INFO 22736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-14 11:21:27.808  INFO 22736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:21:27.809  INFO 22736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:21:27.864  INFO 22736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:21:27.887  INFO 22736 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2017-09-14 11:21:28.063  INFO 22736 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-14 11:21:28.116  INFO 22736 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8082 (http)
+2017-09-14 11:21:28.121  INFO 22736 --- [main] com.jerry.work.AlertApplication          : Started AlertApplication in 7.713 seconds (JVM running for 8.312)
+2017-09-14 11:21:29.143  INFO 22736 --- [Timer-0] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-09-14 11:22:09.179  INFO 22736 --- [Timer-0] com.jerry.work.service.AlertService      : 向oBJDwwrzO7guEV4rqLdSu3Mk1ajQ发微信提醒半开会。
+2017-09-14 11:22:09.768  INFO 22736 --- [Timer-0] com.jerry.work.service.AlertService      : 向oBJDwwrzO7guEV4rqLdSu3Mk1ajQ发ims提醒1970-01-01 08:10:00半开会。
+2017-09-14 11:22:09.865  INFO 22736 --- [Timer-0] com.jerry.work.service.AlertService      : 向oBJDwwrzO7guEV4rqLdSu3Mk1ajQ发sms提醒1970-01-01 08:10:00半开会。
+2017-09-14 11:27:34.062  INFO 5860 --- [main] com.jerry.work.AlertApplication          : Starting AlertApplication on DESKTOP-DD2G69R with PID 5860 (G:\work\java\AIQandA\Alert\target\classes started by XX in G:\work\java\AIQandA\Alert)
+2017-09-14 11:27:34.065  INFO 5860 --- [main] com.jerry.work.AlertApplication          : The following profiles are active: dev
+2017-09-14 11:27:34.113  INFO 5860 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@667a738: startup date [Thu Sep 14 11:27:34 CST 2017]; root of context hierarchy
+2017-09-14 11:27:35.969  INFO 5860 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8082 (http)
+2017-09-14 11:27:35.985  INFO 5860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-14 11:27:35.986  INFO 5860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-14 11:27:36.127  INFO 5860 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/alert]  : Initializing Spring embedded WebApplicationContext
+2017-09-14 11:27:36.128  INFO 5860 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2019 ms
+2017-09-14 11:27:36.336  INFO 5860 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-14 11:27:36.340  INFO 5860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-14 11:27:36.340  INFO 5860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-14 11:27:36.340  INFO 5860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-14 11:27:36.341  INFO 5860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-14 11:27:37.520  INFO 5860 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2017-09-14 11:27:37.536  INFO 5860 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2017-09-14 11:27:37.607  INFO 5860 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-14 11:27:37.609  INFO 5860 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-14 11:27:37.611  INFO 5860 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-14 11:27:37.649  INFO 5860 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-14 11:27:38.722  INFO 5860 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-14 11:27:39.078  INFO 5860 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-14 11:27:39.525  INFO 5860 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2017-09-14 11:27:39.542  INFO 5860 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'secondaryPersistenceUnit'
+2017-09-14 11:27:39.543  INFO 5860 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: secondaryPersistenceUnit
+	...]
+2017-09-14 11:27:39.568  INFO 5860 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-14 11:27:39.610  INFO 5860 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-14 11:27:40.016  INFO 5860 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'secondaryPersistenceUnit'
+2017-09-14 11:27:40.589  INFO 5860 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@667a738: startup date [Thu Sep 14 11:27:34 CST 2017]; root of context hierarchy
+2017-09-14 11:27:40.654  INFO 5860 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/alertMsg],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.AlertController.saveAlertMsg(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-09-14 11:27:40.656  INFO 5860 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-14 11:27:40.657  INFO 5860 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-14 11:27:40.679  INFO 5860 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:27:40.680  INFO 5860 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:27:40.709  INFO 5860 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-14 11:27:40.729  INFO 5860 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2017-09-14 11:27:40.871  INFO 5860 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-14 11:27:40.922  INFO 5860 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8082 (http)
+2017-09-14 11:27:40.926  INFO 5860 --- [main] com.jerry.work.AlertApplication          : Started AlertApplication in 7.194 seconds (JVM running for 7.657)
+2017-09-14 11:27:41.947  INFO 5860 --- [Timer-0] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-09-14 11:27:46.957  INFO 5860 --- [Timer-0] com.jerry.work.service.AlertService      : php数据库中 向100000379发ims提醒2017-09-01 14:38:00开会

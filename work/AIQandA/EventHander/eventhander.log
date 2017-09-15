@@ -1,0 +1,793 @@
+2017-09-12 14:44:31.364  INFO 50628 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 50628 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-12 14:44:31.366  INFO 50628 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-12 14:44:31.412  INFO 50628 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Tue Sep 12 14:44:31 CST 2017]; root of context hierarchy
+2017-09-12 14:44:33.299  INFO 50628 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-12 14:44:33.325  INFO 50628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-12 14:44:33.326  INFO 50628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-12 14:44:33.500  INFO 50628 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-12 14:44:33.500  INFO 50628 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2090 ms
+2017-09-12 14:44:33.715  INFO 50628 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-12 14:44:33.719  INFO 50628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-12 14:44:33.720  INFO 50628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-12 14:44:33.721  INFO 50628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-12 14:44:33.721  INFO 50628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-12 14:44:34.072  INFO 50628 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Tue Sep 12 14:44:31 CST 2017]; root of context hierarchy
+2017-09-12 14:44:34.166  INFO 50628 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String)
+2017-09-12 14:44:34.168  INFO 50628 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-12 14:44:34.169  INFO 50628 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-12 14:44:34.244  INFO 50628 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-12 14:44:34.245  INFO 50628 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-12 14:44:34.288  INFO 50628 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-12 14:44:35.260  INFO 50628 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-12 14:44:35.393  INFO 50628 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-12 14:44:35.472  INFO 50628 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.422 seconds (JVM running for 4.897)
+2017-09-12 14:48:55.062  INFO 50628 --- [http-nio-8081-exec-2] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-12 14:48:55.063  INFO 50628 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-12 14:48:55.097  INFO 50628 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2017-09-12 14:48:55.361 ERROR 50628 --- [http-nio-8081-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/eventhander] threw exception [Request processing failed; nested exception is net.sf.json.JSONException: Unquotted string 'onCreateServicePackGroup'] with root cause
+
+net.sf.json.JSONException: Unquotted string 'onCreateServicePackGroup'
+	at net.sf.json.util.JSONTokener.nextValue(JSONTokener.java:460) ~[json-lib-2.2.3-jdk15.jar:na]
+	at net.sf.json.JSONObject._fromJSONTokener(JSONObject.java:1147) ~[json-lib-2.2.3-jdk15.jar:na]
+	at net.sf.json.JSONObject._fromString(JSONObject.java:1337) ~[json-lib-2.2.3-jdk15.jar:na]
+	at net.sf.json.JSONObject.fromObject(JSONObject.java:187) ~[json-lib-2.2.3-jdk15.jar:na]
+	at net.sf.json.JSONObject.fromObject(JSONObject.java:156) ~[json-lib-2.2.3-jdk15.jar:na]
+	at com.jerry.work.service.EventHandleService.handEvent(EventHandleService.java:19) ~[classes/:na]
+	at com.jerry.work.controller.EventHandleController.sendServicePackAlert(EventHandleController.java:19) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2017-09-12 14:49:20.349  INFO 50628 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGrouptoId = 300servicePackName = 北京儿童医院青少年体重健康管理服务包
+2017-09-12 14:49:21.843  INFO 50628 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","answer":"成功"}
+2017-09-12 14:53:44.401  INFO 50628 --- [http-nio-8081-exec-5] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGrouptoId = 231servicePackName = 北京儿童医院青少年体重健康管理服务包
+2017-09-12 14:53:44.637  INFO 50628 --- [http-nio-8081-exec-5] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","answer":"成功"}
+2017-09-12 15:11:11.552  INFO 71968 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 71968 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-12 15:11:11.554  INFO 71968 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-12 15:11:11.608  INFO 71968 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Tue Sep 12 15:11:11 CST 2017]; root of context hierarchy
+2017-09-12 15:11:13.458  INFO 71968 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-12 15:11:13.478  INFO 71968 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-12 15:11:13.482  INFO 71968 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-12 15:11:13.691  INFO 71968 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-12 15:11:13.691  INFO 71968 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2086 ms
+2017-09-12 15:11:13.977  INFO 71968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-12 15:11:13.981  INFO 71968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-12 15:11:13.982  INFO 71968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-12 15:11:13.982  INFO 71968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-12 15:11:13.983  INFO 71968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-12 15:11:14.267  INFO 71968 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Tue Sep 12 15:11:11 CST 2017]; root of context hierarchy
+2017-09-12 15:11:14.324  INFO 71968 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-12 15:11:14.329  INFO 71968 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-12 15:11:14.330  INFO 71968 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-12 15:11:14.354  INFO 71968 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-12 15:11:14.354  INFO 71968 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-12 15:11:14.384  INFO 71968 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-12 15:11:14.884  INFO 71968 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-12 15:11:14.931  INFO 71968 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-12 15:11:14.934  INFO 71968 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 3.688 seconds (JVM running for 4.047)
+2017-09-12 15:12:11.812  INFO 71968 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-12 15:12:11.813  INFO 71968 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-12 15:12:11.842  INFO 71968 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-09-12 15:12:11.986  INFO 71968 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCOTOR&toId = 231&servicePackName = 北京儿童医院青少年体重健康管理服务包
+2017-09-12 15:12:13.425  INFO 71968 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","msg":"成功"}
+2017-09-15 09:31:36.069  INFO 20240 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 20240 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 09:31:36.087  INFO 20240 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 09:31:36.128  INFO 20240 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 09:31:36 CST 2017]; root of context hierarchy
+2017-09-15 09:31:38.051  INFO 20240 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 09:31:38.064  INFO 20240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 09:31:38.066  INFO 20240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 09:31:38.194  INFO 20240 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 09:31:38.194  INFO 20240 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2069 ms
+2017-09-15 09:31:38.433  INFO 20240 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 09:31:38.437  INFO 20240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 09:31:38.438  INFO 20240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 09:31:38.438  INFO 20240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 09:31:38.438  INFO 20240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 09:31:38.858  INFO 20240 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 09:31:36 CST 2017]; root of context hierarchy
+2017-09-15 09:31:38.921  INFO 20240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 09:31:38.923  INFO 20240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 09:31:38.924  INFO 20240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 09:31:38.945  INFO 20240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:31:38.946  INFO 20240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:31:38.979  INFO 20240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:31:39.731  INFO 20240 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 09:31:39.780  INFO 20240 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 09:31:39.784  INFO 20240 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.188 seconds (JVM running for 4.926)
+2017-09-15 09:31:48.470  INFO 20240 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 09:31:48.470  INFO 20240 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 09:31:48.501  INFO 20240 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2017-09-15 09:31:48.631  INFO 20240 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&toId = 231&servicePackName = 北京儿童医院青少年体重健康管理服务包
+2017-09-15 09:31:50.060  INFO 20240 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：
+2017-09-15 09:32:35.013  INFO 20240 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&toId = 231&servicePackName = 北京儿童医院青少年体重健康管理服务包
+2017-09-15 09:32:35.270  INFO 20240 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：
+2017-09-15 09:36:49.819  INFO 20240 --- [http-nio-8081-exec-4] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&toId = 231&servicePackName = 北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】
+2017-09-15 09:36:49.836  INFO 20240 --- [http-nio-8081-exec-4] c.jerry.work.service.EventHandleService  : 返回结果：
+2017-09-15 09:36:56.628  INFO 31596 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 31596 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 09:36:56.631  INFO 31596 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 09:36:56.677  INFO 31596 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 09:36:56 CST 2017]; root of context hierarchy
+2017-09-15 09:36:58.627  INFO 31596 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 09:36:58.639  INFO 31596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 09:36:58.641  INFO 31596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 09:36:58.766  INFO 31596 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 09:36:58.766  INFO 31596 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2091 ms
+2017-09-15 09:36:58.971  INFO 31596 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 09:36:58.976  INFO 31596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 09:36:58.976  INFO 31596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 09:36:58.976  INFO 31596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 09:36:58.977  INFO 31596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 09:36:59.292  INFO 31596 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 09:36:56 CST 2017]; root of context hierarchy
+2017-09-15 09:36:59.350  INFO 31596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 09:36:59.352  INFO 31596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 09:36:59.353  INFO 31596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 09:36:59.376  INFO 31596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:36:59.376  INFO 31596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:36:59.407  INFO 31596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:37:00.011  INFO 31596 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 09:37:00.066  INFO 31596 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 09:37:00.070  INFO 31596 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 3.777 seconds (JVM running for 4.207)
+2017-09-15 09:37:19.557  INFO 31596 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 09:37:19.558  INFO 31596 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 09:37:19.589  INFO 31596 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2017-09-15 09:37:19.724  INFO 31596 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&toId = 231&servicePackName = 北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】
+2017-09-15 09:37:20.650  INFO 31596 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","msg":"成功"}
+2017-09-15 09:37:47.913  INFO 24944 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 24944 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 09:37:47.918  INFO 24944 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 09:37:47.988  INFO 24944 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:37:47 CST 2017]; root of context hierarchy
+2017-09-15 09:37:50.396  INFO 24944 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 09:37:50.414  INFO 24944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 09:37:50.416  INFO 24944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 09:37:50.583  INFO 24944 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 09:37:50.584  INFO 24944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2599 ms
+2017-09-15 09:37:51.287  INFO 24944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 09:37:51.298  INFO 24944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 09:37:51.299  INFO 24944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 09:37:51.299  INFO 24944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 09:37:51.300  INFO 24944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 09:37:51.773  INFO 24944 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:37:47 CST 2017]; root of context hierarchy
+2017-09-15 09:37:51.844  INFO 24944 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 09:37:51.847  INFO 24944 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 09:37:51.847  INFO 24944 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 09:37:51.880  INFO 24944 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:37:51.880  INFO 24944 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:37:51.917  INFO 24944 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:37:52.751  INFO 24944 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 09:37:52.830  INFO 24944 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 09:37:52.836  INFO 24944 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 5.51 seconds (JVM running for 6.293)
+2017-09-15 09:39:54.115  INFO 29180 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 29180 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 09:39:54.118  INFO 29180 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 09:39:54.256  INFO 29180 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:39:54 CST 2017]; root of context hierarchy
+2017-09-15 09:39:56.375  INFO 29180 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 09:39:56.426  INFO 29180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 09:39:56.427  INFO 29180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 09:39:56.741  INFO 29180 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 09:39:56.742  INFO 29180 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2489 ms
+2017-09-15 09:39:57.138  INFO 29180 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 09:39:57.144  INFO 29180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 09:39:57.145  INFO 29180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 09:39:57.145  INFO 29180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 09:39:57.214  INFO 29180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 09:39:58.045  INFO 29180 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:39:54 CST 2017]; root of context hierarchy
+2017-09-15 09:39:58.144  INFO 29180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 09:39:58.148  INFO 29180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 09:39:58.150  INFO 29180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 09:39:58.206  INFO 29180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:39:58.207  INFO 29180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:39:58.341  INFO 29180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:39:59.765  INFO 29180 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 09:39:59.854  INFO 29180 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 09:39:59.859  INFO 29180 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 6.266 seconds (JVM running for 6.826)
+2017-09-15 09:40:02.408  INFO 29180 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 09:40:02.408  INFO 29180 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 09:40:02.442  INFO 29180 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2017-09-15 09:40:02.546  INFO 29180 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:40:03.552  INFO 29180 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","msg":"成功"}
+2017-09-15 09:40:12.193  INFO 29180 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:43:30.175  INFO 29180 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","msg":"成功"}
+2017-09-15 09:43:31.687  INFO 28156 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 28156 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 09:43:31.690  INFO 28156 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 09:43:31.774  INFO 28156 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:43:31 CST 2017]; root of context hierarchy
+2017-09-15 09:43:34.160  INFO 28156 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 09:43:34.186  INFO 28156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 09:43:34.187  INFO 28156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 09:43:34.517  INFO 28156 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 09:43:34.517  INFO 28156 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2745 ms
+2017-09-15 09:43:34.808  INFO 28156 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 09:43:34.820  INFO 28156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 09:43:34.821  INFO 28156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 09:43:34.821  INFO 28156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 09:43:34.861  INFO 28156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 09:43:35.242  INFO 28156 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:43:31 CST 2017]; root of context hierarchy
+2017-09-15 09:43:35.316  INFO 28156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 09:43:35.320  INFO 28156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 09:43:35.321  INFO 28156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 09:43:35.353  INFO 28156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:43:35.353  INFO 28156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:43:35.438  INFO 28156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:43:36.758  INFO 28156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 09:43:36.857  INFO 28156 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 09:43:36.876  INFO 28156 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 5.765 seconds (JVM running for 6.378)
+2017-09-15 09:43:52.976  INFO 28156 --- [http-nio-8081-exec-10] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 09:43:52.977  INFO 28156 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 09:43:53.011  INFO 28156 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2017-09-15 09:43:53.110  INFO 28156 --- [http-nio-8081-exec-10] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:43:57.519 ERROR 28156 --- [http-nio-8081-exec-10] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:43:57.523  INFO 28156 --- [http-nio-8081-exec-10] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:44:39.594  INFO 28156 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:45:10.675 ERROR 28156 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:45:10.675  INFO 28156 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:45:34.639  INFO 28156 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:45:44.801 ERROR 28156 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:45:44.802  INFO 28156 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:46:17.142  INFO 28156 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:50:11.178 ERROR 28156 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:50:11.179  INFO 28156 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:51:24.120  INFO 15244 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 15244 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 09:51:24.125  INFO 15244 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 09:51:24.199  INFO 15244 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:51:24 CST 2017]; root of context hierarchy
+2017-09-15 09:51:26.747  INFO 15244 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 09:51:26.794  INFO 15244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 09:51:26.796  INFO 15244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 09:51:26.991  INFO 15244 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 09:51:26.992  INFO 15244 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2795 ms
+2017-09-15 09:51:27.381  INFO 15244 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 09:51:27.386  INFO 15244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 09:51:27.386  INFO 15244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 09:51:27.386  INFO 15244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 09:51:27.387  INFO 15244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 09:51:27.882  INFO 15244 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:51:24 CST 2017]; root of context hierarchy
+2017-09-15 09:51:27.964  INFO 15244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 09:51:27.967  INFO 15244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 09:51:27.968  INFO 15244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 09:51:28.003  INFO 15244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:51:28.003  INFO 15244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:51:28.119  INFO 15244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:51:29.452  INFO 15244 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 09:51:29.527  INFO 15244 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 09:51:29.531  INFO 15244 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 5.79 seconds (JVM running for 6.298)
+2017-09-15 09:51:34.180  INFO 15244 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 09:51:34.181  INFO 15244 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 09:51:34.218  INFO 15244 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2017-09-15 09:51:34.330  INFO 15244 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:51:37.175 ERROR 15244 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:51:37.179  INFO 15244 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:51:47.727  INFO 15244 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:51:59.810 ERROR 15244 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:51:59.811  INFO 15244 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:52:07.468  INFO 15244 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:54:08.975 ERROR 15244 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:54:08.976  INFO 15244 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:54:26.565  INFO 31948 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 31948 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 09:54:26.569  INFO 31948 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 09:54:26.658  INFO 31948 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:54:26 CST 2017]; root of context hierarchy
+2017-09-15 09:54:28.835  INFO 31948 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 09:54:28.880  INFO 31948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 09:54:28.881  INFO 31948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 09:54:29.183  INFO 31948 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 09:54:29.183  INFO 31948 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2528 ms
+2017-09-15 09:54:29.597  INFO 31948 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 09:54:29.601  INFO 31948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 09:54:29.602  INFO 31948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 09:54:29.602  INFO 31948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 09:54:29.602  INFO 31948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 09:54:30.346  INFO 31948 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:54:26 CST 2017]; root of context hierarchy
+2017-09-15 09:54:30.425  INFO 31948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 09:54:30.428  INFO 31948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 09:54:30.429  INFO 31948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 09:54:30.464  INFO 31948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:54:30.464  INFO 31948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:54:30.507  INFO 31948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:54:31.561  INFO 31948 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 09:54:31.893  INFO 31948 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 09:54:31.920  INFO 31948 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 5.738 seconds (JVM running for 6.252)
+2017-09-15 09:54:37.717  INFO 31948 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 09:54:37.718  INFO 31948 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 09:54:37.752  INFO 31948 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2017-09-15 09:54:37.849  INFO 31948 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:54:40.558 ERROR 31948 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:54:40.563  INFO 31948 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:54:44.933  INFO 31948 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:54:57.379 ERROR 31948 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : java.lang.reflect.InvocationTargetException
+2017-09-15 09:54:57.380  INFO 31948 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 09:55:35.316  INFO 32432 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 32432 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 09:55:35.319  INFO 32432 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 09:55:35.422  INFO 32432 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:55:35 CST 2017]; root of context hierarchy
+2017-09-15 09:55:37.505  INFO 32432 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 09:55:37.603  INFO 32432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 09:55:37.605  INFO 32432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 09:55:37.898  INFO 32432 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 09:55:37.898  INFO 32432 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2478 ms
+2017-09-15 09:55:38.281  INFO 32432 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 09:55:38.287  INFO 32432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 09:55:38.287  INFO 32432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 09:55:38.287  INFO 32432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 09:55:38.288  INFO 32432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 09:55:38.968  INFO 32432 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 09:55:35 CST 2017]; root of context hierarchy
+2017-09-15 09:55:39.042  INFO 32432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 09:55:39.044  INFO 32432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 09:55:39.045  INFO 32432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 09:55:39.080  INFO 32432 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:55:39.080  INFO 32432 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:55:39.123  INFO 32432 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 09:55:40.060  INFO 32432 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 09:55:40.151  INFO 32432 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 09:55:40.188  INFO 32432 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 5.272 seconds (JVM running for 5.766)
+2017-09-15 09:56:15.906  INFO 32432 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 09:56:15.907  INFO 32432 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 09:56:15.945  INFO 32432 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2017-09-15 09:56:16.058  INFO 32432 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+toId:"231"
+}
+2017-09-15 09:56:18.692  INFO 32432 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"501","msg":"查询不到此服务包，请验证服务包名称是否正确"}
+2017-09-15 10:35:07.174  INFO 1928 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 1928 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 10:35:07.177  INFO 1928 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 10:35:07.228  INFO 1928 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 10:35:07 CST 2017]; root of context hierarchy
+2017-09-15 10:35:09.109  INFO 1928 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 10:35:09.132  INFO 1928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 10:35:09.135  INFO 1928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 10:35:09.371  INFO 1928 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 10:35:09.371  INFO 1928 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2146 ms
+2017-09-15 10:35:09.722  INFO 1928 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 10:35:09.726  INFO 1928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 10:35:09.762  INFO 1928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 10:35:09.763  INFO 1928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 10:35:09.763  INFO 1928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 10:35:10.232  INFO 1928 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 10:35:07 CST 2017]; root of context hierarchy
+2017-09-15 10:35:10.288  INFO 1928 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 10:35:10.291  INFO 1928 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 10:35:10.292  INFO 1928 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 10:35:10.316  INFO 1928 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 10:35:10.316  INFO 1928 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 10:35:10.347  INFO 1928 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 10:35:10.865  INFO 1928 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 10:35:10.912  INFO 1928 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 10:35:10.915  INFO 1928 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.064 seconds (JVM running for 4.491)
+2017-09-15 10:35:33.984  INFO 1928 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 10:35:33.984  INFO 1928 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 10:35:34.017  INFO 1928 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2017-09-15 10:35:34.040  INFO 1928 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+servicePackName:"105",
+toId:"231"
+}
+2017-09-15 10:35:34.157  INFO 1928 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"JSONObject[\"servicePackId\"] not found.","msg":"null"}
+2017-09-15 10:36:10.830  INFO 1928 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+servicePackId:"105",
+toId:"231"
+}
+2017-09-15 10:36:10.836  INFO 1928 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"Invalid bound statement (not found): com.jerry.work.mapper.ServicePackAlertMapper.findServicePackAlertByEventAndServicePackId","msg":"null"}
+2017-09-15 10:36:57.036  INFO 32352 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 32352 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 10:36:57.045  INFO 32352 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 10:36:57.178  INFO 32352 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 10:36:57 CST 2017]; root of context hierarchy
+2017-09-15 10:36:59.354  INFO 32352 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 10:36:59.449  INFO 32352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 10:36:59.451  INFO 32352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 10:36:59.798  INFO 32352 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 10:36:59.798  INFO 32352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2623 ms
+2017-09-15 10:37:00.097  INFO 32352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 10:37:00.101  INFO 32352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 10:37:00.102  INFO 32352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 10:37:00.102  INFO 32352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 10:37:00.102  INFO 32352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 10:37:00.422  INFO 32352 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 10:36:57 CST 2017]; root of context hierarchy
+2017-09-15 10:37:00.490  INFO 32352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 10:37:00.492  INFO 32352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 10:37:00.492  INFO 32352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 10:37:00.521  INFO 32352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 10:37:00.521  INFO 32352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 10:37:00.561  INFO 32352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 10:37:01.278  INFO 32352 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 10:37:01.336  INFO 32352 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 10:37:01.340  INFO 32352 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.708 seconds (JVM running for 5.244)
+2017-09-15 10:37:04.610  INFO 32352 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 10:37:04.611  INFO 32352 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 10:37:04.643  INFO 32352 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2017-09-15 10:37:04.752  INFO 32352 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = onCreateServicePackGroup&trigger=JY_DORCTOR&data = {
+servicePackName:"北京博爱医院脑卒中家庭康复服务包【课题包 非卖品】",
+servicePackId:"105",
+toId:"231"
+}
+2017-09-15 10:37:06.020  INFO 32352 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","msg":"成功"}
+2017-09-15 10:38:12.803  INFO 30936 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 30936 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 10:38:12.809  INFO 30936 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 10:38:12.868  INFO 30936 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 10:38:12 CST 2017]; root of context hierarchy
+2017-09-15 17:24:14.846  INFO 31288 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 31288 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 17:24:14.848  INFO 31288 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 17:24:14.951  INFO 31288 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 17:24:14 CST 2017]; root of context hierarchy
+2017-09-15 17:24:16.977  INFO 31288 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 17:24:16.989  INFO 31288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 17:24:16.990  INFO 31288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 17:24:17.241  INFO 31288 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 17:24:17.242  INFO 31288 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2293 ms
+2017-09-15 17:24:17.632  INFO 31288 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 17:24:17.637  INFO 31288 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 17:24:17.638  INFO 31288 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 17:24:17.638  INFO 31288 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 17:24:17.638  INFO 31288 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 17:24:18.076  INFO 31288 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 17:24:14 CST 2017]; root of context hierarchy
+2017-09-15 17:24:18.142  INFO 31288 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 17:24:18.144  INFO 31288 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findCases],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.FindCaseController.findCases(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2017-09-15 17:24:18.147  INFO 31288 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 17:24:18.147  INFO 31288 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 17:24:18.171  INFO 31288 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:24:18.172  INFO 31288 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:24:18.208  INFO 31288 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:24:18.788  INFO 31288 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 17:24:18.840  INFO 31288 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 17:24:18.843  INFO 31288 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.367 seconds (JVM running for 4.785)
+2017-09-15 17:27:16.851  INFO 31288 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 17:27:16.852  INFO 31288 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 17:27:16.883  INFO 31288 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2017-09-15 17:27:16.907  INFO 31288 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = null&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥",
+
+}
+2017-09-15 17:27:17.022  INFO 31288 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 17:27:26.067  INFO 31288 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = null&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥"
+}
+2017-09-15 17:27:26.068  INFO 31288 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 17:27:33.435  INFO 37636 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 37636 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 17:27:33.438  INFO 37636 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 17:27:33.488  INFO 37636 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:27:33 CST 2017]; root of context hierarchy
+2017-09-15 17:27:35.606  INFO 37636 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 17:27:35.619  INFO 37636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 17:27:35.620  INFO 37636 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 17:27:35.945  INFO 37636 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 17:27:35.945  INFO 37636 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2460 ms
+2017-09-15 17:27:36.395  INFO 37636 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 17:27:36.400  INFO 37636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 17:27:36.400  INFO 37636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 17:27:36.400  INFO 37636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 17:27:36.401  INFO 37636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 17:27:36.766  INFO 37636 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:27:33 CST 2017]; root of context hierarchy
+2017-09-15 17:27:36.844  INFO 37636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 17:27:36.846  INFO 37636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findCases],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.FindCaseController.findCases(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2017-09-15 17:27:36.850  INFO 37636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 17:27:36.850  INFO 37636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 17:27:36.886  INFO 37636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:27:36.887  INFO 37636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:27:36.937  INFO 37636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:27:38.315  INFO 37636 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 17:27:38.448  INFO 37636 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 17:27:38.459  INFO 37636 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 5.425 seconds (JVM running for 5.9)
+2017-09-15 17:28:08.688  INFO 37636 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 17:28:08.688  INFO 37636 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 17:28:08.725  INFO 37636 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2017-09-15 17:28:08.836  INFO 37636 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = null&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥"
+}
+2017-09-15 17:28:08.883  INFO 37636 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 17:28:42.052  INFO 37636 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = null&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥"
+}
+2017-09-15 17:29:19.252  INFO 37636 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 17:29:24.687  INFO 37636 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 参数：event = onIssueCase&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥"
+}
+2017-09-15 17:29:30.125  INFO 37636 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"403","msg":"json参数data解析错误，请检查参数是否正确"}
+2017-09-15 17:29:39.105  INFO 37636 --- [http-nio-8081-exec-4] c.jerry.work.service.EventHandleService  : 参数：event = onIssueCase&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥"
+}
+2017-09-15 17:30:22.585  INFO 37636 --- [http-nio-8081-exec-4] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"403","msg":"json参数data解析错误，请检查参数是否正确"}
+2017-09-15 17:30:25.700  INFO 37636 --- [http-nio-8081-exec-5] c.jerry.work.service.EventHandleService  : 参数：event = onIssueCase&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥",
+type:"1"
+}
+2017-09-15 17:30:28.964  INFO 37636 --- [http-nio-8081-exec-5] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","msg":"成功"}
+2017-09-15 17:33:40.125  INFO 7580 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 7580 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 17:33:40.128  INFO 7580 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 17:33:40.225  INFO 7580 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:33:40 CST 2017]; root of context hierarchy
+2017-09-15 17:33:42.218  INFO 7580 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 17:33:42.232  INFO 7580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 17:33:42.233  INFO 7580 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 17:33:42.589  INFO 7580 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 17:33:42.589  INFO 7580 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2366 ms
+2017-09-15 17:33:43.038  INFO 7580 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 17:33:43.042  INFO 7580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 17:33:43.043  INFO 7580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 17:33:43.043  INFO 7580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 17:33:43.044  INFO 7580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 17:33:43.743  INFO 7580 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:33:40 CST 2017]; root of context hierarchy
+2017-09-15 17:33:43.822  INFO 7580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 17:33:43.823  INFO 7580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findCases],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.FindCaseController.findCases(java.lang.String) throws java.lang.Exception
+2017-09-15 17:33:43.828  INFO 7580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 17:33:43.828  INFO 7580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 17:33:43.855  INFO 7580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:33:43.855  INFO 7580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:33:43.894  INFO 7580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:33:44.204  INFO 7580 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 17:33:44.263  INFO 7580 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 17:33:44.267  INFO 7580 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.677 seconds (JVM running for 5.183)
+2017-09-15 17:33:51.545  INFO 7580 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 17:33:51.545  INFO 7580 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 17:33:51.579  INFO 7580 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2017-09-15 17:39:28.305  INFO 38092 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 38092 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 17:39:28.310  INFO 38092 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 17:39:28.411  INFO 38092 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:39:28 CST 2017]; root of context hierarchy
+2017-09-15 17:39:30.203  INFO 38092 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 17:39:30.218  INFO 38092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 17:39:30.219  INFO 38092 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 17:39:30.387  INFO 38092 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 17:39:30.387  INFO 38092 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1979 ms
+2017-09-15 17:39:30.636  INFO 38092 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 17:39:30.641  INFO 38092 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 17:39:30.642  INFO 38092 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 17:39:30.642  INFO 38092 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 17:39:30.643  INFO 38092 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 17:39:31.432  INFO 38092 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:39:28 CST 2017]; root of context hierarchy
+2017-09-15 17:39:31.525  INFO 38092 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 17:39:31.527  INFO 38092 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findCases],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.FindCaseController.findCases(java.lang.String) throws java.lang.Exception
+2017-09-15 17:39:31.531  INFO 38092 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 17:39:31.531  INFO 38092 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 17:39:31.561  INFO 38092 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:39:31.562  INFO 38092 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:39:31.613  INFO 38092 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:39:31.971  INFO 38092 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 17:39:32.040  INFO 38092 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 17:39:32.045  INFO 38092 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.202 seconds (JVM running for 4.743)
+2017-09-15 17:40:07.989  INFO 38092 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 17:40:07.989  INFO 38092 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 17:40:08.025  INFO 38092 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-09-15 17:42:22.799  INFO 33684 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 33684 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 17:42:22.802  INFO 33684 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 17:42:22.855  INFO 33684 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:42:22 CST 2017]; root of context hierarchy
+2017-09-15 17:42:24.965  INFO 33684 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 17:42:24.979  INFO 33684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 17:42:24.980  INFO 33684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 17:42:25.122  INFO 33684 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 17:42:25.122  INFO 33684 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2270 ms
+2017-09-15 17:42:25.384  INFO 33684 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 17:42:25.389  INFO 33684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 17:42:25.389  INFO 33684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 17:42:25.390  INFO 33684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 17:42:25.390  INFO 33684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 17:42:26.230  INFO 33684 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:42:22 CST 2017]; root of context hierarchy
+2017-09-15 17:42:26.324  INFO 33684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 17:42:26.325  INFO 33684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findCases],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.FindCaseController.findCases(java.lang.String) throws java.lang.Exception
+2017-09-15 17:42:26.329  INFO 33684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 17:42:26.329  INFO 33684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 17:42:26.358  INFO 33684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:42:26.358  INFO 33684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:42:26.395  INFO 33684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:42:26.709  INFO 33684 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 17:42:26.771  INFO 33684 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 17:42:26.775  INFO 33684 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.352 seconds (JVM running for 4.854)
+2017-09-15 17:42:29.609  INFO 33684 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 17:42:29.610  INFO 33684 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 17:42:29.647  INFO 33684 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2017-09-15 17:44:22.188  INFO 38820 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 38820 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 17:44:22.191  INFO 38820 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 17:44:22.333  INFO 38820 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:44:22 CST 2017]; root of context hierarchy
+2017-09-15 17:44:24.482  INFO 38820 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 17:44:24.619  INFO 38820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 17:44:24.620  INFO 38820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 17:44:24.882  INFO 38820 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 17:44:24.882  INFO 38820 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2552 ms
+2017-09-15 17:44:25.171  INFO 38820 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 17:44:25.176  INFO 38820 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 17:44:25.177  INFO 38820 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 17:44:25.177  INFO 38820 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 17:44:25.177  INFO 38820 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 17:44:26.230  INFO 38820 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 17:44:22 CST 2017]; root of context hierarchy
+2017-09-15 17:44:26.346  INFO 38820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 17:44:26.348  INFO 38820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findCases],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.FindCaseController.findCases(java.lang.String) throws java.lang.Exception
+2017-09-15 17:44:26.352  INFO 38820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 17:44:26.353  INFO 38820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 17:44:26.393  INFO 38820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:44:26.394  INFO 38820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:44:26.445  INFO 38820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 17:44:27.356  INFO 38820 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 17:44:27.506  INFO 38820 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 17:44:27.513  INFO 38820 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 5.736 seconds (JVM running for 6.228)
+2017-09-15 17:44:32.094  INFO 38820 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 17:44:32.094  INFO 38820 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 17:44:32.131  INFO 38820 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-09-15 17:45:16.115  INFO 34872 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 34872 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 17:45:16.118  INFO 34872 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 17:45:16.193  INFO 34872 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b53e23f: startup date [Fri Sep 15 17:45:16 CST 2017]; root of context hierarchy
+2017-09-15 18:42:17.017  INFO 42572 --- [main] com.jerry.work.EventHanderApplication    : Starting EventHanderApplication on DESKTOP-DD2G69R with PID 42572 (G:\work\java\AIQandA\EventHander\target\classes started by XX in G:\work\java\AIQandA\EventHander)
+2017-09-15 18:42:17.020  INFO 42572 --- [main] com.jerry.work.EventHanderApplication    : The following profiles are active: dev
+2017-09-15 18:42:17.083  INFO 42572 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 18:42:17 CST 2017]; root of context hierarchy
+2017-09-15 18:42:19.178  INFO 42572 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 18:42:19.215  INFO 42572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-15 18:42:19.232  INFO 42572 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-15 18:42:19.552  INFO 42572 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring embedded WebApplicationContext
+2017-09-15 18:42:19.553  INFO 42572 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2473 ms
+2017-09-15 18:42:20.033  INFO 42572 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 18:42:20.039  INFO 42572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 18:42:20.039  INFO 42572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 18:42:20.040  INFO 42572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 18:42:20.040  INFO 42572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 18:42:20.849  INFO 42572 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a18644: startup date [Fri Sep 15 18:42:17 CST 2017]; root of context hierarchy
+2017-09-15 18:42:20.976  INFO 42572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/handEvent],methods=[POST]}" onto public java.lang.String com.jerry.work.controller.EventHandleController.sendServicePackAlert(java.lang.String,java.lang.String,java.lang.String)
+2017-09-15 18:42:20.980  INFO 42572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findCases],methods=[POST]}" onto public java.lang.Object com.jerry.work.controller.FindCaseController.findCases(java.lang.String) throws java.lang.Exception
+2017-09-15 18:42:20.987  INFO 42572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 18:42:20.987  INFO 42572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 18:42:21.022  INFO 42572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 18:42:21.022  INFO 42572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 18:42:21.076  INFO 42572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 18:42:21.407  INFO 42572 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 18:42:21.468  INFO 42572 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 18:42:21.472  INFO 42572 --- [main] com.jerry.work.EventHanderApplication    : Started EventHanderApplication in 4.84 seconds (JVM running for 5.31)
+2017-09-15 18:42:39.106  INFO 42572 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/eventhander]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 18:42:39.106  INFO 42572 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 18:42:39.146  INFO 42572 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2017-09-15 18:42:39.241  INFO 42572 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 参数：event = null&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥啊啊"
+}
+2017-09-15 18:42:40.984  INFO 42572 --- [http-nio-8081-exec-1] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 18:42:44.791  INFO 42572 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 参数：event = null&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥啊啊"
+}
+2017-09-15 18:43:02.483  INFO 42572 --- [http-nio-8081-exec-2] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"500","msg":"系统异常"}
+2017-09-15 18:43:05.366  INFO 42572 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 参数：event = onIssueCase&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥啊啊"
+}
+2017-09-15 18:43:08.365  INFO 42572 --- [http-nio-8081-exec-3] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"403","msg":"json参数data解析错误，请检查参数是否正确"}
+2017-09-15 18:43:16.026  INFO 42572 --- [http-nio-8081-exec-4] c.jerry.work.service.EventHandleService  : 参数：event = onIssueCase&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥啊啊"
+}
+2017-09-15 18:43:43.845  INFO 42572 --- [http-nio-8081-exec-4] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"403","msg":"json参数data解析错误，请检查参数是否正确"}
+2017-09-15 18:43:48.491  INFO 42572 --- [http-nio-8081-exec-5] c.jerry.work.service.EventHandleService  : 参数：event = onIssueCase&trigger=JY_DORCTOR&data = {
+groupId:"231",
+userId:"100000379",
+url:"www.baidu.com",
+servicePackId:"105",
+issuerId:"100000001",
+issueTime:"2017-09-15 08:08:08",
+caseName:"是说啥啊啊",
+type="1"
+}
+2017-09-15 18:43:52.027  INFO 42572 --- [http-nio-8081-exec-5] c.jerry.work.service.EventHandleService  : 返回结果：{"code":"1","msg":"成功"}

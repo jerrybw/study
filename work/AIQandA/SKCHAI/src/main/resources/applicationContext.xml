@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"  xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/jdbc 
+       http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+	<context:component-scan base-package="com.skch.bean"></context:component-scan>
+	<context:property-placeholder location="classpath:dbConfig.properties" />
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<!-- 日志中打印异常信息 -->
+		<property name="warnLogCategory">
+			<value>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver
+			</value>
+		</property>
+	</bean>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${driverClassName}" />
+		<property name="jdbcUrl" value="${url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxStatements" value="1000"/>  
+		<property name="checkoutTimeout" value="10000"/>  
+	</bean>
+
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
+	</bean>
+	<!-- 	存储对话实现类      -->
+	<bean id="aiDialogsService" class="com.skch.service.impl.AIDialogServiceImpl">
+	</bean>
+	
+	<!-- 	主流程实现类      -->
+	<bean id="mainService" class="com.skch.service.impl.AIMainServiceImpl">
+	</bean>
+	
+	<!-- 	处理方法实现类      -->
+	<bean id="methodService" class="com.skch.service.impl.AIMethodServiceImpl">
+	</bean>
+	
+	<!-- 	处理属性实现类      -->
+	<bean id="variableService" class="com.skch.service.impl.AIVariableServiceImpl">
+	</bean>
+	
+	<!-- 	处理脚本栈实现类      -->
+	<bean id="stackService" class="com.skch.service.impl.AIStackServiceImpl">
+	</bean>
+	
+	<bean id="scriptsService" class="com.skch.service.impl.AIScriptsServiceImpl">
+	</bean>
+
+	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.skch.mapper"/>
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean" />
+	</bean>
+
+
+</beans>

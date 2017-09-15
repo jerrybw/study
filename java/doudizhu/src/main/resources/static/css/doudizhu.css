@@ -1,26 +1,85 @@
-﻿.wallpapers {
+﻿body{
+    padding: 0;
+    margin: 0 auto;
+    /*text-align: center;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: Center;*/
+}
+.wallpapers {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    min-width: 1000px;
+    /*min-width: 1000px;*/
     z-index: -10;
     background: url('/img/background.jpg');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #E2EBF8;
+    /*background-color: red;*/
 }
 
 .gameScope{
-    margin: auto;
+    /*margin: auto;*/
     z-index: 1;
     height: 750px;
     width: 1300px;
-    background: url('/img/table.jpg');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
     border: 1px solid black;
+    background-color: blue;
+}
+.body{
+    margin: 0 auto;
+    padding: 0;
+    /*text-align: center;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: Center;*/
+}
+.robot1Scope{
+    float: left;
+    top: 0px;
+    z-index: 2;
+    height: 500px;
+    width: 400px;
+}
+.robot2Scope{
+    float: left;
+    top: 0px;
+    z-index: 2;
+    height: 500px;
+    width: 400px;
+}
+.tableScope{
+    float :left;
+    top: 0px;
+    z-index: 2;
+    height: 500px;
+    width: 500px;
+}
+.playerScope{
+    position: relative;
+    top: 500px;
+    z-index: 2;
+    height: 250px;
+    width: 1300px;
+}
+.controlBtn{
+    position: relative;
+    top: 50px;
+    left: 600px;
+    z-index: 3;
+    height: auto;
+    width: auto;
+}
+.startBtn{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 4;
+    background-color: #E2EBF8;
+    height: 30px;
+    width: 70px;
 }

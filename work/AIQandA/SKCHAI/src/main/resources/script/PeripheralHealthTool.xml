@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataScripts title="周边健康脚本" attribute="" struct="导医">
+    <DataSources>
+        <userDb dsn=""/>
+    </DataSources>
+    <Questions condition="">
+        <id001 ask="要不要看一看您的周边有哪些药店、医院、诊所等等医疗健康服务？" field="" face='{"type":"radioBox","list":["看一看","不看"]}' value="" ds="" table="">
+            <Questions condition="看一看">
+                <id001001 ask="" field="" face='{"type":"radioBox","list":["医院","药店","诊所","其它"],"breakReturn"="退出周边健康"}' value="" ds="" table="">
+                    <Questions condition="药店">
+                        <id001001001 ask="" field="" face='{"type":"location","icon":"","longitude":"","latitude":"","place":""}'  value="药店"  ds="" table=""></id001001001> 
+                        <id001001002 goto='["","id001001"]'></id001001002>
+                    </Questions>
+                    <Questions condition="医院">
+                        <id001001003 ask="" field="" face='{"type":"location","icon":"","longitude":"","latitude":"","place":""}'  value="医院"  ds="" table=""></id001001003> 
+                        <id001001004 goto='["","id001001"]'></id001001004>
+                    </Questions>
+                    <Questions condition="诊所">
+                        <id001001005 ask="" field="" face='{"type":"location","icon":"","longitude":"","latitude":"","place":""}'  value="诊所"  ds="" table=""></id001001005> 
+                        <id001001006 goto='["","id001001"]'></id001001006>
+                    </Questions>
+                    <Questions condition="其它">
+                        <id001001007 ask="请输入关键词（如：养生）" field="" face='{"type":"lineEdit","property":{"type":""}}'  value=""  ds="" table=""></id001001007> 
+                        <id001001008 ask="" field="" face='{"type":"location","icon":"","longitude":"","latitude":"","place":""}'  value="$_answer.value_$"  ds="" table=""></id001001008> 
+                        <id001001009 goto='["","id001001"]'></id001001009>
+                    </Questions>
+                    <Questions condition="退出周边健康">
+                        <id001001010 goto='["","id999"]'></id001001010>
+                    </Questions>
+                </id001001>
+            </Questions>
+        </id001>
+    </Questions>
+</DataScripts>
