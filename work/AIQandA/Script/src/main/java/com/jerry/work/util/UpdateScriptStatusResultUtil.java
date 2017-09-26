@@ -19,6 +19,7 @@ public class UpdateScriptStatusResultUtil {
         codeMsg.put("501", "script脚本名异常");
         codeMsg.put("500", "系统异常");
         codeMsg.put("503", "数据库中未查找到数据，请检查参数是否正确");
+        codeMsg.put("504", "修改任务状态失败");
     }
 
     public static String handResult(String code, String result) {

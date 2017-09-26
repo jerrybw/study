@@ -13,4 +13,8 @@ import java.util.Map;
 public interface ServicePackAlertMapper {
 
     List<ServicePackAlert> findServicePackAlertByEventAndServicePackId(Map<String, String> param);
+
+    ServicePackAlert findById(String id);
+
+    ServicePackAlert findById(int id);
 }

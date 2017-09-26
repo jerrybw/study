@@ -22,18 +22,24 @@ public class EventHandleService {
         logger.info("参数：event = " +event + "&trigger=" + trigger + "&data = " + data);
         Class<?> clazz = null;
         String code = "1";
+        Object result = "";
+        String resultStr = "";
         try {
-            clazz = Class.forName("com.jerry.work.service.HandEventService." + event);
+            clazz = Class.forName("com.jerry.work.service.HandEventService." + event.trim());
             Object instance = clazz.newInstance();
             Method getResult = clazz.getDeclaredMethod("handEvent", String.class,String.class,String.class);
             getResult.setAccessible(true);
-            getResult.invoke(instance, event,trigger, data);
+            result = getResult.invoke(instance, event,trigger, data);
         }catch (InvocationTargetException e) {
             code = e.getTargetException().getMessage();
         }catch (Exception e){
             code = "500";
         }
-        String resultStr = ResultUtil.handResult(code);
+        if(result == null || result.toString().equals("")){
+            resultStr = ResultUtil.handResult(code);
+        }else {
+            resultStr = ResultUtil.handResultWithReturn(code,result.toString());
+        }
         logger.info("返回结果：" + resultStr);
         return resultStr;
     }

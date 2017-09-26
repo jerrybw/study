@@ -13,5 +13,7 @@ import java.util.Map;
 public interface ResultMapper {
     int updateResultByUserIdAndMethod(Map<String, Object> param);
 
+    Result findByResultByUserIdAndMethod(Map<String, Object> param);
+
     Result getResultByUserIdAndMethodAndServicePackIdAndIssueTime(Map<String, Object> param);
 }

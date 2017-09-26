@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.skch.dao.FormItemMapper">
+
+    <select id="findByFormName" resultType="t_form_item">
+        SELECT * FROM t_forms,t_form_item WHERE t_forms.id = t_form_item.form_id AND  t_forms.name = #{formName}
+    </select>
+
+</mapper>

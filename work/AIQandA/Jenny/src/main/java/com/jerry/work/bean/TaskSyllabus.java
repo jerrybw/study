@@ -14,21 +14,8 @@ public class TaskSyllabus {
     private String taskStatus;//任务状态  目前分为三种 ： 未开始  进行中  已完成
     private String taskResult;//任务结果
     private String jenny;//管理人
+    private String groupId;
 
-    @Override
-    public String toString() {
-        return "TaskSyllabus{" +
-                "id=" + id +
-                ", userId='" + userId + '\'' +
-                ", taskNumber=" + taskNumber +
-                ", taskId=" + taskId +
-                ", start=" + start +
-                ", end=" + end +
-                ", taskStatus='" + taskStatus + '\'' +
-                ", taskResult='" + taskResult + '\'' +
-                ", jenny='" + jenny + '\'' +
-                '}';
-    }
 
     public Integer getId() {
         return id;
@@ -100,6 +87,14 @@ public class TaskSyllabus {
 
     public void setJenny(String jenny) {
         this.jenny = jenny;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
     }
 
     public TaskSyllabus() {

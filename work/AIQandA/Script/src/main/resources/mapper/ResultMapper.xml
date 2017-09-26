@@ -9,8 +9,14 @@
     </select>
 
     <update id="updateResultByUserIdAndMethod">
-        UPDATE t_result SET group_id = #{groupId},issue_time= #{issueTime},service_pack_id=#{servicePackId},issuer_id = #{issueId} WHERE id = (
+        UPDATE t_result SET group_id = #{groupId},issue_time= #{issueTime},service_pack_id=#{servicePackId},issuer_id = #{issuerId} WHERE id = (
 	    SELECT a.id FROM (SELECT tr.id FROM t_result tr, t_forms tf WHERE tr.form_name = tf.name AND tf.method
 	    = #{method} AND user_id = #{userId}ORDER BY create_time DESC LIMIT 1)a)
     </update>
+
+    <select id="findByResultByUserIdAndMethod" resultType="result">
+        SELECT * from t_result WHERE id = (
+        SELECT a.id FROM (SELECT tr.id FROM t_result tr, t_forms tf WHERE tr.form_name = tf.name AND tf.method
+        = #{method} AND user_id = #{userId}ORDER BY create_time DESC LIMIT 1)a)
+    </select>
 </mapper>

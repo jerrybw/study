@@ -9,18 +9,17 @@ public class Task {
     private String taskName;//任务名称
     private String taskContent;//任务内容
     private String handMethod;//处理方法
-    private String param;//参数
-
-    @Override
-    public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", taskName='" + taskName + '\'' +
-                ", taskContent='" + taskContent + '\'' +
-                ", handMethod='" + handMethod + '\'' +
-                ", param='" + param + '\'' +
-                '}';
-    }
+    private Integer tmp;
+    private Integer imToP;
+    private String tmpId;
+    private String first;
+    private String url;
+    private String keyWords;
+    private String remark;
+    private String imToPMsg;
+    private String servicePackId;
+    private Integer imToG;
+    private String imToGMsg;
 
     public Integer getId() {
         return id;
@@ -54,12 +53,94 @@ public class Task {
         this.handMethod = handMethod;
     }
 
-    public String getParam() {
-        return param;
+    public Integer getTmp() {
+        return tmp;
     }
 
-    public void setParam(String param) {
-        this.param = param;
+    public void setTmp(Integer tmp) {
+        this.tmp = tmp;
+    }
+
+    public Integer getImToP() {
+        return imToP;
+    }
+
+    public void setImToP(Integer imToP) {
+        this.imToP = imToP;
+    }
+
+    public String getImToPMsg() {
+        return imToPMsg;
+    }
+
+    public void setImToPMsg(String imToPMsg) {
+        this.imToPMsg = imToPMsg;
+    }
+
+    public Integer getImToG() {
+        return imToG;
+    }
+
+    public void setImToG(Integer imToG) {
+        this.imToG = imToG;
+    }
+
+    public String getImToGMsg() {
+        return imToGMsg;
+    }
+
+    public void setImToGMsg(String imToGMsg) {
+        this.imToGMsg = imToGMsg;
+    }
+
+    public String getTmpId() {
+        return tmpId;
+    }
+
+    public void setTmpId(String tmpId) {
+        this.tmpId = tmpId;
+    }
+
+    public String getFirst() {
+        return first;
+    }
+
+    public void setFirst(String first) {
+        this.first = first;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getKeyWords() {
+        return keyWords;
+    }
+
+    public void setKeyWords(String keyWords) {
+        this.keyWords = keyWords;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+
+
+    public String getServicePackId() {
+        return servicePackId;
+    }
+
+    public void setServicePackId(String servicePackId) {
+        this.servicePackId = servicePackId;
     }
 
     public Task() {

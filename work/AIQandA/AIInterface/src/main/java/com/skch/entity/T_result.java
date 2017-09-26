@@ -22,6 +22,42 @@ public class T_result {
     private String formPurpose;//评估目的
     private String result;//评估结果
     private String MongoDB;//mongodb存储位置
+    private String issueTime;//推送时间
+    private String issuerId;//推送时间
+    private String servicePackId;
+    private String groupId;
+
+    public String getIssueTime() {
+        return issueTime;
+    }
+
+    public void setIssueTime(String issueTime) {
+        this.issueTime = issueTime;
+    }
+
+    public String getIssuerId() {
+        return issuerId;
+    }
+
+    public void setIssuerId(String issuerId) {
+        this.issuerId = issuerId;
+    }
+
+    public String getServicePackId() {
+        return servicePackId;
+    }
+
+    public void setServicePackId(String servicePackId) {
+        this.servicePackId = servicePackId;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
 
     public Integer getId() {
         return id;

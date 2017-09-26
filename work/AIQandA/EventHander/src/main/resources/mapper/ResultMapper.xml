@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.jerry.work.mapper.ResultMapper">
+    <select id="getResultByUserIdAndMethodAndServicePackIdAndIssueTime" resultType="result">
+        SELECT create_time,form_name,form_purpose,tr.id ,issuer_id,issue_time,mongodb,
+        result,result,service_pack_id,user_id,user_name,group_id FROM t_result tr, t_forms tf WHERE form_name
+        = name AND method = #{method} AND user_id=#{userId} AND service_pack_id = #{servicePackId} AND issue_time = #{issueTime}
+    </select>
+
+    <update id="updateResultByUserIdAndMethod">
+        UPDATE t_result SET group_id = #{groupId},issue_time= #{issueTime},service_pack_id=#{servicePackId},issuer_id = #{issueId} WHERE id = (
+	    SELECT a.id FROM (SELECT tr.id FROM t_result tr, t_forms tf WHERE tr.form_name = tf.name AND tf.method
+	    = #{method} AND user_id = #{userId}ORDER BY create_time DESC LIMIT 1)a)
+    </update>
+
+    <select id="findByResultByUserIdAndMethod" resultType="result">
+        SELECT * from t_result WHERE id = (
+        SELECT a.id FROM (SELECT tr.id FROM t_result tr, t_forms tf WHERE tr.form_name = tf.name AND tf.method
+        = #{method} AND user_id = #{userId}ORDER BY create_time DESC LIMIT 1)a)
+    </select>
+</mapper>

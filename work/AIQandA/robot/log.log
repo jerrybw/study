@@ -10994,3 +10994,125 @@ net.sf.json.JSONException: Expected a ',' or '}' at character 58 of {'code':'1',
                     "userTitle":""
             }
 2017-09-14 11:57:34.932  INFO 7040 --- [http-nio-8080-exec-4] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"提醒创建成功！\n--------------------\n主题：提醒我开会\n时间：2017-09-14 17:00:00\n\n<a href="http://d.china-healthcare.cn/Appointment/appointmentRemind/appointment_id/645/uid/11">点击这里</a>，可以进一步设置该提醒 "}
+2017-09-22 14:10:09.939  INFO 121052 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 121052 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-22 14:10:09.965  INFO 121052 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-22 14:10:10.150  INFO 121052 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c372fe6: startup date [Fri Sep 22 14:10:10 CST 2017]; root of context hierarchy
+2017-09-22 14:10:10.398  INFO 121052 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/apache-tomcat-8.0.41/webapps2/conf/datasource.properties] not resolvable: \application\apache-tomcat-8.0.41\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-22 14:10:10.399  INFO 121052 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-22 14:10:12.619  INFO 121052 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-22 14:10:12.645  INFO 121052 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-22 14:10:12.646  INFO 121052 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-22 14:10:12.810  INFO 121052 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-22 14:10:12.810  INFO 121052 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2663 ms
+2017-09-22 14:10:13.242  INFO 121052 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-22 14:10:13.247  INFO 121052 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-22 14:10:13.248  INFO 121052 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-22 14:10:13.248  INFO 121052 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-22 14:10:13.248  INFO 121052 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-22 14:10:13.398  INFO 121052 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-22 14:10:13.900  INFO 121052 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-22 14:10:13.915  INFO 121052 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-22 14:10:13.995  INFO 121052 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-22 14:10:13.997  INFO 121052 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-22 14:10:13.998  INFO 121052 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-22 14:10:14.064  INFO 121052 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-22 14:10:14.367  INFO 121052 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-22 14:10:14.844  INFO 121052 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-22 14:10:15.321  INFO 121052 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-22 14:10:16.231  INFO 121052 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c372fe6: startup date [Fri Sep 22 14:10:10 CST 2017]; root of context hierarchy
+2017-09-22 14:10:16.312  INFO 121052 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-22 14:10:16.315  INFO 121052 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-22 14:10:16.316  INFO 121052 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-22 14:10:16.349  INFO 121052 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-22 14:10:16.350  INFO 121052 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-22 14:10:16.396  INFO 121052 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-22 14:10:16.759  INFO 121052 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-22 14:10:16.819  INFO 121052 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-22 14:10:16.824  INFO 121052 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 7.521 seconds (JVM running for 9.173)
+2017-09-22 14:10:28.543  INFO 121052 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-22 14:10:28.543  INFO 121052 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-22 14:10:28.583  INFO 121052 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2017-09-22 14:10:28.669  INFO 121052 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "预约本"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000379",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_DOCTOR",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-22 14:10:29.044  INFO 121052 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : &打开预约本
+2017-09-22 14:10:29.066  INFO 121052 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-09-22 14:10:29.297  INFO 121052 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : Goto{id=10, property='打开预约本', subject='&打开预约本', script='', askId='', value='', weixin='http://d.china-healthcare.cn/Appointment/index', prompt='点此打开预约本'}
+2017-09-22 14:10:29.298  INFO 121052 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"<a href=\'http://d.china-healthcare.cn/Appointment/index?userId=100000379&script=&askId=&value=\'>点此打开预约本</a>"}
+2017-09-22 15:29:21.546  INFO 123416 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 123416 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-22 15:29:21.550  INFO 123416 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-22 15:29:21.670  INFO 123416 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c372fe6: startup date [Fri Sep 22 15:29:21 CST 2017]; root of context hierarchy
+2017-09-22 15:29:21.815  INFO 123416 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/apache-tomcat-8.0.41/webapps2/conf/datasource.properties] not resolvable: \application\apache-tomcat-8.0.41\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-22 15:29:21.815  INFO 123416 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-22 15:29:23.630  INFO 123416 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-22 15:29:23.646  INFO 123416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-22 15:29:23.647  INFO 123416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-22 15:29:23.810  INFO 123416 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-22 15:29:23.811  INFO 123416 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2143 ms
+2017-09-22 15:29:24.039  INFO 123416 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-22 15:29:24.043  INFO 123416 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-22 15:29:24.044  INFO 123416 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-22 15:29:24.044  INFO 123416 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-22 15:29:24.044  INFO 123416 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-22 15:29:24.152  INFO 123416 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-22 15:29:24.714  INFO 123416 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-22 15:29:24.729  INFO 123416 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-22 15:29:24.799  INFO 123416 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-22 15:29:24.801  INFO 123416 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-22 15:29:24.802  INFO 123416 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-22 15:29:24.854  INFO 123416 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-22 15:29:25.186  INFO 123416 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-22 15:29:25.663  INFO 123416 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-22 15:29:26.066  INFO 123416 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-22 15:29:27.033  INFO 123416 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c372fe6: startup date [Fri Sep 22 15:29:21 CST 2017]; root of context hierarchy
+2017-09-22 15:29:27.148  INFO 123416 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-22 15:29:27.151  INFO 123416 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-22 15:29:27.152  INFO 123416 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-22 15:29:27.211  INFO 123416 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-22 15:29:27.212  INFO 123416 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-22 15:29:27.280  INFO 123416 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-22 15:29:27.628  INFO 123416 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-22 15:29:27.692  INFO 123416 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-22 15:29:27.698  INFO 123416 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 6.997 seconds (JVM running for 7.553)
+2017-09-22 15:29:41.663  INFO 123416 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-22 15:29:41.664  INFO 123416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-22 15:29:41.700  INFO 123416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-09-22 15:29:41.756  INFO 123416 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "预约本"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000379",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_DOCTOR",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-22 15:29:42.074  INFO 123416 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : &打开预约本
+2017-09-22 15:29:42.108  INFO 123416 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-09-22 15:29:42.351  INFO 123416 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : Goto{id=10, property='打开预约本', subject='&打开预约本', script='', askId='', value='', weixin='http://d.china-healthcare.cn/Appointment/index', prompt='点此打开预约本'}
+2017-09-22 15:29:42.352  INFO 123416 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"<a href="http://d.china-healthcare.cn/Appointment/index?userId=100000379&script=&askId=&value=">点此打开预约本</a>"}

@@ -3,6 +3,7 @@ package com.jerry.work.controller;
 import com.jerry.work.bean.ServicePackTask;
 import com.jerry.work.excrption.EventException;
 import com.jerry.work.mapper.ServicePackTaskMapper;
+import com.jerry.work.service.HandEventService.FindCasesService;
 import com.jerry.work.util.ResultUtil;
 import com.jerry.work.util.SpringUtil;
 import net.sf.json.JSONArray;
@@ -23,12 +24,14 @@ import java.util.List;
 public class FindCaseController {
 
     @Autowired
-    private ServicePackTaskMapper servicePackTaskMapper;
+    private FindCasesService findCasesService;
+
+
 
     @PostMapping("/findCases")
     public Object findCases(String groupId) throws Exception {
         String code = "1";
-        List<ServicePackTask> servicePackTasks = servicePackTaskMapper.findServicePackTaskByGroupId(groupId);
+        List<ServicePackTask> servicePackTasks = findCasesService.findCases(groupId);
         if(servicePackTasks == null || servicePackTasks.size() <= 0){
             code = "402";
             return ResultUtil.handResult(code);
@@ -40,6 +43,6 @@ public class FindCaseController {
             code = "500";
             return ResultUtil.handResult(code);
         }
-        return ResultUtil.handFindCaseResult(code,object.toString());
+        return ResultUtil.handResultWithReturn(code,object.toString());
     }
 }

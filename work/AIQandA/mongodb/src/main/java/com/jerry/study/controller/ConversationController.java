@@ -12,6 +12,7 @@ import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +31,9 @@ import static com.jerry.study.util.SendResult.*;
  */
 @RestController
 public class ConversationController {
+
+    @Value("#{url}")
+    private String url;
 
     @Autowired
     ConversationRepository conversationRepository;
@@ -137,7 +141,7 @@ public class ConversationController {
         String data = getData(conversation);
         String result = "";
         if(!"".equals(data)) {
-            result = HttpRequest.sendPost("http://101.200.44.115:2503/robot/ask", "jsonstr={\n" +
+            result = HttpRequest.sendPost(url, "jsonstr={\n" +
                     "                    \"questionId\": \"111\",\n" +
                     "                    \"question\": \"\",\n" +
                     "                    \"answer\": {\n" +

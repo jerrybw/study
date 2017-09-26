@@ -15,6 +15,9 @@ public class SendResult {
 
     public static final String ADD_URL = "http://d.china-healthcare.cn/app/jk/id/JL100";
     private static Logger logger = Logger.getLogger(SendResult.class);
+    private static long sendTime = 0;
+    private static String sendId = "";
+    private static String receiveId = "";
 
     /**
      * 实现家医中对话的接口
@@ -24,7 +27,15 @@ public class SendResult {
      * @param body
      * @param type
      */
-    public static void sendWord(String fromId, String toId, String body, String type) throws Exception{
+    public static void sendWord(String fromId, String toId, String body, String type,long timeStamp) throws Exception{
+
+        if(timeStamp - sendTime <= 1000 && fromId.equals(sendId)&&toId.equals(receiveId)){
+            Thread.sleep(1000);
+            timeStamp = System.currentTimeMillis();
+        }
+        sendId = fromId;
+        receiveId = toId;
+        sendTime = timeStamp;
         //创建连接
         URL url = new URL(ADD_URL);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();

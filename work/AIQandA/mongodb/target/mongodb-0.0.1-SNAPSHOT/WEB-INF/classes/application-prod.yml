@@ -3,5 +3,6 @@ spring:
     mongodb:
       uri: mongodb://skchai:skchai@101.200.44.115:3310/skchai
 logging:
-  file: /application/tomcat/webapps2/log/mongodb.log
+  file: /application/tomcat/webapps2/log/mongodb/mongodb.log
   level: debug
+url: t3.china-healthcare.cn:2503/robot/ask

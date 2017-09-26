@@ -1,9 +1,6 @@
 spring:
     datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url : jdbc:mysql://101.200.44.115:3306/subscribe?useUnicode=true&characterEncoding=utf-8
-      username: root
-      password: S1tdq1E2tzAyOUgb
     jpa:
       hibernate:
         ddl-auto: update
@@ -15,7 +12,7 @@ spring:
       mongodb:
         uri: mongodb://skchai:skchai@101.200.44.115:3310/skchai
 logging:
-  file: /application/apache-tomcat-8.0.41/webapps2/log/aiinterfacelog.log
+  file: /application/tomcat/webapps2/log/aiinterface/aiinterfacelog.log
 
 mybatis:
   mapper-locations: /mapper/*

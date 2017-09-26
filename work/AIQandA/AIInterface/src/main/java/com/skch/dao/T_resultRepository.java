@@ -9,4 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface T_resultRepository extends JpaRepository<T_result,Integer>{
 
     T_result findByUserIdAndFormName(String userId, String formName);
+
+
 }

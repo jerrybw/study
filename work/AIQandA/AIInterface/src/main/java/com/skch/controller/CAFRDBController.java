@@ -166,6 +166,7 @@ public class CAFRDBController {
             t_user_formRepository.save(user_form);
             return getResult("next","[\'\',\'"+getValue(str,"continue")+"\']");
         }else {
+            logger.info("脚本问题问完，调用处理结果方法");
             return getResult("next","[\'\',\'"+getValue(str,"end")+"\']");
         }
     }

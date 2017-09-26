@@ -27,6 +27,8 @@ public class GetScriptStatusResultUtil {
                 ",msg:'" + codeMsg.get(code) + "'";
         if (code == "1") {
             resultJsonStr += ",result:" + result;
+        }else if(code == "0") {
+            resultJsonStr += ",userId:" + result;
         }
         resultJsonStr += "}";
         return JSONObject.fromObject(resultJsonStr).toString();

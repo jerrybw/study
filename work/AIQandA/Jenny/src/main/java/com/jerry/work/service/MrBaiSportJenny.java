@@ -37,15 +37,14 @@ public class MrBaiSportJenny {
             Integer taskId = taskSyllabus.getTaskId();
             Task task = taskMapper.findById(taskId);
             String handMethod = task.getHandMethod();
-            String data = task.getParam();
             Class clazz = null;
             Object result = null;
             try {
                 clazz = Class.forName("com.jerry.work.service.handService." + handMethod);
                 Object instance = clazz.newInstance();
-                Method getResult = clazz.getDeclaredMethod("hand", TaskSyllabus.class, String.class);
+                Method getResult = clazz.getDeclaredMethod("hand", Task.class, TaskSyllabus.class);
                 getResult.setAccessible(true);
-                result = getResult.invoke(instance, taskSyllabus,data);
+                result = getResult.invoke(instance,task, taskSyllabus);
             } catch (Exception e) {
                 e.printStackTrace();
                 logger.error("MrBaiSportJenny工作发生错误"+e.fillInStackTrace());

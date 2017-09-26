@@ -124,7 +124,7 @@ public class AskController {
         String weixin = result.getWeixin();
         String prompt = result.getPrompt();
         String value = result.getValue();
-        String url = "<a href=\\'"+weixin +"?userId="+userId+"&script="+script+"&askId="+askId+"&value="+value+"\\'>"+prompt+"</a>";
+        String url = "<a href='"+weixin +"?userId="+userId+"&script="+script+"&askId="+askId+"&value="+value+"'>"+prompt+"</a>";
         return url;
     }
 

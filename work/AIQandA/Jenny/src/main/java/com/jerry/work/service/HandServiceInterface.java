@@ -1,5 +1,6 @@
 package com.jerry.work.service;
 
+import com.jerry.work.bean.Task;
 import com.jerry.work.bean.TaskSyllabus;
 
 import java.util.Map;
@@ -9,5 +10,5 @@ import java.util.Map;
  */
 public interface HandServiceInterface {
 
-    public Object hand(TaskSyllabus taskSyllabus, String param) throws Exception;
+    public Object hand(Task task,TaskSyllabus taskSyllabus) throws Exception;
 }

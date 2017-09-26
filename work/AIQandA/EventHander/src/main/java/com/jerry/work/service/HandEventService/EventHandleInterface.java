@@ -5,5 +5,5 @@ package com.jerry.work.service.HandEventService;
  */
 public interface EventHandleInterface {
 
-    public Object handEvent(String event,String trigger,String data) throws Exception;
+    public String handEvent(String event,String trigger,String data) throws Exception;
 }
