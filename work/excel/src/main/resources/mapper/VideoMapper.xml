@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.excel.java.mapper.VideoMapper">
+    <select id="getAllVideos" resultType="video">
+        select * from video
+    </select>
+    
+    <insert id="insertVideo" parameterType="video">
+        INSERT INTO video (video_name,video_url,video_introduce,video_time,video_type,update_time)
+        VALUE (#{videoName},#{videoUrl},#{videoIntroduce},#{videoTime},#{videoType},#{updateTime})
+    </insert>
+
+</mapper>

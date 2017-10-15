@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:"/video",
+            type:"GET",
+            success:function (videos) {
+                var html ='';
+                $.each(videos,function (i,video) {
+                    var vedioType = video.videoType==1?"收费":"免费";
+                    var vedioUrl = video.videoUrl.substr(0,10) + "...";
+                    var videoTime = formatSeconds(video.videoTime);
+                    html+="<tr>"+
+                            "<td>"+video.id+"</td>"+
+                            "<td>"+video.videoName+"</td>"+
+                            "<td>"+"<a href='"+video.videoUrl+"'>"+vedioUrl+"</a>"+"</td>"+
+                            "<td>"+video.videoIntroduce+"</td>"+
+                            "<td>"+videoTime+"</td>"+
+                            "<td>"+vedioType+"</td>"+
+                            "</tr>";
+                })
+                $("#videosTab").append(html)
+            }
+        })
+    })
+    function formatSeconds(value){
+        var theSecond=parseInt(value);
+        var theMinute=0;
+        var theHour=0;
+        if(theSecond>60){
+            theMinute=parseInt(theSecond/60);
+            theSecond=parseInt(theSecond%60);
+
+            if(theMinute>60){
+                theHour=parseInt(theMinute/60);
+                theMinute = parseInt(theMinute%60);
+            }
+        }
+        var m = 0;
+        if(parseInt(theSecond) < 10){
+            m = "0"+parseInt(theSecond);
+        }else {
+            m = parseInt(theSecond);
+        }
+        var result=""+m+"秒";
+        if(theMinute>0){
+            if(theMinute <10){
+                result="0"+parseInt(theMinute)+"分"+result;
+            }else {
+                result=""+parseInt(theMinute)+"分"+result;
+            }
+        }else {
+            result="00"+"分"+result;
+        }
+        if(theHour>0){
+            if(theHour <10) {
+                result = "0" + parseInt(theHour) + "分" + result;
+            }else {
+                result=""+parseInt(theHour)+"小时"+result;
+            }
+        }else {
+            result="00"+"小时"+result;
+        }
+        return result;
+    }
+</script>
+<body>
+    <h1>视频列表</h1>
+    <div id="videosDiv">
+        <table  cellspacing="0" cellpadding="1" border="1">
+            <tbody id="videosTab">
+                <tr >
+                    <td>id</td><td>名字</td><td>地址</td><td>简介</td><td>时长</td><td>类型</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/gotoVideoUpload">上传视频</a>
+    </div>
+</body>
+</html>

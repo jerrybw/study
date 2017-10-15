@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频上传</title>
+</head>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script>
+    function myFunction(ele) {
+        $("#videoTimeDouble").val(ele.duration);
+    }
+
+    function changeFile(ele){
+        var video = ele.files[0];
+        var url = URL.createObjectURL(video);
+        document.getElementById("video").src=url;
+    }
+</script>
+<body>
+    <form enctype="multipart/form-data" action="/uploadVideo" method="post">
+        <input id = "videoTimeDouble" name="videoTimeDouble" type="hidden">
+        <video style="display:none;" controls="controls" id="video" oncanplaythrough="myFunction(this)"></video>
+        视频简介：<input name="videoIntroduce" type="text"><br>
+        视频类型：<input name="videoType" type="radio" value="1">收费 <input name="videoType" type="radio" value="0">免费<br>
+        视频：<input type="file" name="file" onchange="changeFile(this)"/><br>
+        <input type="submit" value="上传"/>
+    </form>
+</body>
+</html>
