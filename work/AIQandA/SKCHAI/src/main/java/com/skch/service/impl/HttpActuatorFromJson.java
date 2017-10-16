@@ -40,7 +40,6 @@ public class HttpActuatorFromJson implements MethodActuatorService{
 				}
 	        } 
 			try {
-				System.out.println(url);
 				returnString = requestUtil.getReturnData(url, type);
 			} catch (Exception e) {
 				e.printStackTrace();

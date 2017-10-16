@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        function GetQueryString(name)
+        {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+        }
+        $(function () {
+            var id = GetQueryString("id");
+            if(id != null){
+                $("#id").val(id);
+                $.ajax({
+                    url:"task/"+id,
+                    type:"GET",
+                    success:function (data) {
+                        $("#taskName").val(data.taskName);
+                        $("#taskContent").val(data.taskContent);
+                        $("#handMethod").val(data.handMethod);
+                        $("#tmp" + data.tmp).attr("checked","true");
+                        $("#tmpId").val(data.tmpId);
+                        $("#first").val(data.first);
+                        $("#url").val(data.url);
+                        $("#keyWords").val(data.keyWords);
+                        $("#remark").val(data.remark);
+                        $("#servicePackId").val(data.servicePackId);
+                        $("#imToP"+data.imToP).attr("checked","true");
+                        $("#imToPMsg").val(data.imToPMsg);
+                        $("#imToG" + data.imToG).attr("checked","true");
+                        $("#imToGMsg").val(data.imToGMsg);
+                    }
+                })
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="/task">
+        <form action="task" method="post">
+            <input id="id" type="hidden" name="id">
+            <div style="height: 40px">
+                任务名:
+                <input id="taskName" name="taskName" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                任务内容:
+                <input id="taskContent" name="taskContent" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                处理方法:
+                <input id="handMethod" name="handMethod" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                是否发模板消息:
+                <input id="tmp0" name="tmp" type="radio" value="0">否
+                <input id="tmp1" name="tmp" type="radio" value="1">是<br>
+            </div>
+            <div style="height: 40px">
+                模板消息id:
+                <input id="tmpId" name="tmpId" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                模板消息标题:
+                <input id="first" name="first" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                查看详情页面:
+                <input id="url" name="url" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                模板消息内容，用键值对形式存储，每对之间用英文分号分隔:; ，如：keyWord1:xxx;keyWord2:xxx:
+                <input id="keyWords" name="keyWords" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+            remark:
+                <input id="remark" name="remark" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                服务包商品id:
+                <input id="servicePackId" name="servicePackId" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                是否给人发im消息:
+                <input id="imToP0" name="imToP" type="radio" value="0">否
+                <input id="imToP1" name="imToP" type="radio" value="1">是<br>
+            </div>
+            <div style="height: 40px">
+                给人发im消息内容:
+                <input id="imToPMsg" name="imToPMsg" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                是否给群发im消息:
+                <input id="imToG0" name="imToG" type="radio" value="0">否
+                <input id="imToG1" name="imToG" type="radio" value="1">是<br>
+            </div>
+            <div style="height: 40px">
+                给群发im消息内容:
+                <input id="imToGMsg" name="imToGMsg" type="text" autocomplete>
+            </div>
+            <div style="text-align: center" >
+                <input type="submit" value="提交">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <mapper namespace="com.jerry.work.mapper.TaskSyllabusMapper">
 
     <select id="findByTaskStatusAndStartLessThanEqualAndJenny" resultType="taskSyllabus">
-        select * from ai_task_syllabus where task_status = #{taskStatus} and start &lt;= #{start} and jenny = #{jenny}
+        select * from ai_task_syllabus where task_status = #{taskStatus} and start &lt;= #{start} and jenny = #{jenny} AND status = 1
     </select>
 
     <select id="updateByUserIdAndJennyAndTaskStatusAndStartLessThanEquals" resultType="taskSyllabus">
@@ -18,5 +18,30 @@
     <select id="getGroupIdByUserIdAndJenny" resultType="string">
         SELECT group_id FROM ai_task_syllabus WHERE user_id = #{userId} AND jenny = #{jenny} GROUP BY group_id
     </select>
+
+    <update id="updateStatusByTaskId" parameterType="int">
+        UPDATE ai_task_syllabus set status = 0 WHERE task_id = #{taskId}
+    </update>
+
+    <select id="findAllTaskSyllabus" resultType="taskSyllabus">
+        select * from ai_task_syllabus where status = 1
+    </select>
+
+    <select id="findById" resultType="taskSyllabus">
+        select * from ai_task_syllabus where id = #{id}
+    </select>
+
+    <insert id="saveTaskSyllabus" parameterType="taskSyllabus">
+        INSERT INTO ai_task_syllabus (user_id,task_id,start,jenny,group_id)
+        VALUE (#{userId},#{taskId},#{start},#{jenny},#{groupId})
+    </insert>
+
+    <update id="updateTaskSyllabus" parameterType="taskSyllabus">
+        UPDATE ai_task_syllabus SET user_id = #{userId},task_id = #{taskId},start = #{start},jenny = #{jenny},group_id = #{groupId} WHERE id = #{id}
+    </update>
+
+    <update id="deleteTaskSyllabusById" parameterType="int">
+        UPDATE ai_task_syllabus SET status = 0 where id = #{id}
+    </update>
 
 </mapper>

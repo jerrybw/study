@@ -6,6 +6,7 @@ import com.skch.dao.*;
 import com.skch.entity.*;
 import com.skch.service.GetResultService;
 import com.skch.util.HttpRequest;
+import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,31 +27,33 @@ import java.util.Map;
 import static com.skch.util.JSONUtil.*;
 
 /**
+ * 此接口用于读取数据库中的评估表信息，评估项信息，用户正在评估哪张表的哪个评估项的信息
+ * 并将用户下一个评估项返回，处理评估结果返回并保存在mongodb中，并将用户每个评估项的答案存储
  * Created by XX on 2017/7/27.
  */
 @RestController
 public class CAFRDBController {
 
     @Autowired
-    private MongoDBResultRepository mongoDBResultRepository;
+    private MongoDBResultRepository mongoDBResultRepository;//操作mongodb中评估结果的数据库层
 
     @Autowired
-    private T_user_formRepository t_user_formRepository;
+    private T_user_formRepository t_user_formRepository;//操作用户当前正在评估的评估表和评估项数据表的数据库层
 
     @Autowired
-    private T_formsRepository t_formsRepository;
+    private T_formsRepository t_formsRepository;//操作评估表数据表的数据库层
 
     @Autowired
-    private T_form_itemRepository t_form_itemRepository;
+    private T_form_itemRepository t_form_itemRepository;//操作评估项数据表的数据库层
 
     @Autowired
-    private GetResultService getResultService;
+    private GetResultService getResultService;//操作评估结果的业务逻辑层
 
     @Autowired
-    private T_resultRepository t_resultRepository;
+    private T_resultRepository t_resultRepository;//操作评估结果数据表的数据库层
 
     @Autowired
-    private T_variableRepository t_variableRepository;
+    private T_variableRepository t_variableRepository;//操作用户评估项答案数据表的数据库层
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -179,7 +182,8 @@ public class CAFRDBController {
     @Transactional
     @RequestMapping("CAFRDBEvaluationResultMsg")
     public String getResultMsg(String str){
-        String userId = getValue(str,"userId");
+        JSONObject object = JSONObject.fromObject(str);
+        String userId = object.getString("userId");
         String result = "";
         try {
             T_user_form user_form = t_user_formRepository.findByUserId(userId);

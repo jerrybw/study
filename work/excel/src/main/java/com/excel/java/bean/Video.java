@@ -80,4 +80,17 @@ public class Video {
     public void setUpdateTime(long updateTime) {
         this.updateTime = updateTime;
     }
+
+    @Override
+    public String toString() {
+        return "Video{" +
+                "id=" + id +
+                ", videoName='" + videoName + '\'' +
+                ", videoUrl='" + videoUrl + '\'' +
+                ", videoIntroduce='" + videoIntroduce + '\'' +
+                ", videoTime=" + videoTime +
+                ", videoType=" + videoType +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }

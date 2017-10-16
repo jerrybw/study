@@ -15,6 +15,7 @@ public class TaskSyllabus {
     private String taskResult;//任务结果
     private String jenny;//管理人
     private String groupId;
+    private Integer status;
 
 
     public Integer getId() {
@@ -95,6 +96,14 @@ public class TaskSyllabus {
 
     public void setGroupId(String groupId) {
         this.groupId = groupId;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public TaskSyllabus() {

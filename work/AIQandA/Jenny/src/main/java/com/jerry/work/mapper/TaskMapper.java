@@ -13,4 +13,10 @@ public interface TaskMapper {
     Task findById(Integer id);
 
     List<Task> findAllTask();
+
+    int saveTask(Task task);
+
+    int updateTaskById(Task task);
+
+    int deleteTaskById(int id);
 }

@@ -11116,3 +11116,709 @@ net.sf.json.JSONException: Expected a ',' or '}' at character 58 of {'code':'1',
 2017-09-22 15:29:42.108  INFO 123416 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
 2017-09-22 15:29:42.351  INFO 123416 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : Goto{id=10, property='打开预约本', subject='&打开预约本', script='', askId='', value='', weixin='http://d.china-healthcare.cn/Appointment/index', prompt='点此打开预约本'}
 2017-09-22 15:29:42.352  INFO 123416 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"<a href="http://d.china-healthcare.cn/Appointment/index?userId=100000379&script=&askId=&value=">点此打开预约本</a>"}
+2017-09-30 11:11:17.684  INFO 17376 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 17376 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 11:11:17.704  INFO 17376 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 11:11:17.768  INFO 17376 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c372fe6: startup date [Sat Sep 30 11:11:17 CST 2017]; root of context hierarchy
+2017-09-30 11:11:18.032  INFO 17376 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 11:11:18.034  INFO 17376 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-30 11:11:20.066  INFO 17376 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-30 11:11:20.082  INFO 17376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-30 11:11:20.083  INFO 17376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-30 11:11:20.271  INFO 17376 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-30 11:11:20.271  INFO 17376 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2506 ms
+2017-09-30 11:11:20.541  INFO 17376 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-30 11:11:20.546  INFO 17376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-30 11:11:20.547  INFO 17376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-30 11:11:20.547  INFO 17376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-30 11:11:20.547  INFO 17376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-30 11:11:20.708  INFO 17376 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-30 11:11:21.220  INFO 17376 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-30 11:11:21.235  INFO 17376 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-30 11:11:21.312  INFO 17376 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-30 11:11:21.314  INFO 17376 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-30 11:11:21.315  INFO 17376 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-30 11:11:21.420  INFO 17376 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-30 11:11:21.732  INFO 17376 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-30 11:11:22.189  INFO 17376 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-30 11:11:22.703  INFO 17376 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-30 11:11:23.690  INFO 17376 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c372fe6: startup date [Sat Sep 30 11:11:17 CST 2017]; root of context hierarchy
+2017-09-30 11:11:23.778  INFO 17376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-30 11:11:23.781  INFO 17376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-30 11:11:23.782  INFO 17376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-30 11:11:23.816  INFO 17376 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 11:11:23.816  INFO 17376 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 11:11:23.875  INFO 17376 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 11:11:24.263  INFO 17376 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-30 11:11:24.330  INFO 17376 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-30 11:11:24.334  INFO 17376 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 7.441 seconds (JVM running for 8.714)
+2017-09-30 11:12:23.196  INFO 17376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-30 11:12:23.196  INFO 17376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-30 11:12:23.247  INFO 17376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 50 ms
+2017-09-30 11:12:23.318  INFO 17376 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "提醒我明天早上八点开会"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000379",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_DOCTOR",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-30 11:12:29.133  INFO 17376 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 发生错误net.sf.json.JSONException: A JSONObject text must begin with '{' at character 0 of 
+2017-09-30 11:12:29.244  INFO 17376 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"功能导航\n------------------\n<a href='http://d.china-healthcare.cn/Appointment/remindAdd'>【１】提醒</a> \n<a href='http://d.china-healthcare.cn/LayChat/myService'>【２】我的服务</a> \n<a href='http://d.china-healthcare.cn/Appointment/index'>【３】预约本</a> \n<a href='http://d.china-healthcare.cn/Skim/mailList'>【４】通讯录</a> \n<a href='http://d.china-healthcare.cn/MedicalRecord/medicalRecordList'>【５】病历夹</a> \n发送语音“提醒我XXXXX”，可添加提醒"}
+2017-09-30 11:20:15.439  INFO 18248 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 18248 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 11:20:15.442  INFO 18248 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 11:20:15.570  INFO 18248 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 11:20:15 CST 2017]; root of context hierarchy
+2017-09-30 11:20:15.786  INFO 18248 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 11:20:15.787  INFO 18248 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-30 11:20:17.452  INFO 18248 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-30 11:20:17.463  INFO 18248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-30 11:20:17.465  INFO 18248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-30 11:20:17.629  INFO 18248 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-30 11:20:17.629  INFO 18248 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2061 ms
+2017-09-30 11:20:17.879  INFO 18248 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-30 11:20:17.883  INFO 18248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-30 11:20:17.883  INFO 18248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-30 11:20:17.884  INFO 18248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-30 11:20:17.884  INFO 18248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-30 11:20:17.985  INFO 18248 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-30 11:20:18.400  INFO 18248 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-30 11:20:18.415  INFO 18248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-30 11:20:18.483  INFO 18248 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-30 11:20:18.484  INFO 18248 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-30 11:20:18.486  INFO 18248 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-30 11:20:18.526  INFO 18248 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-30 11:20:18.809  INFO 18248 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-30 11:20:19.171  INFO 18248 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-30 11:20:19.699  INFO 18248 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-30 11:20:20.424  INFO 18248 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 11:20:15 CST 2017]; root of context hierarchy
+2017-09-30 11:20:20.492  INFO 18248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-30 11:20:20.494  INFO 18248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-30 11:20:20.498  INFO 18248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-30 11:20:20.523  INFO 18248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 11:20:20.523  INFO 18248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 11:20:20.563  INFO 18248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 11:20:20.858  INFO 18248 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-30 11:20:20.910  INFO 18248 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-30 11:20:20.914  INFO 18248 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 5.938 seconds (JVM running for 6.472)
+2017-09-30 11:21:17.622  INFO 18248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-30 11:21:17.623  INFO 18248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-30 11:21:17.664  INFO 18248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2017-09-30 11:21:17.711  INFO 18248 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "提醒我明天早上八点开会"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000379",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_DOCTOR",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-30 11:21:18.101  INFO 18248 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 发生错误net.sf.json.JSONException: A JSONObject text must begin with '{' at character 0 of 
+2017-09-30 11:21:18.223  INFO 18248 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"功能导航\n------------------\n<a href='http://d.china-healthcare.cn/Appointment/remindAdd'>【１】提醒</a> \n<a href='http://d.china-healthcare.cn/LayChat/myService'>【２】我的服务</a> \n<a href='http://d.china-healthcare.cn/Appointment/index'>【３】预约本</a> \n<a href='http://d.china-healthcare.cn/Skim/mailList'>【４】通讯录</a> \n<a href='http://d.china-healthcare.cn/MedicalRecord/medicalRecordList'>【５】病历夹</a> \n发送语音“提醒我XXXXX”，可添加提醒"}
+2017-09-30 11:25:31.441  INFO 18248 --- [http-nio-8080-exec-3] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "提醒我明天早上八点开会"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000379",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_DOCTOR",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-30 11:25:31.947  INFO 18248 --- [http-nio-8080-exec-3] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"为您提醒创建成功！\n--------------------\n主题：开会\n时间：2017-10-01 08:00:00\n\n<a href='http://d.china-healthcare.cn/Appointment/appointmentRemind/appointment_id/1407/uid/100000379'>点击这里</a>，可以进一步设置该提醒 "}
+2017-09-30 14:08:32.379  INFO 692 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 692 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 14:08:32.381  INFO 692 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 14:08:32.430  INFO 692 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6eda5c9: startup date [Sat Sep 30 14:08:32 CST 2017]; root of context hierarchy
+2017-09-30 14:08:32.616  INFO 692 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 14:08:32.643  WARN 692 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.jerry.work.RobotApplication]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+2017-09-30 14:08:32.648 ERROR 692 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.context.annotation.AnnotationConfigApplicationContext@6eda5c9: startup date [Sat Sep 30 14:08:32 CST 2017]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.jerry.work.RobotApplication.main(RobotApplication.java:31) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+
+2017-09-30 14:08:32.656 ERROR 692 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.jerry.work.RobotApplication]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.jerry.work.RobotApplication.main(RobotApplication.java:31) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:163) ~[spring-core-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.retrieveBeanMethodMetadata(ConfigurationClassParser.java:380) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:314) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/ServletContext
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_111]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_111]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_111]
+	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:152) ~[spring-core-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.ServletContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_111]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_111]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_111]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_111]
+	... 26 common frames omitted
+
+2017-09-30 14:08:43.140  INFO 21676 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 21676 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 14:08:43.143  INFO 21676 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 14:08:43.190  INFO 21676 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6eda5c9: startup date [Sat Sep 30 14:08:43 CST 2017]; root of context hierarchy
+2017-09-30 14:08:43.329  INFO 21676 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 14:08:43.330  INFO 21676 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-30 14:08:43.347  WARN 21676 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.jerry.work.RobotApplication]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+2017-09-30 14:08:43.360 ERROR 21676 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.context.annotation.AnnotationConfigApplicationContext@6eda5c9: startup date [Sat Sep 30 14:08:43 CST 2017]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.jerry.work.RobotApplication.main(RobotApplication.java:31) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+
+2017-09-30 14:08:43.370 ERROR 21676 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.jerry.work.RobotApplication]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.jerry.work.RobotApplication.main(RobotApplication.java:31) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:163) ~[spring-core-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.retrieveBeanMethodMetadata(ConfigurationClassParser.java:380) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:314) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/ServletContext
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_111]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_111]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_111]
+	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:152) ~[spring-core-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.ServletContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_111]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_111]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_111]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_111]
+	... 26 common frames omitted
+
+2017-09-30 14:08:53.030  INFO 21304 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 21304 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 14:08:53.033  INFO 21304 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 14:08:53.086  INFO 21304 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 14:08:53 CST 2017]; root of context hierarchy
+2017-09-30 14:08:53.223  INFO 21304 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 14:08:53.224  INFO 21304 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-30 14:08:55.155  INFO 21304 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-30 14:08:55.172  INFO 21304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-30 14:08:55.173  INFO 21304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-30 14:08:55.346  INFO 21304 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-30 14:08:55.346  INFO 21304 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2262 ms
+2017-09-30 14:08:55.604  INFO 21304 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-30 14:08:55.608  INFO 21304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-30 14:08:55.609  INFO 21304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-30 14:08:55.609  INFO 21304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-30 14:08:55.609  INFO 21304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-30 14:08:55.703  INFO 21304 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-30 14:08:56.135  INFO 21304 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:08:56.150  INFO 21304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-30 14:08:56.227  INFO 21304 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-30 14:08:56.228  INFO 21304 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-30 14:08:56.229  INFO 21304 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-30 14:08:56.271  INFO 21304 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-30 14:08:56.562  INFO 21304 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-30 14:08:56.920  INFO 21304 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-30 14:08:57.377  INFO 21304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:08:58.059  INFO 21304 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 14:08:53 CST 2017]; root of context hierarchy
+2017-09-30 14:08:58.148  INFO 21304 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-30 14:08:58.151  INFO 21304 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-30 14:08:58.152  INFO 21304 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-30 14:08:58.178  INFO 21304 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:08:58.178  INFO 21304 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:08:58.212  INFO 21304 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:08:58.423  INFO 21304 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-30 14:08:58.471  INFO 21304 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-30 14:08:58.474  INFO 21304 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 5.885 seconds (JVM running for 6.396)
+2017-09-30 14:09:13.802  INFO 21304 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-30 14:09:13.802  INFO 21304 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-30 14:09:13.841  INFO 21304 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2017-09-30 14:09:13.886  INFO 21304 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "你好"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000493",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_PATIENT",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-30 14:09:14.206  INFO 21304 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 发生错误java.lang.NullPointerException
+2017-09-30 14:09:14.289 ERROR 21304 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/robot] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.jerry.work.service.NavigationService.getNavigation(NavigationService.java:36) ~[classes/:na]
+	at com.jerry.work.controller.AskController.ask(AskController.java:89) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2017-09-30 14:09:50.657  INFO 22104 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 22104 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 14:09:50.660  INFO 22104 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 14:09:50.725  INFO 22104 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c372fe6: startup date [Sat Sep 30 14:09:50 CST 2017]; root of context hierarchy
+2017-09-30 14:09:50.864  INFO 22104 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 14:09:50.865  INFO 22104 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-30 14:09:53.213  INFO 22104 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-30 14:09:53.226  INFO 22104 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-30 14:09:53.228  INFO 22104 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-30 14:09:53.432  INFO 22104 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-30 14:09:53.432  INFO 22104 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2710 ms
+2017-09-30 14:09:53.724  INFO 22104 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-30 14:09:53.729  INFO 22104 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-30 14:09:53.730  INFO 22104 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-30 14:09:53.730  INFO 22104 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-30 14:09:53.730  INFO 22104 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-30 14:09:53.850  INFO 22104 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-30 14:09:54.281  INFO 22104 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:09:54.296  INFO 22104 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-30 14:09:54.369  INFO 22104 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-30 14:09:54.371  INFO 22104 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-30 14:09:54.372  INFO 22104 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-30 14:09:54.416  INFO 22104 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-30 14:09:54.709  INFO 22104 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-30 14:09:55.162  INFO 22104 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-30 14:09:55.617  INFO 22104 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:09:56.603  INFO 22104 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c372fe6: startup date [Sat Sep 30 14:09:50 CST 2017]; root of context hierarchy
+2017-09-30 14:09:56.705  INFO 22104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-30 14:09:56.709  INFO 22104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-30 14:09:56.710  INFO 22104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-30 14:09:56.754  INFO 22104 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:09:56.754  INFO 22104 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:09:56.865  INFO 22104 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:09:57.269  INFO 22104 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-30 14:09:57.324  INFO 22104 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-30 14:09:57.328  INFO 22104 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 7.223 seconds (JVM running for 7.786)
+2017-09-30 14:26:20.023  INFO 17272 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 17272 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 14:26:20.031  INFO 17272 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 14:26:20.105  INFO 17272 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 14:26:20 CST 2017]; root of context hierarchy
+2017-09-30 14:26:20.376  INFO 17272 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 14:26:20.376  INFO 17272 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-30 14:26:21.969  INFO 17272 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-30 14:26:21.981  INFO 17272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-30 14:26:21.982  INFO 17272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-30 14:26:22.162  INFO 17272 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-30 14:26:22.162  INFO 17272 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2060 ms
+2017-09-30 14:26:22.409  INFO 17272 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-30 14:26:22.413  INFO 17272 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-30 14:26:22.413  INFO 17272 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-30 14:26:22.414  INFO 17272 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-30 14:26:22.414  INFO 17272 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-30 14:26:22.504  INFO 17272 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-30 14:26:22.932  INFO 17272 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:26:22.948  INFO 17272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-30 14:26:23.019  INFO 17272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-30 14:26:23.021  INFO 17272 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-30 14:26:23.022  INFO 17272 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-30 14:26:23.065  INFO 17272 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-30 14:26:23.348  INFO 17272 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-30 14:26:23.710  INFO 17272 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-30 14:26:24.092  INFO 17272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:26:24.806  INFO 17272 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 14:26:20 CST 2017]; root of context hierarchy
+2017-09-30 14:26:24.872  INFO 17272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-30 14:26:24.875  INFO 17272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-30 14:26:24.876  INFO 17272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-30 14:26:24.901  INFO 17272 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:26:24.902  INFO 17272 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:26:24.935  INFO 17272 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:26:25.132  INFO 17272 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-30 14:26:25.179  INFO 17272 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-30 14:26:25.182  INFO 17272 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 5.638 seconds (JVM running for 6.161)
+2017-09-30 14:27:00.865  INFO 20508 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 20508 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 14:27:00.868  INFO 20508 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 14:27:00.921  INFO 20508 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 14:27:00 CST 2017]; root of context hierarchy
+2017-09-30 14:27:01.050  INFO 20508 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 14:27:01.051  INFO 20508 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-30 14:27:02.937  INFO 20508 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-30 14:27:02.951  INFO 20508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-30 14:27:02.952  INFO 20508 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-30 14:27:03.109  INFO 20508 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-30 14:27:03.109  INFO 20508 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2191 ms
+2017-09-30 14:27:03.349  INFO 20508 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-30 14:27:03.353  INFO 20508 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-30 14:27:03.354  INFO 20508 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-30 14:27:03.354  INFO 20508 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-30 14:27:03.354  INFO 20508 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-30 14:27:03.454  INFO 20508 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-30 14:27:03.842  INFO 20508 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:27:03.857  INFO 20508 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-30 14:27:03.926  INFO 20508 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-30 14:27:03.928  INFO 20508 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-30 14:27:03.929  INFO 20508 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-30 14:27:03.970  INFO 20508 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-30 14:27:04.266  INFO 20508 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-30 14:27:04.643  INFO 20508 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-30 14:27:05.030  INFO 20508 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:27:05.758  INFO 20508 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 14:27:00 CST 2017]; root of context hierarchy
+2017-09-30 14:27:05.823  INFO 20508 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-30 14:27:05.825  INFO 20508 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-30 14:27:05.826  INFO 20508 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-30 14:27:05.852  INFO 20508 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:27:05.852  INFO 20508 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:27:05.889  INFO 20508 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:27:06.113  INFO 20508 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-30 14:27:06.164  INFO 20508 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-30 14:27:06.167  INFO 20508 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 5.737 seconds (JVM running for 6.198)
+2017-09-30 14:27:08.464  INFO 20508 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-30 14:27:08.465  INFO 20508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-30 14:27:08.505  INFO 20508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+2017-09-30 14:27:08.551  INFO 20508 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "你好"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000493",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_PATIENT",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-30 14:27:14.213  INFO 20508 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 发生错误java.util.NoSuchElementException
+2017-09-30 14:27:14.305  INFO 20508 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"功能导航\n------------------\n<a href='http://p.china-healthcare.cn/Appointment/remindAdd'>【１】提醒</a> \n<a href='http://p.china-healthcare.cn/LayChat/myService'>【２】我的服务</a> \n<a href='http://p.china-healthcare.cn/Skim/mailList'>【３】通讯录</a> \n<a href='http://p.china-healthcare.cn/MedicalRecord/medicalRecordList'>【４】病历夹</a> \n发送语音“提醒我XXXXX”，可添加提醒"}
+2017-09-30 14:27:46.791  INFO 20508 --- [http-nio-8080-exec-2] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "提醒我下午五点开会"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000493",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_PATIENT",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-30 14:27:47.445  INFO 20508 --- [http-nio-8080-exec-2] com.jerry.work.controller.AskController  : 发生错误net.sf.json.JSONException: A JSONObject text must begin with '{' at character 0 of 
+2017-09-30 14:27:47.515  INFO 20508 --- [http-nio-8080-exec-2] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"功能导航\n------------------\n<a href='http://p.china-healthcare.cn/Appointment/remindAdd'>【１】提醒</a> \n<a href='http://p.china-healthcare.cn/LayChat/myService'>【２】我的服务</a> \n<a href='http://p.china-healthcare.cn/Skim/mailList'>【３】通讯录</a> \n<a href='http://p.china-healthcare.cn/MedicalRecord/medicalRecordList'>【４】病历夹</a> \n发送语音“提醒我XXXXX”，可添加提醒"}
+2017-09-30 14:28:15.775  INFO 20652 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 20652 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-09-30 14:28:15.778  INFO 20652 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-09-30 14:28:15.848  INFO 20652 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 14:28:15 CST 2017]; root of context hierarchy
+2017-09-30 14:28:16.078  INFO 20652 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-09-30 14:28:16.078  INFO 20652 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-09-30 14:28:17.719  INFO 20652 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-30 14:28:17.730  INFO 20652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-30 14:28:17.731  INFO 20652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-30 14:28:17.916  INFO 20652 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-09-30 14:28:17.916  INFO 20652 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2070 ms
+2017-09-30 14:28:18.194  INFO 20652 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-30 14:28:18.198  INFO 20652 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-30 14:28:18.199  INFO 20652 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-30 14:28:18.199  INFO 20652 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-30 14:28:18.199  INFO 20652 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-30 14:28:18.296  INFO 20652 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-30 14:28:18.720  INFO 20652 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:28:18.734  INFO 20652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-30 14:28:18.806  INFO 20652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-09-30 14:28:18.808  INFO 20652 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-09-30 14:28:18.809  INFO 20652 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-09-30 14:28:18.848  INFO 20652 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-09-30 14:28:19.116  INFO 20652 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-09-30 14:28:19.491  INFO 20652 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-09-30 14:28:19.909  INFO 20652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-09-30 14:28:20.632  INFO 20652 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Sat Sep 30 14:28:15 CST 2017]; root of context hierarchy
+2017-09-30 14:28:20.700  INFO 20652 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-09-30 14:28:20.703  INFO 20652 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-30 14:28:20.704  INFO 20652 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-30 14:28:20.728  INFO 20652 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:28:20.728  INFO 20652 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:28:20.763  INFO 20652 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-30 14:28:20.964  INFO 20652 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-30 14:28:21.011  INFO 20652 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-30 14:28:21.014  INFO 20652 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 5.651 seconds (JVM running for 6.173)
+2017-09-30 14:28:23.979  INFO 20652 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-30 14:28:23.979  INFO 20652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-30 14:28:24.021  INFO 20652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2017-09-30 14:28:24.071  INFO 20652 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "提醒我下午五点开会"
+                    },
+                    "clientId": "weixin",
+                    "deviceId": "",
+                    "userId": "100000493",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_PATIENT",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-09-30 14:28:24.726  INFO 20652 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"为您提醒创建成功！\n--------------------\n主题：开会\n时间：2017-09-30 17:00:00\n\n<a href='http://p.china-healthcare.cn/Appointment/appointmentRemind/appointment_id/1425/uid/100000493'>点击这里</a>，可以进一步设置该提醒 "}
+2017-10-13 09:57:15.916  INFO 2580 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 2580 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-10-13 09:57:15.923  INFO 2580 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-10-13 09:57:16.012  INFO 2580 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@71809907: startup date [Fri Oct 13 09:57:16 CST 2017]; root of context hierarchy
+2017-10-13 09:57:16.249  INFO 2580 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-10-13 09:57:16.249  INFO 2580 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-10-13 09:57:17.794  INFO 2580 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-10-13 09:57:17.805  INFO 2580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-13 09:57:17.806  INFO 2580 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-10-13 09:57:17.973  INFO 2580 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-10-13 09:57:17.973  INFO 2580 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1965 ms
+2017-10-13 09:57:18.227  INFO 2580 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-13 09:57:18.231  INFO 2580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-13 09:57:18.231  INFO 2580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-13 09:57:18.231  INFO 2580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-13 09:57:18.231  INFO 2580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-13 09:57:18.352  INFO 2580 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 09:57:18.863  INFO 2580 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-13 09:57:18.878  INFO 2580 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-13 09:57:18.948  INFO 2580 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-13 09:57:18.949  INFO 2580 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-10-13 09:57:18.951  INFO 2580 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-10-13 09:57:18.992  INFO 2580 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-13 09:57:19.264  INFO 2580 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-13 09:57:19.626  INFO 2580 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-10-13 09:57:20.058  INFO 2580 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-13 09:57:20.854  INFO 2580 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@71809907: startup date [Fri Oct 13 09:57:16 CST 2017]; root of context hierarchy
+2017-10-13 09:57:20.926  INFO 2580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-10-13 09:57:20.928  INFO 2580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-13 09:57:20.929  INFO 2580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-13 09:57:20.956  INFO 2580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-13 09:57:20.956  INFO 2580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-13 09:57:20.989  INFO 2580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-13 09:57:21.187  INFO 2580 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-13 09:57:21.234  INFO 2580 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-10-13 09:57:21.238  INFO 2580 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 5.868 seconds (JVM running for 6.351)
+2017-10-13 09:59:02.362  INFO 12296 --- [main] com.jerry.work.RobotApplication          : Starting RobotApplication on DESKTOP-DD2G69R with PID 12296 (G:\work\java\AIQandA\robot\target\classes started by XX in G:\work\java\AIQandA\robot)
+2017-10-13 09:59:02.365  INFO 12296 --- [main] com.jerry.work.RobotApplication          : The following profiles are active: dev
+2017-10-13 09:59:02.532  INFO 12296 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@71809907: startup date [Fri Oct 13 09:59:02 CST 2017]; root of context hierarchy
+2017-10-13 09:59:02.707  INFO 12296 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [file:/application/tomcat/webapps2/conf/datasource.properties] not resolvable: \application\tomcat\webapps2\conf\datasource.properties (系统找不到指定的路径。)
+2017-10-13 09:59:02.708  INFO 12296 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [classpath:/application.properties] not resolvable: class path resource [application.properties] cannot be opened because it does not exist
+2017-10-13 09:59:04.339  INFO 12296 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-10-13 09:59:04.351  INFO 12296 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-13 09:59:04.352  INFO 12296 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-10-13 09:59:04.515  INFO 12296 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring embedded WebApplicationContext
+2017-10-13 09:59:04.515  INFO 12296 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1985 ms
+2017-10-13 09:59:04.760  INFO 12296 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-13 09:59:04.764  INFO 12296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-13 09:59:04.764  INFO 12296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-13 09:59:04.764  INFO 12296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-13 09:59:04.765  INFO 12296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-13 09:59:04.861  INFO 12296 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 09:59:05.225  INFO 12296 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-13 09:59:05.241  INFO 12296 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-13 09:59:05.316  INFO 12296 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-13 09:59:05.317  INFO 12296 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-10-13 09:59:05.318  INFO 12296 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-10-13 09:59:05.361  INFO 12296 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-13 09:59:05.656  INFO 12296 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-13 09:59:06.039  INFO 12296 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-10-13 09:59:06.433  INFO 12296 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-13 09:59:07.158  INFO 12296 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@71809907: startup date [Fri Oct 13 09:59:02 CST 2017]; root of context hierarchy
+2017-10-13 09:59:07.240  INFO 12296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ask]}" onto public java.lang.String com.jerry.work.controller.AskController.ask(java.lang.String)
+2017-10-13 09:59:07.246  INFO 12296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-13 09:59:07.248  INFO 12296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-13 09:59:07.292  INFO 12296 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-13 09:59:07.293  INFO 12296 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-13 09:59:07.343  INFO 12296 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-13 09:59:07.572  INFO 12296 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-13 09:59:07.623  INFO 12296 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-10-13 09:59:07.627  INFO 12296 --- [main] com.jerry.work.RobotApplication          : Started RobotApplication in 5.717 seconds (JVM running for 6.248)
+2017-10-13 09:59:51.450  INFO 12296 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/robot]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-13 09:59:51.450  INFO 12296 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-13 09:59:51.490  INFO 12296 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2017-10-13 09:59:51.538  INFO 12296 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 参数{
+                    "questionId": "11",
+                    "question": "",
+                    "answer": {
+                        "askId": "",
+                        "script": "",
+                        "value": "提醒詹俊峰两分钟后开会"
+                    },
+                    "clientId": "h5",
+                    "deviceId": "",
+                    "userId": "100000379",
+                    "longitude": "",
+                    "latitude": "",
+                    "userType": "JY_DOCTOR",
+                    "userName":"",
+                    "userTitle":""
+            }
+2017-10-13 09:59:52.584  INFO 12296 --- [http-nio-8080-exec-1] com.jerry.work.controller.AskController  : 结果{"code":1,"answer":"创建提醒<br>--------------------<br>提醒：詹俊峰<br>主题：开会<br>时间：2017-10-13 10:01:00<br><br><a href='http://d.china-healthcare.cn/Appointment/appointmentRemind/appointment_id/1658/uid/100000379'>点击这里创建成功</a>"}

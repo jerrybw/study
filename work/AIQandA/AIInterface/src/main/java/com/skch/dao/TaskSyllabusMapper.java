@@ -14,7 +14,6 @@ public interface TaskSyllabusMapper {
 
     List<TaskSyllabus> findByTaskStatusAndStartLessThanEqualAndJenny(Map<String, Object> param);
 
-
     List<TaskSyllabus> updateByUserIdAndJennyAndTaskStatusAndStartLessThanEquals(Map<String, Object> param);
 
     List<TaskSyllabus> updateByUserIdAndJennyAndTaskStatusAndStartLessThanEqualsAndTaskId(Map<String, Object> param);

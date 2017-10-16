@@ -8,7 +8,21 @@
     </select>
 
     <select id="findAllTask" resultType="task">
-        select * from ai_task
+        select * from ai_task where status = 1
     </select>
 
+    <insert id="saveTask" parameterType="task">
+        INSERT INTO ai_task (task_name,task_content,hand_method,tmp,im_to_p,tmp_id,first,url,key_words,remark,im_to_p_msg,service_pack_id,im_to_g,im_to_g_msg)
+        VALUE (#{taskName},#{taskContent},#{handMethod},#{tmp},#{imToP},#{tmpId},#{first},#{url},#{keyWords},#{remark},#{imToPMsg},#{servicePackId},#{imToG},#{imToGMsg})
+    </insert>
+
+    <update id="updateTaskById" parameterType="task">
+        UPDATE ai_task SET task_name = #{taskName},task_content = #{taskContent},hand_method = #{handMethod},tmp = #{tmp},im_to_p = #{imToP}
+        ,tmp_id = #{tmpId},first = #{first},url = #{url},key_words = #{keyWords},remark = #{remark},im_to_p_msg = #{imToPMsg},
+        service_pack_id = #{servicePackId},im_to_g = #{imToG},im_to_g_msg = #{imToGMsg} where id = #{id}
+    </update>
+    
+    <update id="deleteTaskById" parameterType="int">
+        UPDATE ai_task SET status = 0 where id = #{id}
+    </update>
 </mapper>

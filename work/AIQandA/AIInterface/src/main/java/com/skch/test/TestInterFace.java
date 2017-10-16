@@ -1,14 +1,9 @@
 package com.skch.test;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.apache.commons.io.IOUtils;
 
 public class TestInterFace {
     public static void main(String[] args){

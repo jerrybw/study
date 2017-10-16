@@ -2492,3 +2492,348 @@ java.lang.NumberFormatException: For input string: "121.558"
 2017-10-15 18:23:02.911 DEBUG 5428 --- [http-nio-80-exec-5] c.e.j.mapper.VideoMapper.getAllVideos    : ==> Parameters: 
 2017-10-15 18:23:02.913 DEBUG 5428 --- [http-nio-80-exec-5] c.e.j.mapper.VideoMapper.getAllVideos    : <==      Total: 2
 2017-10-15 18:23:02.914  INFO 5428 --- [http-nio-80-exec-5] c.excel.java.controller.VideoController  : 返回值:[com.excel.java.bean.Video@6135f929, com.excel.java.bean.Video@5918f4ef]
+2017-10-16 09:14:27.171  INFO 22688 --- [main] com.excel.java.ExcelApplication          : Starting ExcelApplication on DESKTOP-DD2G69R with PID 22688 (G:\jerry\work\excel\target\classes started by XX in G:\jerry\work\excel)
+2017-10-16 09:14:27.173  INFO 22688 --- [main] com.excel.java.ExcelApplication          : The following profiles are active: dev
+2017-10-16 09:14:27.246  INFO 22688 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@61d47554: startup date [Mon Oct 16 09:14:27 CST 2017]; root of context hierarchy
+2017-10-16 09:14:27.461  WARN 22688 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.excel.java.ExcelApplication]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+2017-10-16 09:14:27.469 ERROR 22688 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.context.annotation.AnnotationConfigApplicationContext@61d47554: startup date [Mon Oct 16 09:14:27 CST 2017]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at com.excel.java.ExcelApplication.main(ExcelApplication.java:20) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+
+2017-10-16 09:14:27.588 ERROR 22688 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.excel.java.ExcelApplication]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at com.excel.java.ExcelApplication.main(ExcelApplication.java:20) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:163) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.retrieveBeanMethodMetadata(ConfigurationClassParser.java:380) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:314) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/ServletContext
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_111]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_111]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_111]
+	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:152) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.ServletContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_111]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_111]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_111]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_111]
+	... 26 common frames omitted
+
+2017-10-16 09:14:50.724  INFO 21628 --- [main] com.excel.java.ExcelApplication          : Starting ExcelApplication on DESKTOP-DD2G69R with PID 21628 (G:\jerry\work\excel\target\classes started by XX in G:\jerry\work\excel)
+2017-10-16 09:14:50.727  INFO 21628 --- [main] com.excel.java.ExcelApplication          : The following profiles are active: dev
+2017-10-16 09:14:50.775  INFO 21628 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@61d47554: startup date [Mon Oct 16 09:14:50 CST 2017]; root of context hierarchy
+2017-10-16 09:14:50.967  WARN 21628 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.excel.java.ExcelApplication]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+2017-10-16 09:14:50.973 ERROR 21628 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.context.annotation.AnnotationConfigApplicationContext@61d47554: startup date [Mon Oct 16 09:14:50 CST 2017]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at com.excel.java.ExcelApplication.main(ExcelApplication.java:20) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+
+2017-10-16 09:14:51.025 ERROR 21628 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.excel.java.ExcelApplication]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at com.excel.java.ExcelApplication.main(ExcelApplication.java:20) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.support.SpringBootServletInitializer
+	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:163) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.retrieveBeanMethodMetadata(ConfigurationClassParser.java:380) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:314) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/ServletContext
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_111]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_111]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_111]
+	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:152) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.ServletContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_111]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_111]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_111]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_111]
+	... 26 common frames omitted
+
+2017-10-16 09:16:17.780  INFO 6580 --- [main] com.excel.java.ExcelApplication          : Starting ExcelApplication on DESKTOP-DD2G69R with PID 6580 (G:\jerry\work\excel\target\classes started by XX in G:\jerry\work\excel)
+2017-10-16 09:16:17.783  INFO 6580 --- [main] com.excel.java.ExcelApplication          : The following profiles are active: dev
+2017-10-16 09:16:17.865  INFO 6580 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e04fa0a: startup date [Mon Oct 16 09:16:17 CST 2017]; root of context hierarchy
+2017-10-16 09:16:20.054  INFO 6580 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2017-10-16 09:16:20.074  INFO 6580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-16 09:16:20.075  INFO 6580 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-16 09:16:20.294  INFO 6580 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-16 09:16:20.295  INFO 6580 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2433 ms
+2017-10-16 09:16:20.625  INFO 6580 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-16 09:16:20.630  INFO 6580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-16 09:16:20.630  INFO 6580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-16 09:16:20.630  INFO 6580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-16 09:16:20.631  INFO 6580 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-16 09:16:21.511  INFO 6580 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e04fa0a: startup date [Mon Oct 16 09:16:17 CST 2017]; root of context hierarchy
+2017-10-16 09:16:21.594  INFO 6580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/gotoVideoUpload]}" onto public java.lang.String com.excel.java.controller.HTMController.gotoVideoUpload()
+2017-10-16 09:16:21.596  INFO 6580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/uploadVideo],methods=[POST]}" onto public java.lang.String com.excel.java.controller.VideoController.uploadVideo(org.springframework.web.multipart.MultipartFile,java.lang.String,com.excel.java.bean.Video,javax.servlet.http.HttpServletRequest)
+2017-10-16 09:16:21.596  INFO 6580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/video],methods=[GET]}" onto public java.lang.Object com.excel.java.controller.VideoController.listVideo()
+2017-10-16 09:16:21.598  INFO 6580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-16 09:16:21.599  INFO 6580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-16 09:16:21.641  INFO 6580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:16:21.641  INFO 6580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:16:21.682  INFO 6580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:16:21.709  INFO 6580 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [resources/index.html]
+2017-10-16 09:16:22.033  INFO 6580 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-16 09:16:22.096  INFO 6580 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2017-10-16 09:16:22.102  INFO 6580 --- [main] com.excel.java.ExcelApplication          : Started ExcelApplication in 4.852 seconds (JVM running for 5.744)
+2017-10-16 09:17:21.884  INFO 6580 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-16 09:17:21.885  INFO 6580 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-16 09:17:21.926  INFO 6580 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2017-10-16 09:17:22.463  INFO 6580 --- [http-nio-80-exec-3] c.excel.java.controller.VideoController  : 接收到获取视频列表请求
+2017-10-16 09:17:22.855 DEBUG 6580 --- [http-nio-80-exec-3] c.e.j.mapper.VideoMapper.getAllVideos    : ==>  Preparing: select * from video 
+2017-10-16 09:17:22.878 DEBUG 6580 --- [http-nio-80-exec-3] c.e.j.mapper.VideoMapper.getAllVideos    : ==> Parameters: 
+2017-10-16 09:17:22.893 DEBUG 6580 --- [http-nio-80-exec-3] c.e.j.mapper.VideoMapper.getAllVideos    : <==      Total: 4
+2017-10-16 09:17:22.895  INFO 6580 --- [http-nio-80-exec-3] c.excel.java.controller.VideoController  : 返回值:[com.excel.java.bean.Video@251e117b, com.excel.java.bean.Video@101ec90f, com.excel.java.bean.Video@2e41351c, com.excel.java.bean.Video@68875e7a]
+2017-10-16 09:23:30.581  INFO 21196 --- [main] com.excel.java.ExcelApplication          : Starting ExcelApplication on DESKTOP-DD2G69R with PID 21196 (G:\jerry\work\excel\target\classes started by XX in G:\jerry\work\excel)
+2017-10-16 09:23:30.585  INFO 21196 --- [main] com.excel.java.ExcelApplication          : The following profiles are active: dev
+2017-10-16 09:23:30.655  INFO 21196 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e04fa0a: startup date [Mon Oct 16 09:23:30 CST 2017]; root of context hierarchy
+2017-10-16 09:23:32.812  INFO 21196 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2017-10-16 09:23:32.828  INFO 21196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-16 09:23:32.829  INFO 21196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-16 09:23:32.997  INFO 21196 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-16 09:23:32.998  INFO 21196 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2344 ms
+2017-10-16 09:23:33.263  INFO 21196 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-16 09:23:33.268  INFO 21196 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-16 09:23:33.268  INFO 21196 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-16 09:23:33.268  INFO 21196 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-16 09:23:33.269  INFO 21196 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-16 09:23:34.001  INFO 21196 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e04fa0a: startup date [Mon Oct 16 09:23:30 CST 2017]; root of context hierarchy
+2017-10-16 09:23:34.091  INFO 21196 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/gotoVideoUpload]}" onto public java.lang.String com.excel.java.controller.HTMController.gotoVideoUpload()
+2017-10-16 09:23:34.094  INFO 21196 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/uploadVideo],methods=[POST]}" onto public java.lang.String com.excel.java.controller.VideoController.uploadVideo(org.springframework.web.multipart.MultipartFile,java.lang.String,com.excel.java.bean.Video,javax.servlet.http.HttpServletRequest)
+2017-10-16 09:23:34.098  INFO 21196 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/video],methods=[GET]}" onto public java.lang.Object com.excel.java.controller.VideoController.listVideo()
+2017-10-16 09:23:34.100  INFO 21196 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-16 09:23:34.101  INFO 21196 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-16 09:23:34.134  INFO 21196 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:23:34.136  INFO 21196 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:23:34.203  INFO 21196 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:23:34.235  INFO 21196 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [resources/index.html]
+2017-10-16 09:23:34.540  INFO 21196 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-16 09:23:34.610  INFO 21196 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2017-10-16 09:23:34.615  INFO 21196 --- [main] com.excel.java.ExcelApplication          : Started ExcelApplication in 4.451 seconds (JVM running for 5.05)
+2017-10-16 09:23:50.050  INFO 21196 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-16 09:23:50.051  INFO 21196 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-16 09:23:50.093  INFO 21196 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 42 ms
+2017-10-16 09:23:50.560  INFO 21196 --- [http-nio-80-exec-3] c.excel.java.controller.VideoController  : 接收到获取视频列表请求
+2017-10-16 09:23:50.874 DEBUG 21196 --- [http-nio-80-exec-3] c.e.j.mapper.VideoMapper.getAllVideos    : ==>  Preparing: select * from video 
+2017-10-16 09:23:50.898 DEBUG 21196 --- [http-nio-80-exec-3] c.e.j.mapper.VideoMapper.getAllVideos    : ==> Parameters: 
+2017-10-16 09:23:50.909 DEBUG 21196 --- [http-nio-80-exec-3] c.e.j.mapper.VideoMapper.getAllVideos    : <==      Total: 4
+2017-10-16 09:23:50.910  INFO 21196 --- [http-nio-80-exec-3] c.excel.java.controller.VideoController  : 返回值:[Video{id=1, videoName='测试1', videoUrl='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400', videoIntroduce='测试', videoTime=5, videoType=1, updateTime=0}, Video{id=2, videoName='12.mp4', videoUrl='http://115.159.202.209/video/12&1508064776449.mp4', videoIntroduce='aa', videoTime=121, videoType=1, updateTime=1508064776449}, Video{id=3, videoName='12.mp4', videoUrl='http://115.159.202.209/video/12&1508065523134.mp4', videoIntroduce='hgfhgf', videoTime=121, videoType=1, updateTime=1508065523134}, Video{id=4, videoName='波士顿矩阵图2.mp4', videoUrl='http://115.159.202.209/video/波士顿矩阵图2&1508065822556.mp4', videoIntroduce='波士顿矩阵图', videoTime=159, videoType=0, updateTime=1508065822556}]
+2017-10-16 09:24:44.332 ERROR 21196 --- [http-nio-80-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: ""] with root cause
+
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_111]
+	at java.lang.Integer.parseInt(Integer.java:592) ~[na:1.8.0_111]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_111]
+	at com.excel.java.controller.VideoController.uploadVideo(VideoController.java:51) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2017-10-16 09:35:27.806 DEBUG 21196 --- [http-nio-80-exec-6] c.e.java.mapper.VideoMapper.insertVideo  : ==>  Preparing: INSERT INTO video (video_name,video_url,video_introduce,video_time,video_type,update_time) VALUE (?,?,?,?,?,?) 
+2017-10-16 09:35:27.807 DEBUG 21196 --- [http-nio-80-exec-6] c.e.java.mapper.VideoMapper.insertVideo  : ==> Parameters: -1825863542.mp4(String), http://127.0.0.1/video/-1825863542&1508117727719.mp4(String), sddf(String), 133(Integer), 1(Integer), 1508117727719(Long)
+2017-10-16 09:35:27.838 DEBUG 21196 --- [http-nio-80-exec-6] c.e.java.mapper.VideoMapper.insertVideo  : <==    Updates: 1
+2017-10-16 09:35:28.193  INFO 21196 --- [http-nio-80-exec-9] c.excel.java.controller.VideoController  : 接收到获取视频列表请求
+2017-10-16 09:35:28.193 DEBUG 21196 --- [http-nio-80-exec-9] c.e.j.mapper.VideoMapper.getAllVideos    : ==>  Preparing: select * from video 
+2017-10-16 09:35:28.194 DEBUG 21196 --- [http-nio-80-exec-9] c.e.j.mapper.VideoMapper.getAllVideos    : ==> Parameters: 
+2017-10-16 09:35:28.196 DEBUG 21196 --- [http-nio-80-exec-9] c.e.j.mapper.VideoMapper.getAllVideos    : <==      Total: 5
+2017-10-16 09:35:28.197  INFO 21196 --- [http-nio-80-exec-9] c.excel.java.controller.VideoController  : 返回值:[Video{id=1, videoName='测试1', videoUrl='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400', videoIntroduce='测试', videoTime=5, videoType=1, updateTime=0}, Video{id=2, videoName='12.mp4', videoUrl='http://115.159.202.209/video/12&1508064776449.mp4', videoIntroduce='aa', videoTime=121, videoType=1, updateTime=1508064776449}, Video{id=3, videoName='12.mp4', videoUrl='http://115.159.202.209/video/12&1508065523134.mp4', videoIntroduce='hgfhgf', videoTime=121, videoType=1, updateTime=1508065523134}, Video{id=4, videoName='波士顿矩阵图2.mp4', videoUrl='http://115.159.202.209/video/波士顿矩阵图2&1508065822556.mp4', videoIntroduce='波士顿矩阵图', videoTime=159, videoType=0, updateTime=1508065822556}, Video{id=5, videoName='-1825863542.mp4', videoUrl='http://127.0.0.1/video/-1825863542&1508117727719.mp4', videoIntroduce='sddf', videoTime=133, videoType=1, updateTime=1508117727719}]
+2017-10-16 09:54:47.332  INFO 26540 --- [main] com.excel.java.ExcelApplication          : Starting ExcelApplication on DESKTOP-DD2G69R with PID 26540 (G:\jerry\work\excel\target\classes started by XX in G:\jerry\work\excel)
+2017-10-16 09:54:47.336  INFO 26540 --- [main] com.excel.java.ExcelApplication          : The following profiles are active: dev-com
+2017-10-16 09:54:47.388  INFO 26540 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e04fa0a: startup date [Mon Oct 16 09:54:47 CST 2017]; root of context hierarchy
+2017-10-16 09:54:49.771  INFO 26540 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2017-10-16 09:54:49.785  INFO 26540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-16 09:54:49.786  INFO 26540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-16 09:54:49.949  INFO 26540 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-16 09:54:49.949  INFO 26540 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2564 ms
+2017-10-16 09:54:50.216  INFO 26540 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-16 09:54:50.221  INFO 26540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-16 09:54:50.222  INFO 26540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-16 09:54:50.222  INFO 26540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-16 09:54:50.223  INFO 26540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-16 09:54:51.073  INFO 26540 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e04fa0a: startup date [Mon Oct 16 09:54:47 CST 2017]; root of context hierarchy
+2017-10-16 09:54:51.157  INFO 26540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/gotoVideoUpload]}" onto public java.lang.String com.excel.java.controller.HTMController.gotoVideoUpload()
+2017-10-16 09:54:51.159  INFO 26540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/uploadVideo],methods=[POST]}" onto public java.lang.String com.excel.java.controller.VideoController.uploadVideo(org.springframework.web.multipart.MultipartFile,java.lang.String,com.excel.java.bean.Video,javax.servlet.http.HttpServletRequest)
+2017-10-16 09:54:51.160  INFO 26540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/video],methods=[GET]}" onto public java.lang.Object com.excel.java.controller.VideoController.listVideo()
+2017-10-16 09:54:51.163  INFO 26540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-16 09:54:51.164  INFO 26540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-16 09:54:51.197  INFO 26540 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:54:51.198  INFO 26540 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:54:51.246  INFO 26540 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:54:51.273  INFO 26540 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [resources/index.html]
+2017-10-16 09:54:51.627  INFO 26540 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-16 09:54:51.697  INFO 26540 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2017-10-16 09:54:51.701  INFO 26540 --- [main] com.excel.java.ExcelApplication          : Started ExcelApplication in 4.78 seconds (JVM running for 5.333)
+2017-10-16 09:55:29.587  INFO 9036 --- [main] com.excel.java.ExcelApplication          : Starting ExcelApplication on DESKTOP-DD2G69R with PID 9036 (G:\jerry\work\excel\target\classes started by XX in G:\jerry\work\excel)
+2017-10-16 09:55:29.591  INFO 9036 --- [main] com.excel.java.ExcelApplication          : The following profiles are active: dev-com
+2017-10-16 09:55:29.650  INFO 9036 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e04fa0a: startup date [Mon Oct 16 09:55:29 CST 2017]; root of context hierarchy
+2017-10-16 09:55:31.997  INFO 9036 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2017-10-16 09:55:32.081  INFO 9036 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-16 09:55:32.082  INFO 9036 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-16 09:55:32.378  INFO 9036 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-16 09:55:32.378  INFO 9036 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2731 ms
+2017-10-16 09:55:32.702  INFO 9036 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-16 09:55:32.706  INFO 9036 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-16 09:55:32.708  INFO 9036 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-16 09:55:32.708  INFO 9036 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-16 09:55:32.708  INFO 9036 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-16 09:55:33.711  INFO 9036 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e04fa0a: startup date [Mon Oct 16 09:55:29 CST 2017]; root of context hierarchy
+2017-10-16 09:55:33.791  INFO 9036 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/gotoVideoUpload]}" onto public java.lang.String com.excel.java.controller.HTMController.gotoVideoUpload()
+2017-10-16 09:55:33.817  INFO 9036 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/video],methods=[GET]}" onto public java.lang.Object com.excel.java.controller.VideoController.listVideo()
+2017-10-16 09:55:33.818  INFO 9036 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/uploadVideo],methods=[POST]}" onto public java.lang.String com.excel.java.controller.VideoController.uploadVideo(org.springframework.web.multipart.MultipartFile,java.lang.String,com.excel.java.bean.Video,javax.servlet.http.HttpServletRequest)
+2017-10-16 09:55:33.821  INFO 9036 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-16 09:55:33.821  INFO 9036 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-16 09:55:33.923  INFO 9036 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:55:33.923  INFO 9036 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:55:34.056  INFO 9036 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-16 09:55:34.107  INFO 9036 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [resources/index.html]
+2017-10-16 09:55:34.794  INFO 9036 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-16 09:55:34.885  INFO 9036 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2017-10-16 09:55:34.966  INFO 9036 --- [main] com.excel.java.ExcelApplication          : Started ExcelApplication in 5.793 seconds (JVM running for 6.324)
+2017-10-16 09:55:42.696  INFO 9036 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-16 09:55:42.697  INFO 9036 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-16 09:55:42.740  INFO 9036 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 42 ms
+2017-10-16 09:55:51.299 DEBUG 9036 --- [http-nio-80-exec-3] c.e.java.mapper.VideoMapper.insertVideo  : ==>  Preparing: INSERT INTO video (video_name,video_url,video_introduce,video_time,video_type,update_time) VALUE (?,?,?,?,?,?) 
+2017-10-16 09:55:51.327 DEBUG 9036 --- [http-nio-80-exec-3] c.e.java.mapper.VideoMapper.insertVideo  : ==> Parameters: -1825863542.mp4(String), http://127.0.0.1/video/-1825863542&1508118950950.mp4(String), aa(String), 133(Integer), 0(Integer), 1508118950950(Long)
+2017-10-16 09:55:51.368 DEBUG 9036 --- [http-nio-80-exec-3] c.e.java.mapper.VideoMapper.insertVideo  : <==    Updates: 1
+2017-10-16 09:55:51.625  INFO 9036 --- [http-nio-80-exec-4] c.excel.java.controller.VideoController  : 接收到获取视频列表请求
+2017-10-16 09:55:51.629 DEBUG 9036 --- [http-nio-80-exec-4] c.e.j.mapper.VideoMapper.getAllVideos    : ==>  Preparing: select * from video 
+2017-10-16 09:55:51.632 DEBUG 9036 --- [http-nio-80-exec-4] c.e.j.mapper.VideoMapper.getAllVideos    : ==> Parameters: 
+2017-10-16 09:55:51.647 DEBUG 9036 --- [http-nio-80-exec-4] c.e.j.mapper.VideoMapper.getAllVideos    : <==      Total: 6
+2017-10-16 09:55:51.649  INFO 9036 --- [http-nio-80-exec-4] c.excel.java.controller.VideoController  : 返回值:[Video{id=1, videoName='测试1', videoUrl='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400', videoIntroduce='测试', videoTime=5, videoType=1, updateTime=0}, Video{id=2, videoName='12.mp4', videoUrl='http://115.159.202.209/video/12&1508064776449.mp4', videoIntroduce='aa', videoTime=121, videoType=1, updateTime=1508064776449}, Video{id=3, videoName='12.mp4', videoUrl='http://115.159.202.209/video/12&1508065523134.mp4', videoIntroduce='hgfhgf', videoTime=121, videoType=1, updateTime=1508065523134}, Video{id=4, videoName='波士顿矩阵图2.mp4', videoUrl='http://115.159.202.209/video/波士顿矩阵图2&1508065822556.mp4', videoIntroduce='波士顿矩阵图', videoTime=159, videoType=0, updateTime=1508065822556}, Video{id=5, videoName='-1825863542.mp4', videoUrl='http://127.0.0.1/video/-1825863542&1508117727719.mp4', videoIntroduce='sddf', videoTime=133, videoType=1, updateTime=1508117727719}, Video{id=6, videoName='-1825863542.mp4', videoUrl='http://127.0.0.1/video/-1825863542&1508118950950.mp4', videoIntroduce='aa', videoTime=133, videoType=0, updateTime=1508118950950}]

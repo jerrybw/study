@@ -9,9 +9,12 @@ import com.jerry.work.util.SendResult;
 import com.jerry.work.util.SendWeiXin;
 import com.jerry.work.util.SpringUtil;
 import org.apache.log4j.Logger;
+import org.springframework.format.datetime.DateFormatter;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -32,6 +35,7 @@ public class SendMsg implements HandServiceInterface{
         TaskSyllabusMapper bean = SpringUtil.getBean(TaskSyllabusMapper.class);
         String userId = taskSyllabus.getUserId();
         String groupId = taskSyllabus.getGroupId();
+        String jenny = taskSyllabus.getJenny();
         Integer tmp = task.getTmp();
         Integer imToP = task.getImToP();
         Integer imToG = task.getImToG();
@@ -63,7 +67,17 @@ public class SendMsg implements HandServiceInterface{
         if(imToG == 1){
             SendResult.sendWord("888888888",groupId,task.getImToGMsg(),"group",System.currentTimeMillis());
         }
-//        bean.updateByUserIdAndJennyAndTaskStatusAndStartLessThanEqualsAndTaskId();
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("userId",userId);
+        map.put("taskStatus","未开始");
+        map.put("jenny",jenny);
+        map.put("afterStatus","已完成");
+        map.put("taskId",task.getId());
+        Date nowDay = new Date(System.currentTimeMillis() + 1000*60*60*24);
+        DateFormatter dateFormatter = new DateFormatter("yyyy-MM-dd");
+        String nowDayStr = dateFormatter.print(nowDay, Locale.getDefault());
+        map.put("start",nowDayStr);
+        bean.updateByUserIdAndJennyAndTaskStatusAndStartLessThanEqualsAndTaskId(map);
         return null;
     }
 }

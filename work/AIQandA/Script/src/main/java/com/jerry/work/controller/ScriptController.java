@@ -17,24 +17,38 @@ import org.springframework.web.bind.annotation.RestController;
 public class ScriptController {
 
     @Autowired
-    private ScriptService scriptService;
+    private ScriptService scriptService;//评估结果处理业务逻辑层
 
     @Autowired
     private SendResultAndChangeStatusService sendResultAndChangeStatusService;
 
+    /**
+     * 获取任务的完成状态
+     * @param param 请求参数
+     * @return
+     */
     @PostMapping("/getScriptStatus")
     public String getScriptStatus(String param){
         return scriptService.getScriptStatus(param);
     }
 
+    /**
+     * 将评估结果关联到任务中并修改任务的完成状态
+     * @param param
+     * @return
+     */
     @PostMapping("/updateScriptStatus")
     public String updateScriptStatus(String param){
         return scriptService.updateScriptStatus(param);
     }
 
+    /**
+     * 修改任务的完成状态
+     * @param param
+     * @return
+     */
     @PostMapping("/updateTaskStatus")
     public String updateTaskStatus(String param){
-        String script = "";
         String userId = "";
         String servicePackId = "";
         String issueTime = "";
@@ -53,7 +67,7 @@ public class ScriptController {
         } catch (JSONException e) {
             code = "502";
         }
-        code = sendResultAndChangeStatusService.sendResultAndChangeStatusService(userId,servicePackId,issueTime,issuerId,groupId,finishTime);
+        code = sendResultAndChangeStatusService.sendResultAndChangeStatus(userId,servicePackId,issueTime,issuerId,groupId,finishTime);
         return UpdateScriptStatusResultUtil.handResult(code,"");
     }
 

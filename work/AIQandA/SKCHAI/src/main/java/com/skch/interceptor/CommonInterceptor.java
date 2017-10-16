@@ -25,7 +25,7 @@ public class CommonInterceptor extends HandlerInterceptorAdapter{
 //		}else {
 		
 //		System.out.println("拦截");
-			return super.preHandle(request, response, handler);
+		return super.preHandle(request, response, handler);
 //		}
 	}
 

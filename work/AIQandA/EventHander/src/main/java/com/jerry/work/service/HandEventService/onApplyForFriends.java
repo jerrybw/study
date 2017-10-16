@@ -1,22 +1,15 @@
 package com.jerry.work.service.HandEventService;
 
-import com.jerry.work.bean.Result;
-import com.jerry.work.bean.Tmp;
-import com.jerry.work.eventEnum.JiaoChaOrJiaYi;
 import com.jerry.work.excrption.EventException;
 import com.jerry.work.mapper.TmpMapper;
 import com.jerry.work.util.*;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
-import org.springframework.format.datetime.DateFormatter;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URLEncoder;
 import java.util.*;
 
-import static com.jerry.work.util.ResultUtil.*;
 import static com.jerry.work.util.SpringUtil.getBean;
 
 /**
@@ -40,7 +33,7 @@ public class onApplyForFriends implements EventHandleInterface{
             try {
                 reason = dataJson.getString("reason");
             }catch (JSONException e){
-                reason = "（申请人未说明）";
+                reason = "申请添加您为好友";
             }
         }catch (JSONException e){
             throw new EventException("403");
@@ -55,19 +48,19 @@ public class onApplyForFriends implements EventHandleInterface{
         /**
          * 获取申请人信息
          */
-        String userMessage = GetMessageService.getUserMessageByUserId(issueId);
+        String userMessage = GetMessageUtil.getUserMessageByUserId(issueId);
         JSONObject userMessageJson = JSONObject.fromObject(userMessage);
         JSONObject userInfoJson = userMessageJson.getJSONObject("info");
         JSONObject userInfoJsonObj = userInfoJson.getJSONObject("info");
         String m_renming = userInfoJsonObj.getString("m_renming");
 
-        SendResult.sendWord("888888888", targetId,"您有一个加好友请求", "friend",System.currentTimeMillis());
+        SendResult.sendWord("888888888", targetId,"您有新联系人添加申请", "friend",System.currentTimeMillis());
         Map<String,String> keyWords = new HashMap<String,String>();
-        String nowStr = GetNowStr.getNowStr();
+        String nowStr = GetNowStr.getHanZiNowDateStr();
         keyWords.put("keyword1",m_renming);
         keyWords.put("keyword2", reason);
         keyWords.put("keyword3",nowStr);
-        SendWeiXin.sendWeiXin(event,targetId,url, URLEncoder.encode("您有一个加好友请求","utf-8"),keyWords,URLEncoder.encode("点此查看详情","utf-8"));
+        SendWeiXin.sendWeiXin(event,targetId,url, URLEncoder.encode("您有新联系人添加申请","utf-8"),keyWords,URLEncoder.encode("查看详情请点击进入","utf-8"));
         logger.info("向"+targetId+"发送模板消息");
         return "";
     }

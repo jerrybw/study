@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频上传</title>
+</head>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+    $(function () {
+        var videoId = GetQueryString("videoId");
+        $("#videoId").val(videoId);
+        $.ajax({
+            url:"/video/"+videoId,
+            type:"GET",
+
+        })
+    })
+</script>
+<body>
+    <form enctype="multipart/form-data" action="/uploadVideo" method="post">
+        <input id = "videoId" name="videoId" type="hidden">
+        视频简介：<input name="videoIntroduce" type="text"><br>
+        视频类型：<input name="videoType" type="radio" value="1">收费 <input name="videoType" type="radio" value="0">免费<br>
+        视频：<input type="file" name="file" onchange="changeFile(this)"/><br>
+        <input type="submit" value="上传"/>
+    </form>
+</body>
+</html>

@@ -29,7 +29,7 @@ public class CountScore {
         Integer score = 0;
         for (T_variable t_variable : t_variables) {
             String paramValue = t_variable.getParamvalue();
-            if ("能".equals(paramValue) || "是".equals(paramValue)) {
+            if ("能".equals(paramValue) || "是".equals(paramValue) || "对".equals(paramValue)) {
                 score++;
             }
         }

@@ -1,22 +1,22 @@
 package com.skch.controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.skch.dao.FormItemMapper;
 import com.skch.dao.MongoDBResultRepository;
 import com.skch.dao.T_resultRepository;
 import com.skch.entity.MongoDBResult;
 import com.skch.entity.T_form_item;
 import com.skch.entity.T_result;
-import net.sf.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import javax.persistence.Entity;
-import javax.persistence.EntityNotFoundException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import net.sf.json.JSONObject;
 
 /**
  * Created by 向博文 on 2017/9/21.

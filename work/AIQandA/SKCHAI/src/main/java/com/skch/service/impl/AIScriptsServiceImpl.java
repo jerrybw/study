@@ -16,7 +16,6 @@ public class AIScriptsServiceImpl implements ScriptsService {
 	
 	public AIScriptsServiceImpl() {
 		loadScriptsFiles();
-		System.out.println("装载脚本");
 	}
 
 	@Override
@@ -28,7 +27,6 @@ public class AIScriptsServiceImpl implements ScriptsService {
 	public void loadScriptsFiles() {
 		String path = AIScriptsServiceImpl.class.getResource("/script").getPath();
 		File file = new File(path.substring(0,path.length() - 1));
-		System.out.println(path.substring(0,path.length() - 1));
 		File[] listFiles = file.listFiles();
 		for (File childFile : listFiles) {
 			String fileName = childFile.getName();

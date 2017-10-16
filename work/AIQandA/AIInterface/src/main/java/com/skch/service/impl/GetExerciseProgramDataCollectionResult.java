@@ -23,7 +23,7 @@ public class GetExerciseProgramDataCollectionResult implements GetResultInter
     @Override
     public String getResult(Map<String,List<T_variable>> param) throws Exception{
         List<T_variable> t_variables = param.get("t_variables");
-        TaskSyllabusMapper taskSyllabusMapper = SpringUtil.getBean(TaskSyllabusMapper.class);
+//        TaskSyllabusMapper taskSyllabusMapper = SpringUtil.getBean(TaskSyllabusMapper.class);
         String userid = "";
         Map<String,Object> map = new HashMap<String,Object>();
         map.put("jenny","白教练");

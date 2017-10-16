@@ -4,6 +4,7 @@ import com.jerry.work.bean.ServicePackTask;
 import com.jerry.work.excrption.EventException;
 import com.jerry.work.mapper.ServicePackTaskMapper;
 import com.jerry.work.service.EventHandleService;
+import com.jerry.work.util.GetUrl;
 import com.jerry.work.util.SendWeiXin;
 import com.jerry.work.util.SpringUtil;
 import net.sf.json.JSONException;
@@ -52,11 +53,17 @@ public class onIssueCase implements EventHandleInterface {
         if (i != 1) {
             throw new EventException("401");
         }
-        url += "&userId=" + userId + "&servicePackId=" + servicePackId + "&issueTime=" + issueTime + "&issuerId=" + issuerId + "&groupId=" + groupId;
-        url = url.replaceAll("&", "%26");
+        if(url.contains("script=")) {
+            url += "&userId=" + userId + "&servicePackId=" + servicePackId + "&issueTime=" + issueTime + "&issuerId=" + issuerId + "&groupId=" + groupId;
+            url = url.replaceAll("&", "%26");
+        }else if(url.contains("DetectionResult")){
+            String[] split = url.split("=");
+            url = GetUrl.getUrl("jianceurl") + "/" + issueTime + "/" + groupId + "/"+split[1];
+            servicePackTask.setUrl(url);
+        }
         Map<String,String> keyWords = new HashMap<String,String>();
         keyWords.put("keyword1", caseName);
-        keyWords.put("keyword2","（此消息不涉及）");
+        keyWords.put("keyword2","暂无");
         long l = Long.parseLong(issueTime);
         DateFormatter dateFormatter = new DateFormatter("yyyy-MM-dd HH:mm:ss");
         Date date = new Date(l);

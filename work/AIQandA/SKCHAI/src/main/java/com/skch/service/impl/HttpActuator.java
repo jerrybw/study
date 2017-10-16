@@ -25,14 +25,11 @@ public class HttpActuator implements MethodActuatorService{
 	 */
 	@Override
 	public String getResault(String json) {
-		System.out.println(1);
-		System.out.println(url+"   "+type+"  "+json);
 		url = url+"?";
 		JSONObject jb = JSONObject.fromObject(json);
 	     Map<String, Object> map =jb;  
 	     int i = 1;
 	       for (Entry<String, Object> entry : map.entrySet()) {  
-//	            System.out.println(entry.getKey()+"="+entry.getValue());
 	            if(i!=1){
 	            	if(entry.getKey().equals("address") || entry.getKey().equals("Question")){
 	            		try {
@@ -59,7 +56,6 @@ public class HttpActuator implements MethodActuatorService{
 	            }
 	            i++;
 	       }     
-		System.out.println("请求的url:"+url);
 		//请求
 		RequestUtil requestUtil = new RequestUtil();
 		String returnString = "";

@@ -34,6 +34,7 @@ public class GetResultService {
         logger.info("收到处理结果的请求");
         T_forms form = t_formsRepository.getOne(formId);
         String method = form.getMethod();
+        method = method.replaceAll("-|\\(|\\)|（|）|  ","");
         Class<?> clazz = null;
         Object result = null;
         try {

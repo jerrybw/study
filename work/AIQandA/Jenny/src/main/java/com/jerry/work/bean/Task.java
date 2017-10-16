@@ -20,6 +20,7 @@ public class Task {
     private String servicePackId;
     private Integer imToG;
     private String imToGMsg;
+    private Integer status = 1;//是否有效 0 代表无效 1代表有效
 
     public Integer getId() {
         return id;
@@ -133,7 +134,13 @@ public class Task {
         this.remark = remark;
     }
 
+    public Integer getStatus() {
+        return status;
+    }
 
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
 
     public String getServicePackId() {
         return servicePackId;

@@ -14,4 +14,7 @@ mybatis:
     mapUnderscoreToCamelCase: true
 logging:
   file: /application/tomcat/webapps2/log/robot/robotlog.log
-saveAlertMsgUrl: "http://101.200.44.115:2503/alert/alertMsg"
+saveAlertMsgUrl: "http://t3.china-healthcare.cn:2503/alert/alertMsg"
+aiUrl: "http://47.93.160.47:8868/nlu"
+sendtmpd: "http://d.china-healthcare.cn/Wx/sendtmpmsg"
+sendtmpp: "http://p.china-healthcare.cn/Wxp/sendtmpmsg"

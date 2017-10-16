@@ -11,6 +11,6 @@ import java.util.List;
  */
 public interface AlertMsgRepository extends JpaRepository<AlertMsg,Integer>{
     //
-    @Query(value = "SELECT * FROM dao_sk_appointment_book WHERE valid = ?1 AND yy_type = ?2 AND (yy_start <= ?3 or (yy_remind <= ?4 and not yy_remind = ''))",nativeQuery = true)
-    List<AlertMsg> findByYyStartLessThanEqualAndYyTypeAndValidOrYyRemindLessThanEqual(String valid, String yyType,String yyStart,String yyRemind);//
+    @Query(value = "SELECT * FROM dao_sk_appointment_book WHERE valid = ?1 AND yy_type = ?2 AND (yy_start <= ?3 or (yy_remind <= ?4 and not yy_remind = '')) AND yy_state = ?5",nativeQuery = true)
+    List<AlertMsg> findByYyStartLessThanEqualAndYyTypeAndValidOrYyRemindLessThanEqualAndYyState(String valid, String yyType,String yyStart,String yyRemind,String yyState);//
 }

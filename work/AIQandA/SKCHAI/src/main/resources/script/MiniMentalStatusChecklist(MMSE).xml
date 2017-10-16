@@ -1,47 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <DataScripts title="简易精神状态检查量表（MMSE)附加说明——患者家属填写" attribute="" struct="导医">
     <DataSources>
         <userDb dsn=""/>
     </DataSources>
     <Questions condition="">
-        <id001 ask="很乐意为您服务，现在开始评估吧" field="" face='{"type":"radioBox","list":["开始评估","下次再来评估"]}' value="" ds="" table="" >
-            <Questions condition="开始评估">
-                <id001001 ask="下面的情况，请用户自查，家属辅助填写，只需要根据实际情况选择“对”或 “错”即可" field="" face='{"type":"radioBox","list":["好的，明白"]}' value="" ds="" table="" />
-                <id001002 ask="&lt;p&gt;今年的年份？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}}' value="" ds="" table=""  variable="Mini01"/>
-                <id001003 ask="&lt;p&gt;现在是什么季节？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini02"/>
-                <id001004 ask="&lt;p&gt;现在是几月份？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini03"/>
-                <id001005 ask="&lt;p&gt;今天是几号？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini04"/>
-                <id001006 ask="&lt;p&gt;今天是星期几？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini05"/>
-                <id001007 ask="&lt;p&gt;咱们现在是在哪个城市？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini06"/>
-                <id001008 ask="&lt;p&gt;咱们现在是在哪个区？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini07"/>
-                <id001009 ask="&lt;p&gt;咱们现在的地址、门牌号？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini08"/>
-                <id001010 ask="&lt;p&gt;咱们现在是在医院还是家里？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini09"/>
-                <id001011 ask="&lt;p&gt;这里是第几层楼？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini10"/>
-                <id001012 ask="&lt;p&gt;现在我告诉您三种东西，在我说完后，请您重复一遍这三种东西是什么。请记住这三种东西，过一会儿我还要问您：树、钟、汽车。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["0","1","2","3"]}' value="" ds="" table=""  variable="Mini11"/>
-                <id001013 ask="&lt;p&gt;100-7=？连续5次&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["0","1","2","3","4","5"]}' value="" ds="" table=""  variable="Mini12"/>
-                <id001014 ask="&lt;p&gt;现在请您说出我刚才让您记住的那三种东西&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["0","1","2","3"]}' value="" ds="" table=""  variable="Mini13"/>
-                <id001015 ask="&lt;p&gt;（出示手表）这个东西叫什么？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini14"/>
-                <id001016 ask="&lt;p&gt;（出示铅笔）这个东西叫什么？&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini15"/>
-                <id001017 ask="&lt;p&gt;请您跟着我说：“四十四只石狮子”&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini16"/>
-                <id001018 ask="&lt;p&gt;我给您一张纸，请按我说的去做，现在开始：“用右手拿着这张纸”&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini17"/>
-                <id001019 ask="&lt;p&gt;“用两只手将它对折起来”&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini18"/>
-                <id001020 ask="&lt;p&gt;“放在您的左腿上”&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist19.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini19"/>
-                <id001021 ask="&lt;p&gt;出示写有：“请闭上您的眼睛”的卡片。请您念一下这句话，并按上面的意思去做&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini20"/>
-                <id001022 ask="&lt;p&gt;请您给我写一个完整的句子（要有主、谓语，而且要有意义。）&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini21"/>
-                <id001023 ask="&lt;p&gt;出示图案。请您照样把它画下来。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://jishu.china-healthcare.cn/Uploads/java_img/MiniMentalStatusChecklist22.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;" field="" face='{"type":"radioBox","list":["对","错"]}' value="" ds="" table=""  variable="Mini22"/>
-                <id001024 ask='$FUN$MiniMentalStatusChecklist?{
-                    "s1":{"Mini01":"#_Mini01_#","Mini02":"#_Mini02_#","Mini03":"#_Mini03_#","Mini04":"#_Mini04_#","Mini05":"#_Mini05_#","Mini06":"#_Mini06_#",
-					"Mini07":"#_Mini07_#","Mini08":"#_Mini08_#","Mini09":"#_Mini09_#","Mini10":"#_Mini10_#","Mini14":"#_Mini14_#","Mini15":"#_Mini15_#",
-					"Mini16":"#_Mini16_#","Mini17":"#_Mini17_#","Mini18":"#_Mini18_#","Mini19":"#_Mini19_#","Mini20":"#_Mini20_#","Mini21":"#_Mini21_#",
-					"Mini22":"#_Mini22_#"},"s2":{"Mini11":"#_Mini12_#","Mini12":"#_Mini12_#","Mini13":"#_Mini13_#"}
-					}$FUN$' field="" face='{"type": "msg"}' value="" ds="" table="" />
+        <id001 ask="" field="" face='{"type": "msg"}' value="" ds="" table=""/>
+        <id002 goto='$FUN$setUserAssessment?{"userId":"$_userId_$","Assessment":"236","number":"1","next":"id003"}$FUN$'></id002>
+        <id003 ask='$FUN$cafrdbGetWelcomeWords?{"userId":"$_userId_$"}$FUN$' field="" face='{"type":"radioBox","list":["好的，明白"]}' value="" ds="" table="">
+            <Questions condition="好的，明白">
+                <id003001 ask='$FUN$cafrdbEvaluationItemAsk?{"userId":"$_userId_$"}$FUN$' field="" face='$FUN$cafrdbEvaluationItemFace?{"userId":"$_userId_$"}$FUN$' value="" ds="" table="" variable='$FUN$cafrdbEvaluationItemVariable?{"userId":"$_userId_$"}$FUN$'/>
+                <id003002 goto='$FUN$cafrdbEvaluationItemNext?{"userId":"$_userId_$","continue":"id003001","end":"id003003"}$FUN$'/>
+                <id003003 ask='$FUN$cafrdbEvaluationResultMsg?{"userId":"$_userId_$"}$FUN$' field="" face='{"type":"msg"}' value="" ds="" table=""/>
             </Questions>
-            <Questions condition="下次再来">
-                <id001025 ask="好的，欢迎下次再来。" field="" face='{"type": "msg"}' value="" ds="" table=""  variable="SocialSS18"></id001025>
-            </Questions>
-            <Questions condition="退出">
-                <id001026 goto="['','id999']"> </id001026>
-            </Questions>
-        </id001>
+        </id003>
     </Questions>
 </DataScripts>

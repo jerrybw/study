@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        function GetQueryString(name)
+        {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+        }
+        $(function () {
+            var id = GetQueryString("id");
+            $("#id").val(id);
+            if(id != null) {
+                $.ajax({
+                    url: "taskSyllabus/" + id,
+                    type: "GET",
+                    success: function (data) {
+                        $("#userId").val(data.userId);
+                        $("#taskId").val(data.taskId);
+                        $("#start").val(data.start);
+                        $("#jenny").val(data.jenny);
+                        $("#groupId").val(data.groupId);
+                    }
+                })
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="/taskSyllabus">
+        <form action="taskSyllabus" method="post">
+            <input id="id" type="hidden" name="id">
+            <div style="height: 40px">
+                用户id:
+                <input id="userId" name="userId" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                任务id:
+                <input id="taskId" name="taskId" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                开始时间:
+                <input id="start" name="start" type="datetime"><br>
+            </div>
+            <div style="height: 40px">
+                管理人:
+                <input id="jenny" name="jenny" type="text" autocomplete><br>
+            </div>
+            <div style="height: 40px">
+                群id:
+                <input id="groupId" name="groupId" type="text" autocomplete><br>
+            </div>
+            <div style="text-align: center" >
+                <input type="submit" value="提交" autocomplete>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

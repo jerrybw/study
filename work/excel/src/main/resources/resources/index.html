@@ -19,10 +19,11 @@
                     html+="<tr>"+
                             "<td>"+video.id+"</td>"+
                             "<td>"+video.videoName+"</td>"+
-                            "<td>"+"<a href='"+video.videoUrl+"'>"+vedioUrl+"</a>"+"</td>"+
+                            "<td>"+"<a href='"+video.videoUrl+"' target='_blank'>"+vedioUrl+"</a>"+"</td>"+
                             "<td>"+video.videoIntroduce+"</td>"+
                             "<td>"+videoTime+"</td>"+
                             "<td>"+vedioType+"</td>"+
+                            "<td>"+"<a href='editPage?videoId="+video.id+"' target='_blank'>修改</a>"+"</td>"+
                             "</tr>";
                 })
                 $("#videosTab").append(html)
@@ -76,7 +77,7 @@
         <table  cellspacing="0" cellpadding="1" border="1">
             <tbody id="videosTab">
                 <tr >
-                    <td>id</td><td>名字</td><td>地址</td><td>简介</td><td>时长</td><td>类型</td>
+                    <td>id</td><td>名字</td><td>地址</td><td>简介</td><td>时长</td><td>类型</td><td>操作</td>
                 </tr>
             </tbody>
         </table>

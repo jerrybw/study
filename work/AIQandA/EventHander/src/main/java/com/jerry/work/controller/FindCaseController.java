@@ -10,6 +10,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,8 +27,12 @@ public class FindCaseController {
     @Autowired
     private FindCasesService findCasesService;
 
-
-
+    /**
+     * 通过群id获取任务列表
+     * @param groupId 群id
+     * @return 任务列表
+     * @throws Exception
+     */
     @PostMapping("/findCases")
     public Object findCases(String groupId) throws Exception {
         String code = "1";

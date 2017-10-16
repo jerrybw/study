@@ -22,7 +22,9 @@ public class GetAdrenalDysfunctionTestResult implements GetResultInter
             result = "你可能有中度的肾上腺功能障碍";
         }else if(score >= 11){
             result = "你可能有重度的肾上腺功能障碍";
-        }
-        return "数据采集完成";
+        }else {
+			result = "数据采集完成";
+		}
+        return result;
     }
 }

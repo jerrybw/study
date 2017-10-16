@@ -2,17 +2,10 @@ package com.jerry.work.util;
 
 import com.jerry.work.bean.Tmp;
 import com.jerry.work.eventEnum.JiaoChaOrJiaYi;
-import com.jerry.work.excrption.EventException;
 import com.jerry.work.mapper.TmpMapper;
-import com.jerry.work.service.HandEventService.GetMessageService;
-import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URLEncoder;
 import java.util.Map;
-import java.util.Properties;
 
 import static com.jerry.work.util.SpringUtil.getBean;
 

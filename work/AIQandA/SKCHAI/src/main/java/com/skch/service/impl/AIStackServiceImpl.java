@@ -14,7 +14,6 @@ public class AIStackServiceImpl implements StackService {
 	
 	public AIStackServiceImpl() {
 		jedis = new Jedis("localhost");
-		System.out.println("初始化");
 	}
 
 	@Override
@@ -22,7 +21,6 @@ public class AIStackServiceImpl implements StackService {
 		String scriptsFile = askPos.getScriptsFile();
 		String askId = askPos.getAskId();
 		String location = scriptsFile + "," + askId;
-		System.out.println("压栈  地址是：" + location);
 		jedis.lpush(userId, location);
 		jedis.close();
 	}
@@ -31,7 +29,6 @@ public class AIStackServiceImpl implements StackService {
 	public AskLabelPosition pop(String userId) {
 		AskLabelPosition askLabelPosition = null;
 		String location = jedis.lpop(userId);
-		System.out.println("出栈  地址是：" + location);
 		String fileName = "";
 		String askId = "";
 		if(location != null && !location.equals("")){

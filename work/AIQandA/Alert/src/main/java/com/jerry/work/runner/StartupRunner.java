@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 @Order(value=1)
 public class StartupRunner implements CommandLineRunner
 {
+    //服务启动时调用此方法
     @Override
     public void run(String... args) throws Exception
     {

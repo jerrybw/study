@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        function loadTasks() {
+            $.ajax({
+                type:"GET",
+                url:"getTaskSyllabusList",
+                success:function(msg){
+                    var obj = JSON.parse(msg);
+                    $.each(obj,function(index,eachObj){
+                        $("#taskSyllabusTable").append("<tr id='"+eachObj.id+"'>"
+                                + "<td>" + eachObj.id + "</td>"
+                                + "<td>" + eachObj.userId + "</td>"
+                                + "<td>" + eachObj.taskId + "</td>"
+                                + "<td>" + eachObj.taskStatus+ "</td>"
+                                + "<td>" + eachObj.start + "</td>"
+                                + "<td>" + eachObj.jenny + "</td>"
+                                + "<td>" + eachObj.groupId + "</td>"
+                                + "<td> <a href='editTaskSyllabus.html?id="+eachObj.id+"'>改</a>&nbsp;&nbsp;<a href='javascript:deleteTaskSyllabus("+eachObj.id+");'>删</a>" + "</td>" +
+                                "</tr>")
+                    })
+                }
+            });
+        }
+        function deleteTaskSyllabus(id) {
+            var flag = confirm("确定要删除此用户任务吗？");
+            if(!flag){
+                return;
+            }
+            $.ajax({
+                url: "deleteTaskSyllabus/" + id,
+                type: "GET",
+                success: function (data) {
+                    $("tr").remove("#"+id);
+                }
+            })
+        }
+        $(function () {
+            loadTasks();
+        })
+
+    </script>
+</head>
+<body>
+    <div class="taskSyllabusTable">
+        <a href='editTaskSyllabus.html'>新增</a>
+        <table id="taskSyllabusTable" cellpadding="1" cellspacing="0" border="1">
+            <tr>
+                <td>用户任务id</td>
+                <td>用户id</td>
+                <td>任务id</td>
+                <td>用户任务状态</td>
+                <td>开始时间</td>
+                <td>管理人</td>
+                <td>群id</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

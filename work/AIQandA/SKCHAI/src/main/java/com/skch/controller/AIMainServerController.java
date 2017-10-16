@@ -41,8 +41,8 @@ public class AIMainServerController {
 	private ScriptsService scriptsService;
 	
 
-	@Autowired
-	private DialogsService dialogsService;
+//	@Autowired
+//	private DialogsService dialogsService;
 	
 	@Autowired
 	private StackService stackService;
@@ -101,7 +101,7 @@ public class AIMainServerController {
 						}
 					}
 				}
-				dialogsService.addSentence(userId, "AI", askLabel.getAskPos().getScriptsFile(), askLabel.getAskPos().getAskId(), value);
+//				dialogsService.addSentence(userId, "AI", askLabel.getAskPos().getScriptsFile(), askLabel.getAskPos().getAskId(), value);
 			}
 			//定位到下一个问句
 			nextAsk = scriptsFile.getAskLabelNext(answer.getAskId(),value);
@@ -173,7 +173,7 @@ public class AIMainServerController {
 		element = mainService.handVariable(element, userQuestion);
 		element = mainService.handMethod(element);
 		//将标签中数据转换成json字符串返回给客户端
-		dialogsService.addSentence( "AI",userId, nextAsk.getScriptsFile(), nextAsk.getAskId(), element.attributeValue("ask"));
+//		dialogsService.addSentence( "AI",userId, nextAsk.getScriptsFile(), nextAsk.getAskId(), element.attributeValue("ask"));
 		result = readXmlUtil.getEleJson(element, scriptsFile);
 		JSONObject fromObject = JSONObject.fromObject(result);
 		result = fromObject.toString();
@@ -182,19 +182,7 @@ public class AIMainServerController {
 	}
 	
 	
-	@RequestMapping("index")
-	public String index(){
-		return "index";
-	}
-	
-	@ResponseBody
-	@RequestMapping(value="login",produces="text/html;charset=utf-8")
-	public Object login(){
-		String login = "{'code':1,'answer':'','requestion':{'ask':'您还未登录，请登录','askId':'id001','script':'login.xml','face':{'type':'picker','list':['去登录']},'value':''},'questionId':''}";
-		login = JSONObject.fromObject(login).toString();
-		return(login);
-	}
-	
+
 	public String scriptBreaked(){
 		JSONObject fromObject = JSONObject.fromObject("{'code':1,'answer':'','requestion':{'ask':'','askId':'','script':'','face':{'type':'msg'},'value':''},'questionId':''}");
 		return fromObject.toString();

@@ -1,5 +1,6 @@
 package com.jerry.work.mapper;
 
+import com.jerry.work.bean.Task;
 import com.jerry.work.bean.TaskSyllabus;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -20,4 +21,16 @@ public interface TaskSyllabusMapper {
     List<TaskSyllabus> updateByUserIdAndJennyAndTaskStatusAndStartLessThanEqualsAndTaskId(Map<String, Object> param);
 
     String getGroupIdByUserIdAndJenny(Map<String, Object> param);
+
+    int updateStatusByTaskId(Integer taskId);
+
+    List<TaskSyllabus> findAllTaskSyllabus();
+
+    int saveTaskSyllabus(TaskSyllabus taskSyllabus);
+
+    int updateTaskSyllabus(TaskSyllabus taskSyllabus);
+
+    TaskSyllabus findById(Integer id);
+
+    int deleteTaskSyllabusById(Integer id);
 }

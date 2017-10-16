@@ -32,7 +32,7 @@ public class MuscleSpasticityAssessmentController {
         return "{Words:\"" + result.toString() + "\"}";
     }
 
-    public String translate(String str) {
+    public static String translate(String str) {
         switch (str) {
             case "A":
                 return "0";

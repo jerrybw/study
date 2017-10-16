@@ -1,8 +1,6 @@
 package com.jerry.work.service.HandEventService;
 
-import com.jerry.work.bean.Tmp;
 import com.jerry.work.excrption.EventException;
-import com.jerry.work.mapper.TmpMapper;
 import com.jerry.work.util.*;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
@@ -29,11 +27,6 @@ public class onInviteToGroup implements EventHandleInterface{
         String url = "";
         String reason = "";
         try {
-            try {
-                reason = dataJson.getString("reason");
-            }catch (JSONException e){
-                reason = "（申请人未说明）";
-            }
             issueId = dataJson.getString("issueId");
             targetId = dataJson.getString("targetId");
             groupId = dataJson.getString("groupId");
@@ -44,7 +37,7 @@ public class onInviteToGroup implements EventHandleInterface{
         /**
          * 获取申请人信息
          */
-        String userMessage = GetMessageService.getUserMessageByUserId(targetId);
+        String userMessage = GetMessageUtil.getUserMessageByUserId(targetId);
         JSONObject userMessageJson = JSONObject.fromObject(userMessage);
         JSONObject userInfoJson = userMessageJson.getJSONObject("info");
         JSONObject userInfoJsonObj = userInfoJson.getJSONObject("info");
@@ -52,13 +45,12 @@ public class onInviteToGroup implements EventHandleInterface{
         /**
          * 获取群信息
          */
-        String groupMessage = GetMessageService.getGroupMessageByGroupId(groupId);
+        String groupMessage = GetMessageUtil.getGroupMessageByGroupId(groupId);
         JSONObject groupMessageJson = JSONObject.fromObject(groupMessage);
         JSONObject groupInfoJson = groupMessageJson.getJSONObject("info");
         JSONObject groupInfoJsonObj = groupInfoJson.getJSONObject("info");
         String groupname = groupInfoJsonObj.getString("groupname");
-        String gid = groupInfoJsonObj.getString("gid");
-
+        String type = groupInfoJsonObj.getString("type");
         boolean isDoctor = IsDoctor.isDoctor(issueId);
         if(isDoctor){
             url = GetUrl.getUrl("dlianxiren");
@@ -67,12 +59,26 @@ public class onInviteToGroup implements EventHandleInterface{
         }
 
         Map<String,String> keyWords = new HashMap<String,String>();
-        String nowStr = GetNowStr.getNowStr();
+        String nowStr = GetNowStr.getHanZiNowDateStr();
+        String isQun = "";
+        if("2".equals(type)){
+            isQun = "团队";
+        }else if("1".equals(type)){
+            isQun = "群";
+        }
+        try {
+            reason = dataJson.getString("reason");
+        }catch (JSONException e){
+            reason = "邀请您加入“"+groupname +"”"+ isQun;
+        }
+        if("".equals(reason) || "null".equals(reason)){
+            reason = "邀请您加入“"+groupname +"”"+ isQun;
+        }
         keyWords.put("keyword1",m_renming);
-        keyWords.put("keyword2", "邀请您加入：《"+groupname + "》群");
+        keyWords.put("keyword2", reason);
         keyWords.put("keyword3",nowStr);
-        SendResult.sendWord("888888888", issueId,m_renming+"邀请您加入：《"+groupname+"》群", "friend",System.currentTimeMillis());
-        SendWeiXin.sendWeiXin(event,issueId,url, URLEncoder.encode("您有一个新的群邀请申请","utf-8"),keyWords,URLEncoder.encode("点此查看详情","utf-8"));
+        SendResult.sendWord("888888888", issueId,m_renming+"邀请您加入“"+groupname +"”"+isQun, "friend",System.currentTimeMillis());
+        SendWeiXin.sendWeiXin(event,issueId,url, URLEncoder.encode("您有一个新的"+isQun+"邀请申请","utf-8"),keyWords,URLEncoder.encode("查看详情点击进入","utf-8"));
         logger.info("向"+issueId+"发送模板消息");
         return "";
     }

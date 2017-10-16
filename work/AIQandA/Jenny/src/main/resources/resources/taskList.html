@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        function loadTasks() {
+            $.ajax({
+                type:"GET",
+                url:"tasks",
+                success:function(msg){
+                    var obj = JSON.parse(msg);
+                    $.each(obj,function(index,eachObj){
+                        var tmp = eachObj.tmp == '1' ? "是":"否";
+                        var impToP = eachObj.imToP == '1' ? "是":"否";
+                        var impToG = eachObj.imToG == '1' ? "是":"否";
+                        $("#tasksTable").append("<tr id='"+eachObj.id+"'>"
+                                + "<td>" + eachObj.id + "</td>"
+                                + "<td>" + eachObj.taskName + "</td>"
+                                + "<td>" + eachObj.taskContent + "</td>"
+                                + "<td>" + tmp + "</td>"
+                                + "<td>" + eachObj.tmpId + "</td>"
+                                + "<td>" + eachObj.first + "</td>"
+                                + "<td>" + eachObj.url + "</td>"
+                                + "<td>" + eachObj.keyWords + "</td>"
+                                + "<td>" + eachObj.remark + "</td>"
+                                + "<td>" + impToP + "</td>"
+                                + "<td>" + eachObj.imToPMsg + "</td>"
+                                + "<td>" + impToG + "</td>"
+                                + "<td>" + eachObj.imToGMsg + "</td>"
+                                + "<td> <a href='editTask.html?id="+eachObj.id+"'>改</a>&nbsp;&nbsp;<a href='javascript:deleteTask("+eachObj.id+");'>删</a>" + "</td>" +
+                                "</tr>")
+                    })
+                }
+            });
+        }
+        function deleteTask(id) {
+            var flag = confirm("确定要删除此任务吗？");
+            if(!flag){
+                return;
+            }
+            $.ajax({
+                url: "deleteTask/" + id,
+                type: "GET",
+                success: function (data) {
+                    if(data.success == "success") {
+                        $("tr").remove("#" + id);
+                    }
+                }
+            })
+        }
+        $(function () {
+            loadTasks();
+        })
+
+    </script>
+</head>
+<body>
+    <div class="tasksTable">
+        <a href='editTask.html'>新增</a>
+        <table id="tasksTable" cellpadding="1" cellspacing="0" border="1">
+            <tr>
+                <td>任务id</td>
+                <td>任务名</td>
+                <td>任务内容</td>
+                <td>是否发模板消息</td>
+                <td>模板消息id</td>
+                <td>模板消息标题</td>
+                <td>查看详情页面</td>
+                <td>模板消息内容，用键值对形式存储（keyWord1:xxx;keyWord2:xxx）</td>
+                <td>remark</td>
+                <td>是否给人发im消息</td>
+                <td>给人发im消息内容</td>
+                <td>是否给群发im消息</td>
+                <td>给群发im消息内容</td>
+                <td>操作</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

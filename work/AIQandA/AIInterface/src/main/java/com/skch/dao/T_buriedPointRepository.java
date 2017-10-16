@@ -1,8 +1,8 @@
 package com.skch.dao;
 
-import com.skch.entity.T_buriedPoint;
-import com.skch.entity.T_variable;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.skch.entity.T_buriedPoint;
 
 /**
  * Created by XX on 2017/7/20.

@@ -18,8 +18,15 @@ public class EventHandleService {
 
     private Logger logger = Logger.getLogger(EventHandleService.class);
 
-    public String handEvent(String event,String trigger,String data){
-        logger.info("参数：event = " +event + "&trigger=" + trigger + "&data = " + data);
+    /**
+     * 处理事件请求的业务逻辑层分发器
+     * @param event 事件
+     * @param trigger 医生或患者标识
+     * @param param //参数
+     * @return
+     */
+    public String handEvent(String event,String trigger,String param){
+        logger.info("参数：event = " +event + "&trigger=" + trigger + "&param = " + param);
         Class<?> clazz = null;
         String code = "1";
         Object result = "";
@@ -29,7 +36,7 @@ public class EventHandleService {
             Object instance = clazz.newInstance();
             Method getResult = clazz.getDeclaredMethod("handEvent", String.class,String.class,String.class);
             getResult.setAccessible(true);
-            result = getResult.invoke(instance, event,trigger, data);
+            result = getResult.invoke(instance, event,trigger, param);
         }catch (InvocationTargetException e) {
             code = e.getTargetException().getMessage();
         }catch (Exception e){

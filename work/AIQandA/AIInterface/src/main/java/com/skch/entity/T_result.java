@@ -1,10 +1,10 @@
 package com.skch.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * Created by XX on 2017/7/28.

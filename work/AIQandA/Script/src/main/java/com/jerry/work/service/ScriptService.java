@@ -25,8 +25,6 @@ public class ScriptService {
     @Autowired
     private ResultMapper resultMapper;
 
-    @Autowired
-    private ServicePackTaskMapper servicePackTaskMapper;
 
     @Autowired
     private SendResultAndChangeStatusService sendResultAndChangeStatusService;
@@ -35,10 +33,10 @@ public class ScriptService {
 
     /**
      * "userId":事件标识,
-     *   "script":事件产生者,
+     * "script":事件产生者,
      * "servicePackId",服务包标识,
-     *   "issuerId":发布脚本任务的医生id,
-     *   "issueTime":发布脚本任务的时间
+     * "issuerId":发布脚本任务的医生id,
+     * "issueTime":发布脚本任务的时间
      *
      * @param param
      * @return
@@ -48,13 +46,17 @@ public class ScriptService {
         String code = "1";
         String result = "";
         try {
+            //获取请求参数中的值
             Map<String, Object> map = getParamMap(param);
+            //查询任务完成状态
             Result resultObj = resultMapper.getResultByUserIdAndMethodAndServicePackIdAndIssueTime(map);
+            //
             if (resultObj == null) {
+                //
                 result = map.get("userId").toString();
                 throw new ScriptException("0");
             }
-            SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+            SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String format = s.format(resultObj.getCreateTime());
             JSONObject resultJsonObj = JSONObject.fromObject(resultObj);
             resultJsonObj.put("createTime", format);
@@ -70,7 +72,7 @@ public class ScriptService {
     }
 
     public String updateScriptStatus(String param) {
-        logger.info("getScriptStatus 接收参数为：" + param);
+        logger.info("updateScriptStatus 接收参数为：" + param);
         String code = "1";
         String result = "";
         Map<String, Object> map = new HashMap<String,Object>();
@@ -86,7 +88,7 @@ public class ScriptService {
                 map.put("issueTime", issueTime);
                 String issuerId = map.get("issuerId").toString();
                 String groupId = map.get("groupId").toString();
-                sendResultAndChangeStatusService.sendResultAndChangeStatusService(userId,servicePackId,issueTime,issuerId,groupId, GetNowStr.getNowStr());
+                sendResultAndChangeStatusService.sendResultAndChangeStatus(userId,servicePackId,issueTime,issuerId,groupId, GetNowStr.getNowStr());
             }
         } catch (ScriptException e) {
             code = e.getMessage();
@@ -99,6 +101,13 @@ public class ScriptService {
         return returnResult;
     }
 
+
+    /**
+     * 获取请求中的参数放入map中返回
+     * @param param 请求参数
+     * @return map
+     * @throws Exception
+     */
     public Map<String, Object> getParamMap(String param) throws Exception {
         Map<String, Object> map = new HashMap<String, Object>();
         String script = "";
@@ -109,6 +118,7 @@ public class ScriptService {
         String groupId = "";
         boolean isD = false;
         try {
+            //从请求参数中取出值
             JSONObject paramJson = JSONObject.fromObject(param);
             userId = paramJson.getString("userId");
             script = paramJson.getString("script");
@@ -116,6 +126,7 @@ public class ScriptService {
             issueTime = paramJson.getString("issueTime");
             issuerId = paramJson.getString("issuerId");
             groupId = paramJson.getString("groupId");
+            //放入map中
             map.put("userId", userId);
             map.put("servicePackId", servicePackId);
             map.put("issueTime", issueTime);
@@ -144,9 +155,7 @@ public class ScriptService {
             JSONObject groupMessageJson = JSONObject.fromObject(groupMessage);
             JSONObject info = groupMessageJson.getJSONObject("info");
             JSONObject bc = info.getJSONObject("bc");
-            JSONObject infoObj = info.getJSONObject("info");
-            String creator = infoObj.getString("creator");
-            userId = bc.getString("dd_goumai");
+            userId = bc.getString("dd_uren");
             map.put("userId", userId);
         }
         return map;

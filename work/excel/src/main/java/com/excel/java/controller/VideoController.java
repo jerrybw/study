@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.util.List;
 
 /**
@@ -30,6 +31,9 @@ public class VideoController {
 
     @Value("${videoAddress}")
     private String videoAddress;
+
+    @Value("${videoBakAddress}")
+    private String videoBakAddress;
 
     private Logger logger = Logger.getLogger(VideoController.class);
 
@@ -54,6 +58,11 @@ public class VideoController {
         String[] split = fileName.split("\\.");
         fileName = split[0] +"&"+ updateTime + "." + split[1];
         String filePath = videoAddress + "resources/video/";
+        try {
+            FileUtil.uploadFile(file.getBytes(), filePath, fileName);
+        } catch (Exception e) {
+        }
+        filePath = videoBakAddress + "resources/video/";
         try {
             FileUtil.uploadFile(file.getBytes(), filePath, fileName);
         } catch (Exception e) {
