@@ -14,4 +14,6 @@ public interface VideoMapper {
     public List<Video> getAllVideos();
 
     public int insertVideo(Video video);
+
+    public Video getVideoById(int id);
 }

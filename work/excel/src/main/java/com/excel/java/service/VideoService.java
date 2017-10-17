@@ -23,4 +23,8 @@ public class VideoService {
     public int saveVideo(Video video){
         return videoMapper.insertVideo(video);
     }
+
+    public Video findVideoById(int id){
+        return videoMapper.getVideoById(id);
+    }
 }

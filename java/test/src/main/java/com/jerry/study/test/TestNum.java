@@ -5,12 +5,16 @@ package com.jerry.study.test;
  */
 public class TestNum {
     public static void main(String[] args){
-        int a = 11;
-        int b = 12;
-        a = a^b;
-        b = a^b;
-        a = a^b;
-        System.out.println(a);
-        System.out.println(b);
+        for (int k = 0;k<100;k++) {
+            long start = System.currentTimeMillis();
+            for (int i = 1; i < 100000; i++) {
+                int sum = 1;
+                for (int j = 1; j <= i; j++) {
+                    sum *= j;
+                }
+            }
+            long end = System.currentTimeMillis();
+            System.out.println(end - start);
+        }
     }
 }

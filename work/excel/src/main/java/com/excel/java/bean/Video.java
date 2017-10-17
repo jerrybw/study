@@ -10,19 +10,20 @@ public class Video {
     private String videoUrl;//视频地址
     private String videoIntroduce;//视频简介
     private int videoTime;//视频时长
-    private int videoType;//视频类型
-    private long updateTime;//上传时间
+    private int videoType;//视频类型 1是收费 0是免费
+    private long uploadTime;//上传时间
+    private int valid;//是否有效 1有效 0无效
 
     public Video() {
     }
 
-    public Video(String videoName, String videoUrl, String videoIntroduce, int videoTime, int videoType, long updateTime) {
+    public Video(String videoName, String videoUrl, String videoIntroduce, int videoTime, int videoType, long uploadTime) {
         this.videoName = videoName;
         this.videoUrl = videoUrl;
         this.videoIntroduce = videoIntroduce;
         this.videoTime = videoTime;
         this.videoType = videoType;
-        this.updateTime = updateTime;
+        this.uploadTime = uploadTime;
     }
 
     public Integer getId() {
@@ -73,12 +74,20 @@ public class Video {
         this.videoType = videoType;
     }
 
-    public long getUpdateTime() {
-        return updateTime;
+    public long getUploadTime() {
+        return uploadTime;
     }
 
-    public void setUpdateTime(long updateTime) {
-        this.updateTime = updateTime;
+    public void setUploadTime(long uploadTime) {
+        this.uploadTime = uploadTime;
+    }
+
+    public int getValid() {
+        return valid;
+    }
+
+    public void setValid(int valid) {
+        this.valid = valid;
     }
 
     @Override
@@ -90,7 +99,7 @@ public class Video {
                 ", videoIntroduce='" + videoIntroduce + '\'' +
                 ", videoTime=" + videoTime +
                 ", videoType=" + videoType +
-                ", updateTime=" + updateTime +
+                ", uploadTime=" + uploadTime +
                 '}';
     }
 }

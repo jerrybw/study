@@ -11,23 +11,84 @@
         var r = window.location.search.substr(1).match(reg);
         if(r!=null)return  unescape(r[2]); return null;
     }
+
+    function getLocalTime(nS) {
+        return new Date(parseInt(nS) * 1000).toLocaleString();
+//    .replace(/:\d{1,2}$/,' ')
+    }
     $(function () {
         var videoId = GetQueryString("videoId");
-        $("#videoId").val(videoId);
-        $.ajax({
-            url:"/video/"+videoId,
-            type:"GET",
+        if(videoId != null) {
+            $("#videoId").val(videoId);
+            $.ajax({
+                url: "/getVideo/" + videoId,
+                type: "GET",
+                success: function (video) {
+                    var strs = video.videoName.split(".");
+                    $("#videoType" + video.videoType).attr("checked","true");
+                    $("#uploadTime").val(getLocalTime(video.uploadTime / 1000));
+                    $("#videoName").val(strs[0]);
+                    $("#videoIntroduce").val(video.videoIntroduce);
+                    $("#videoTime").val(formatSeconds(video.videoTime));
+                    $("#videoUrl").attr("href",video.videoUrl);
+                    $("#videoUrl").html(video.videoName);
+                }
+            })
+        }
 
-        })
+
+        function formatSeconds(value){
+            var theSecond=parseInt(value);
+            var theMinute=0;
+            var theHour=0;
+            if(theSecond>60){
+                theMinute=parseInt(theSecond/60);
+                theSecond=parseInt(theSecond%60);
+
+                if(theMinute>60){
+                    theHour=parseInt(theMinute/60);
+                    theMinute = parseInt(theMinute%60);
+                }
+            }
+            var m = 0;
+            if(parseInt(theSecond) < 10){
+                m = "0"+parseInt(theSecond);
+            }else {
+                m = parseInt(theSecond);
+            }
+            var result=""+m+"秒";
+            if(theMinute>0){
+                if(theMinute <10){
+                    result="0"+parseInt(theMinute)+"分"+result;
+                }else {
+                    result=""+parseInt(theMinute)+"分"+result;
+                }
+            }else {
+                result="00"+"分"+result;
+            }
+            if(theHour>0){
+                if(theHour <10) {
+                    result = "0" + parseInt(theHour) + "分" + result;
+                }else {
+                    result=""+parseInt(theHour)+"小时"+result;
+                }
+            }else {
+                result="00"+"小时"+result;
+            }
+            return result;
+        }
     })
 </script>
 <body>
-    <form enctype="multipart/form-data" action="/uploadVideo" method="post">
+    <form enctype="multipart/form-data" action="/updateVideo" method="post">
         <input id = "videoId" name="videoId" type="hidden">
-        视频简介：<input name="videoIntroduce" type="text"><br>
-        视频类型：<input name="videoType" type="radio" value="1">收费 <input name="videoType" type="radio" value="0">免费<br>
-        视频：<input type="file" name="file" onchange="changeFile(this)"/><br>
-        <input type="submit" value="上传"/>
+        视频名称：<input id="videoName" name="videoName" type="text"><br>
+        视频简介：<input id="videoIntroduce" name="videoIntroduce" type="text"><br>
+        视频类型：<input id="videoType1" name="videoType" type="radio" value="1">收费 <input id="videoType0" name="videoType" type="radio" value="0">免费<br>
+        视频上传时间：<input id="uploadTime" name="uploadTime" type="text" disabled><br>
+        视频时长：<input id="videoTime" name="videoTime" type="text" disabled><br>
+        视频地址：<a id="videoUrl" target="_blank"></a><br>
+        <input type="submit" value="修改"/>
     </form>
 </body>
 </html>

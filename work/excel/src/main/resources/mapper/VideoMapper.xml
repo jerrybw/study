@@ -3,7 +3,11 @@
 <!--这里的***.**指的是包名-->
 <mapper namespace="com.excel.java.mapper.VideoMapper">
     <select id="getAllVideos" resultType="video">
-        select * from video
+        select * from video WHERE valid = 1
+    </select>
+
+    <select id="getVideoById" resultType="video">
+        select * from video WHERE id = #{id} AND valid = 1
     </select>
     
     <insert id="insertVideo" parameterType="video">
