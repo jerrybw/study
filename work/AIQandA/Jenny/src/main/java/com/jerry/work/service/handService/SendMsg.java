@@ -48,9 +48,8 @@ public class SendMsg implements HandServiceInterface{
             }else {
                 Map<String, String> map = new HashMap<String, String>();
                 String[] splits = keyWords.split(";");
-                for (String keyWord : splits) {
-                    String[] split = keyWord.split(":");
-                    map.put(split[0], split[1]);
+                for (int i =0;i<splits.length;i++) {
+                    map.put("keyword"+(i+1), splits[i]);
                 }
                 boolean isD = IsDoctor.isDoctor(userId);
                 if (!isD) {

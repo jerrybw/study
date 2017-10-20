@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.jerry.work.mapper.primary.AlertTaskJennyMapper">
+
+    <select id="findAlertTaskByAlertTimestampLessThanAndAlertTimesLessThanShouldAlertTimes" resultType="com.jerry.work.bean.AlertTaskJenny">
+        select * from ai_alert_task_jenny where alert_timestamp &lt;= #{nowTimeStamp} AND alert_times &lt; should_alert_times
+    </select>
+
+</mapper>

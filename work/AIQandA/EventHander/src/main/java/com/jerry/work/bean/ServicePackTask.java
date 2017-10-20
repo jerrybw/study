@@ -16,6 +16,7 @@ public class ServicePackTask {
     private String servicePackId;
     private String caseName;
     private String finishTime;
+    private int isAlerted;//是否提醒过，1表示没有，0表示提醒过了
 
     public String getFinishTime() {
         return finishTime;
@@ -107,6 +108,14 @@ public class ServicePackTask {
 
     public ServicePackTask() {
 
+    }
+
+    public int getIsAlerted() {
+        return isAlerted;
+    }
+
+    public void setIsAlerted(int isAlerted) {
+        this.isAlerted = isAlerted;
     }
 
     public ServicePackTask(String groupId, String userId, String url, int type, String issuerId, String issueTime, String servicePackId, String caseName) {

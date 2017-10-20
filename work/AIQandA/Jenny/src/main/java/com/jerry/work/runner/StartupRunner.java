@@ -1,6 +1,7 @@
 package com.jerry.work.runner;
 
 import com.jerry.work.jennytype.M5;
+import com.jerry.work.jennytype.S10;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -16,5 +17,6 @@ public class StartupRunner implements CommandLineRunner
     public void run(String... args) throws Exception
     {
         M5.run();
+        S10.run();
     }
 }

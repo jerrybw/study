@@ -68,7 +68,7 @@ public class GetExerciseTemporaryScheme1Result implements GetResultInter
                 Date date1 = new Date();
                 DateFormatter dateFormatter1 = new DateFormatter("yyyy-MM-dd HH:mm:ss");
                 String now1 = dateFormatter1.print(date, Locale.getDefault());
-                String url = "http://d.china-healthcare.cn/Wx/sendtmpmsg";
+                String url = "http://p.china-healthcare.cn/Wxp/sendtmpmsg";
                 String remark = "点击提交数据";
                 String clickUrl = "http://jishu.china-healthcare.cn/m.php/GuideMedicine/index?script=ExerciseProgramDataCollection.xml&askId=id001&value=%E5%BC%80%E5%A7%8B%E8%AF%84%E4%BC%B0&title=%E6%A0%87%E9%A2%98&userId="+userid;
                 clickUrl = clickUrl.replaceAll("&", "%26");
@@ -87,7 +87,7 @@ public class GetExerciseTemporaryScheme1Result implements GetResultInter
             Date date1 = new Date();
             DateFormatter dateFormatter1 = new DateFormatter("yyyy-MM-dd HH:mm:ss");
             String now1 = dateFormatter1.print(date1, Locale.getDefault());
-            String url = "http://d.china-healthcare.cn/Wx/sendtmpmsg";
+            String url = "http://p.china-healthcare.cn/Wxp/sendtmpmsg";
             String remark = "点击开始锻炼方案2";
             String clickUrl = "http://jishu.china-healthcare.cn/m.php/GuideMedicine/index?script=ExerciseTemporaryScheme2.xml&askId=id001&value=%E5%BC%80%E5%A7%8B%E8%AF%84%E4%BC%B0&title=%E6%A0%87%E9%A2%98&userId=" + userid;
             clickUrl = clickUrl.replaceAll("&", "%26");

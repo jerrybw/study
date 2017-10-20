@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,10 +20,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.skch.util.JSONUtil.*;
 
@@ -54,6 +52,10 @@ public class CAFRDBController {
 
     @Autowired
     private T_variableRepository t_variableRepository;//操作用户评估项答案数据表的数据库层
+
+
+    @Autowired
+    private FormItemMapper formItemMapper;
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -221,6 +223,37 @@ public class CAFRDBController {
             logger.info("计算结果出现错误"+"\n" + "结果返回为空");
         }
         return getResult("result",result == null?"计算结果出现错误":result);
+    }
+
+    /**
+     * 获取评估表内所有评估项的答案
+     * @param resultId
+     * @return
+     */
+    @PostMapping("/getDetailResult")
+    public String getDetailResult(String resultId){
+        int id = Integer.parseInt(resultId);
+        T_result result = null;
+        String resultStr = "";
+        result = t_resultRepository.getOne(id);
+        MongoDBResult mongoDBResult = mongoDBResultRepository.findOne(result.getMongoDB());
+        Map<String, Object> items = mongoDBResult.getItems();
+        Set<String> keys = items.keySet();
+        List<T_form_item> t_form_items = formItemMapper.findByFormName(result.getFormName());
+        Map<String, String> resultMap = new HashMap<String, String>();
+        for (T_form_item t : t_form_items) {
+            if (!keys.contains(t.getVariable())) {
+                continue;
+            }
+            String ask = t.getAsk();
+            String answer = items.get(t.getVariable()).toString();
+            answer = answer.replaceAll("<span>","");
+            answer = answer.replaceAll("</span>","");
+            resultMap.put(ask, answer);
+        }
+        JSONObject object = JSONObject.fromObject(resultMap);
+        resultStr = object.toString();
+        return resultStr;
     }
 
     public T_form_item getFormItem(String str){

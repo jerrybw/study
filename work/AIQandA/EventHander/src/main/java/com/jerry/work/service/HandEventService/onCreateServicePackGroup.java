@@ -69,7 +69,7 @@ public class onCreateServicePackGroup implements EventHandleInterface{
         keyWords.put("keyword2","创建群");
         SendWeiXin.sendWeiXin(event,issuerId,"www.baidu.com","创建群",keyWords,"创建群");
         onIssueCase onIssueCase = new onIssueCase();
-        String url = "http://jishu.china-healthcare.cn/m.php/GuideMedicine/index?script=GeneralPersonalInformationCollectionForm.xml&askId=id001&value=%E5%BC%80%E5%A7%8B%E8%AF%84%E4%BC%B0&title=%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86";
+        String url = "http://jishu.china-healthcare.cn/m.php/GuideMedicine/index?script=PersonalInformationCollectionForm-ProgrammeCustomization.xml&askId=id001&value=%E5%BC%80%E5%A7%8B%E8%AF%84%E4%BC%B0&title=%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86";
         long now = System.currentTimeMillis();
         String onIssueCaseData = "{\"userId\":\""+dd_uren+"\"," +
                 "\"type\":\"1\"," +

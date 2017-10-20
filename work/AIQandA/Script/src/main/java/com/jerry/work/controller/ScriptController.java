@@ -67,7 +67,7 @@ public class ScriptController {
         } catch (JSONException e) {
             code = "502";
         }
-        code = sendResultAndChangeStatusService.sendResultAndChangeStatus(userId,servicePackId,issueTime,issuerId,groupId,finishTime);
+        code = sendResultAndChangeStatusService.sendResultAndChangeStatus(userId,servicePackId,issueTime,issuerId,groupId,finishTime,"");
         return UpdateScriptStatusResultUtil.handResult(code,"");
     }
 

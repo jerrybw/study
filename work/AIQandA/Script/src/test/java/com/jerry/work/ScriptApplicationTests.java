@@ -1,7 +1,6 @@
 package com.jerry.work;
 
-import com.jerry.work.bean.Result;
-import com.jerry.work.mapper.ResultMapper;
+import com.jerry.work.mapper.primary.ResultMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.jerry.work.mapper.primary.SchemeConditionMapper">
+
+    <select id="findSchemeConditionBySPIAndScriptAndFINAndFIV" resultType="com.jerry.work.bean.SchemeCondition">
+        select * from ai_scheme_condition
+        where service_pack_id = #{servicePackId}
+        AND script = #{script}
+        AND form_item_name = #{formItemName}
+        AND form_item_value = #{formItemValue}
+    </select>
+
+</mapper>

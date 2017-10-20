@@ -1,16 +1,15 @@
 package com.jerry.work.service;
 
 import com.jerry.work.bean.ServicePackTask;
-import com.jerry.work.mapper.ServicePackTaskMapper;
+import com.jerry.work.mapper.primary.ServicePackTaskMapper;
+import com.jerry.work.util.GetMessageUtil;
 import com.jerry.work.util.SendResult;
-import exception.ScriptException;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,12 +22,15 @@ public class SendResultAndChangeStatusService {
     @Autowired(required = false)
     private ServicePackTaskMapper servicePackTaskMapper;
 
+    @Autowired
+    private HandAfterUpdateScriptStatusService handAfterUpdateScriptStatusService;
+
     @Value("${jianceurl}")
     private String jianceurl;
 
     private Logger logger = Logger.getLogger(SendResultAndChangeStatusService.class);
 
-    public String sendResultAndChangeStatus(String userId,String servicePackId,String issueTime,String issuerId,String groupId,String finishTime){
+    public String sendResultAndChangeStatus(String userId,String servicePackId,String issueTime,String issuerId,String groupId,String finishTime,String script){
 
         String code = "1";
 
@@ -47,11 +49,12 @@ public class SendResultAndChangeStatusService {
             String url = servicePackTask.getUrl();
             if(url.contains("script=")) {
                 url += "&userId=" + userId + "&servicePackId=" + servicePackId + "&issueTime=" + issueTime + "&issuerId=" + issuerId + "&groupId=" + groupId;
+
             }else if(url.contains("DetectionResult")){
                 String[] split = url.split("=");
                 url = jianceurl + "/" + issueTime + "/" + groupId + "/"+split[1];
             }
-            String userMessage = GetMessageService.getUserMessageByUserId(userId);
+            String userMessage = GetMessageUtil.getUserMessageByUserId(userId);
             JSONObject userMessageJson = JSONObject.fromObject(userMessage);
             JSONObject userInfoJson = userMessageJson.getJSONObject("info");
             JSONObject userInfoJsonObj = userInfoJson.getJSONObject("info");

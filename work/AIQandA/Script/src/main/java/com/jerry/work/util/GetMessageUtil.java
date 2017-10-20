@@ -1,11 +1,10 @@
-package com.jerry.work.service;
+package com.jerry.work.util;
 
-import com.jerry.work.util.HttpRequest;
 
 /**
  * Created by 向博文 on 2017/9/18.
  */
-public class GetMessageService {
+public class GetMessageUtil {
     public static String getUserMessageByUserId(String userId) {
         String url = "http://d.china-healthcare.cn/app/jk/id/JL108";
         String param = "uid=" + userId;
@@ -13,7 +12,6 @@ public class GetMessageService {
         try {
             message = HttpRequest.sendPost(url, param);
         } catch (Exception e) {
-            throw new RuntimeException("获取用户信息失败");
         }
         return message;
     }
@@ -25,7 +23,6 @@ public class GetMessageService {
         try {
             message = HttpRequest.sendPost(url, param);
         } catch (Exception e) {
-            throw new RuntimeException("获取群信息失败");
         }
         return message;
     }

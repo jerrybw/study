@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的***.**指的是包名-->
+<mapper namespace="com.jerry.work.mapper.ServicePackTaskMapper">
+
+    <select id="findServicePackTaskByGroupId" resultType="servicePackTask">
+        select * from ai_service_pack_task where group_id = #{groupId}
+    </select>
+
+    <select id="findServicePackTaskById" resultType="servicePackTask">
+        select * from ai_service_pack_task where id = #{id}
+    </select>
+
+    <insert id="saveServicePackTask" >
+        INSERT INTO ai_service_pack_task
+        (group_id,user_id,url,TYPE,STATUS,issuer_id,issue_time,service_pack_id,case_name)
+        VALUE(#{groupId},#{userId},#{url},#{type},#{status},#{issuerId},#{issueTime},#{servicePackId},#{caseName})
+    </insert>
+</mapper>

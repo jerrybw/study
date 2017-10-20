@@ -1,11 +1,9 @@
 package com.jerry.work.service;
 
-import com.jerry.work.bean.ServicePackTask;
-import com.jerry.work.mapper.ServicePackTaskMapper;
 import com.jerry.work.util.*;
 import exception.ScriptException;
 import com.jerry.work.bean.Result;
-import com.jerry.work.mapper.ResultMapper;
+import com.jerry.work.mapper.primary.ResultMapper;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
@@ -24,7 +22,6 @@ public class ScriptService {
 
     @Autowired
     private ResultMapper resultMapper;
-
 
     @Autowired
     private SendResultAndChangeStatusService sendResultAndChangeStatusService;
@@ -65,12 +62,18 @@ public class ScriptService {
             code = e.getMessage();
         } catch (Exception e) {
             code = "500";
+            logger.error(e.fillInStackTrace());
         }
         String returnResult = GetScriptStatusResultUtil.handResult(code, result);
         logger.info("getScriptStatus 返回结果为" + returnResult);
         return returnResult;
     }
 
+    /**
+     * 修改评估结果，将评估结果与任务关联上
+     * @param param
+     * @return
+     */
     public String updateScriptStatus(String param) {
         logger.info("updateScriptStatus 接收参数为：" + param);
         String code = "1";
@@ -88,12 +91,15 @@ public class ScriptService {
                 map.put("issueTime", issueTime);
                 String issuerId = map.get("issuerId").toString();
                 String groupId = map.get("groupId").toString();
-                sendResultAndChangeStatusService.sendResultAndChangeStatus(userId,servicePackId,issueTime,issuerId,groupId, GetNowStr.getNowStr());
+                String script = map.get("script").toString();
+                sendResultAndChangeStatusService.sendResultAndChangeStatus(userId,servicePackId,issueTime,issuerId,groupId,GetNowStr.getNowDateTimeStr(),script);
             }
+
         } catch (ScriptException e) {
             code = e.getMessage();
         } catch (Exception e) {
             code = "500";
+            logger.error(e.fillInStackTrace());
         }
 
         String returnResult = UpdateScriptStatusResultUtil.handResult(code, result);
@@ -132,6 +138,7 @@ public class ScriptService {
             map.put("issueTime", issueTime);
             map.put("issuerId", issuerId);
             map.put("groupId", groupId);
+            map.put("script", script);
             String method = "";
             try {
                 String[] split = script.split("\\.");
@@ -151,7 +158,7 @@ public class ScriptService {
             return map;
         }
         if(isD){
-            String groupMessage = GetMessageService.getGroupMessageByGroupId(groupId);
+            String groupMessage = GetMessageUtil.getGroupMessageByGroupId(groupId);
             JSONObject groupMessageJson = JSONObject.fromObject(groupMessage);
             JSONObject info = groupMessageJson.getJSONObject("info");
             JSONObject bc = info.getJSONObject("bc");

@@ -1,6 +1,5 @@
 package com.jerry.work.util;
 
-import com.jerry.work.service.GetMessageService;
 import net.sf.json.JSONObject;
 
 /**
@@ -15,7 +14,7 @@ public class IsDoctor {
      * @return
      */
     public static boolean isDoctor(String userId){
-        String userMessage = GetMessageService.getUserMessageByUserId(userId);
+        String userMessage = GetMessageUtil.getUserMessageByUserId(userId);
         JSONObject userMessageJson = JSONObject.fromObject(userMessage);
         JSONObject infoJson = userMessageJson.getJSONObject("info");
         JSONObject infoJsonObj = infoJson.getJSONObject("info");
